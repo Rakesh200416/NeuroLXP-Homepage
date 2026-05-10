@@ -1,0 +1,470 @@
+.retail-health-page {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #e6e6ee;
+  color: #101a3d;
+  padding: 56px 6%;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+.retail-health-page * {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.retail-health-page h1 {
+  font-size: 40px;
+}
+
+.retail-health-page h2 {
+  font-size: 32px;
+}
+
+.retail-health-page h3 {
+  font-size: 24px;
+}
+
+.retail-health-page h4 {
+  font-size: 20px;
+}
+
+.retail-health-page p {
+  font-size: 18px;
+}
+
+/* HERO */
+.rh-hero {
+  max-width: 1180px;
+  margin: 0 auto 56px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  gap: 38px;
+  align-items: center;
+}
+
+.rh-hero-text {
+  padding: 42px;
+  border-radius: 8px;
+  background: #e6e6ee;
+  border: 1px solid rgba(16, 26, 61, 0.18);
+  box-shadow:
+    12px 12px 26px #c4c4cc,
+    -12px -12px 26px #ffffff;
+}
+
+.rh-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 16px;
+  margin-bottom: 18px;
+  border-radius: 4px;
+  background: #e6e6ee;
+  color: #30344f;
+  border: 1px solid rgba(16, 26, 61, 0.18);
+  box-shadow:
+    5px 5px 10px #c9c9d1,
+    -5px -5px 10px #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.rh-hero h1 {
+  margin: 0 0 12px;
+  color: #18284a;
+  font-weight: 850;
+  line-height: 1.1;
+}
+
+.rh-hero h1 span {
+  color: #5d6df6;
+}
+
+.rh-hero h2 {
+  max-width: 760px;
+  margin: 0 0 20px;
+  color: #20324f;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.rh-hero p {
+  max-width: 760px;
+  margin: 0;
+  color: #4b5277;
+}
+
+.rh-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 28px 0 0;
+}
+
+.rh-btn {
+  border: 1px solid rgba(16, 26, 61, 0.18);
+  background: #e6e6ee;
+  color: #101a3d;
+  padding: 13px 20px;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow:
+    6px 6px 12px #c9c9d1,
+    -6px -6px 12px #ffffff;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.rh-btn:hover {
+  transform: translateY(-3px);
+  border-color: rgba(93, 109, 246, 0.38);
+  box-shadow:
+    9px 9px 18px #bfc0c8,
+    -9px -9px 18px #ffffff;
+}
+
+.rh-btn-secondary {
+  color: #5d6df6;
+}
+
+.rh-hero-image-card {
+  padding: 16px;
+  border-radius: 8px;
+  background: #e6e6ee;
+  border: 1px solid rgba(16, 26, 61, 0.18);
+  box-shadow:
+    inset 7px 7px 16px #d0d2dc,
+    inset -7px -7px 16px #ffffff;
+}
+
+.rh-hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* STATS */
+.rh-stats {
+  max-width: 1180px;
+  margin: 0 auto 62px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  border-radius: 8px;
+  background: #e6e6ee;
+  border: 1px solid rgba(16, 26, 61, 0.18);
+  box-shadow:
+    12px 12px 26px #c4c4cc,
+    -12px -12px 26px #ffffff;
+}
+
+.rh-stats div {
+  padding: 24px 18px;
+  text-align: center;
+  border-radius: 6px;
+  background: #e6e6ee;
+  box-shadow:
+    inset 5px 5px 12px #d0d2dc,
+    inset -5px -5px 12px #ffffff;
+}
+
+.rh-stats strong {
+  display: block;
+  color: #5d6df6;
+  font-size: 30px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.rh-stats span {
+  color: #4b5277;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* SECTIONS */
+.rh-content-section {
+  max-width: 1180px;
+  margin: 0 auto 64px;
+}
+
+.rh-section-header {
+  max-width: 860px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.rh-section-header h2 {
+  margin: 0 0 12px;
+  color: #20324f;
+  font-weight: 850;
+}
+
+.rh-section-header p {
+  margin: 0 auto;
+  color: #4b5277;
+}
+
+/* CHALLENGE CARDS */
+.rh-card-grid {
+  display: grid;
+  gap: 22px;
+}
+
+.rh-card-grid.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.rh-challenge-card {
+  position: relative;
+  min-height: 210px;
+  padding: 30px;
+  border-radius: 8px;
+  background: #e6e6ee;
+  border: 1px solid rgba(16, 26, 61, 0.18);
+  box-shadow:
+    9px 9px 18px #c4c4cc,
+    -9px -9px 18px #ffffff;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.rh-challenge-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  border-radius: 8px 0 0 8px;
+  background: #5d6df6;
+}
+
+.rh-challenge-card.healthcare::before {
+  background: #28ce8b;
+}
+
+.rh-challenge-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(93, 109, 246, 0.34);
+  box-shadow:
+    13px 13px 26px #bfc0c8,
+    -13px -13px 26px #ffffff;
+}
+
+.rh-icon {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 18px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  background: #e6e6ee;
+  color: #5d6df6;
+  border: 1px solid rgba(16, 26, 61, 0.14);
+  box-shadow:
+    5px 5px 10px #c9c9d1,
+    -5px -5px 10px #ffffff;
+  font-size: 22px;
+  transition: transform 0.25s ease;
+}
+
+.rh-challenge-card.healthcare .rh-icon {
+  color: #28ce8b;
+}
+
+.rh-challenge-card:hover .rh-icon {
+  transform: scale(1.08);
+}
+
+.rh-challenge-card h3,
+.rh-benefit-card h3 {
+  margin: 0 0 10px;
+  color: #101a3d;
+  font-weight: 850;
+  line-height: 1.3;
+}
+
+.rh-challenge-card p,
+.rh-benefit-card p {
+  margin: 0;
+  color: #4b5277;
+}
+
+/* TEXT PANEL */
+.rh-text-panel {
+  margin-top: 28px;
+  padding: 36px;
+  border-radius: 8px;
+  background: #e6e6ee;
+  border: 1px solid rgba(16, 26, 61, 0.18);
+  border-left: 6px solid #5d6df6;
+  box-shadow:
+    12px 12px 26px #c4c4cc,
+    -12px -12px 26px #ffffff;
+}
+
+.rh-text-panel.healthcare {
+  border-left-color: #28ce8b;
+}
+
+.rh-text-panel h3 {
+  margin: 0 0 14px;
+  color: #20324f;
+  font-weight: 850;
+}
+
+.rh-text-panel p {
+  margin: 0 0 16px;
+  color: #4b5277;
+}
+
+.rh-text-panel p:last-child {
+  margin-bottom: 0;
+}
+
+/* BENEFITS */
+.rh-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.rh-benefit-card {
+  min-height: 210px;
+  padding: 24px 20px;
+  border-radius: 8px;
+  background: #e6e6ee;
+  border: 1px solid rgba(16, 26, 61, 0.16);
+  box-shadow:
+    inset 5px 5px 12px #d0d2dc,
+    inset -5px -5px 12px #ffffff;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.rh-benefit-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(93, 109, 246, 0.34);
+  box-shadow:
+    10px 10px 22px #bfc0c8,
+    -10px -10px 22px #ffffff;
+}
+
+.rh-benefit-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 16px;
+  display: grid;
+  place-items: center;
+  color: #5d6df6;
+  font-size: 22px;
+}
+
+.rh-benefit-card.healthcare .rh-benefit-icon {
+  color: #28ce8b;
+}
+
+/* CTA */
+.rh-cta {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 46px;
+  text-align: center;
+  border-radius: 8px;
+  background: #e6e6ee;
+  border: 1px solid rgba(16, 26, 61, 0.18);
+  box-shadow:
+    12px 12px 26px #c4c4cc,
+    -12px -12px 26px #ffffff;
+}
+
+.rh-cta h2 {
+  margin: 0 0 16px;
+  color: #20324f;
+  font-weight: 850;
+}
+
+.rh-cta p {
+  max-width: 900px;
+  margin: 0 auto 26px;
+  color: #4b5277;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .rh-hero,
+  .rh-card-grid.three {
+    grid-template-columns: 1fr;
+  }
+
+  .rh-benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .rh-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .retail-health-page {
+    padding: 36px 18px;
+  }
+
+  .retail-health-page h1 {
+    font-size: 32px;
+  }
+
+  .retail-health-page h2 {
+    font-size: 26px;
+  }
+
+  .retail-health-page h3 {
+    font-size: 22px;
+  }
+
+  .retail-health-page p {
+    font-size: 16px;
+  }
+
+  .rh-hero-text,
+  .rh-text-panel,
+  .rh-cta {
+    padding: 28px;
+  }
+
+  .rh-actions {
+    flex-direction: column;
+  }
+
+  .rh-btn {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .rh-stats,
+  .rh-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rh-challenge-card,
+  .rh-benefit-card {
+    min-height: auto;
+  }
+}

@@ -1,0 +1,370 @@
+:root {
+  --neu-bg: #E0E1E9;
+  --neu-surface: #E0E1E9;
+  --neu-light: #FFFFFF;
+  --neu-dark: #A3B1C6;
+  --neu-text-primary: #2D3748;
+  --neu-text-secondary: #718096;
+  --neu-text-muted: #A0AEC0;
+  --neu-primary: #6C63FF;
+  --neu-secondary: #5B6EE6;
+  --neu-accent: #6C63FF;
+  --neu-success: #2DBD91;
+  --neu-warning: #F5B35D;
+  --neu-danger: #F15B5B;
+  --shadow-raised: 8px 8px 16px #A3B1C6, -8px -8px 16px #FFFFFF;
+  --shadow-pressed: inset 4px 4px 8px #A3B1C6, inset -4px -4px 8px #FFFFFF;
+  --shadow-soft: 4px 4px 8px #A3B1C6, -4px -4px 8px #FFFFFF;
+  --shadow-large: 12px 12px 24px #A3B1C6, -12px -12px 24px #FFFFFF;
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+}
+
+.pageWrapper {
+  min-height: 100vh;
+  padding: 3rem 1.25rem;
+  background: linear-gradient(135deg, var(--neu-bg) 0%, #f8fafc 50%, var(--neu-bg) 100%);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  position: relative;
+}
+
+.pageWrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(108, 99, 255, 0.03) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(45, 189, 145, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.pageContent {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.pageHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.eyebrow {
+  display: inline-flex;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: var(--neu-surface);
+  color: var(--neu-primary);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  box-shadow: var(--shadow-pressed);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.pageHeader h1 {
+  margin: 0.85rem auto;
+  font-size: clamp(32px, 4vw, 40px);
+  color: var(--neu-text-primary);
+  line-height: 1.05;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.7s ease-out;
+}
+
+.subtitle {
+  color: var(--neu-text-secondary);
+  max-width: 680px;
+  margin: 0.75rem auto 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.panelGrid {
+  display: grid;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.panelGrid--single {
+  grid-template-columns: 1fr;
+}
+
+.formCard {
+  border-radius: var(--radius-lg);
+  background: var(--neu-surface);
+  box-shadow: var(--shadow-raised);
+  border: none;
+  transition: all 0.3s ease;
+  padding: 2rem;
+  position: relative;
+  overflow: visible;
+  background: linear-gradient(135deg, var(--neu-surface), rgba(255, 255, 255, 0.3));
+}
+
+.formCard:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-large);
+}
+
+.formHeading h2 {
+  margin: 0;
+  font-size: clamp(24px, 3vw, 32px);
+  color: var(--neu-text-primary);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.mandatoryMessage {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: var(--radius-md);
+  background: rgba(108, 99, 255, 0.08);
+  box-shadow: var(--shadow-soft);
+  color: #243b7f;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-left: 4px solid #5b6ee6;
+  animation: slideIn 0.5s ease-out;
+}
+
+.messageIcon {
+  color: #5b6ee6;
+  flex-shrink: 0;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fieldLabel {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+  animation-delay: calc(var(--index, 0) * 0.1s);
+  position: relative;
+  z-index: 1;
+}
+
+.fieldTitle {
+  font-weight: 600;
+  color: var(--neu-text-primary);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.fieldIcon {
+  position: absolute;
+  left: 1rem;
+  z-index: 2;
+  font-size: 1rem;
+  pointer-events: none;
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neu-primary);
+}
+
+.fieldIcon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.neumorphic-input,
+.neumorphic-textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: var(--neu-text-primary);
+  background: var(--neu-surface);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.15rem;
+  padding-left: 3rem;
+  box-shadow: var(--shadow-pressed);
+  transition: all 0.25s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.neumorphic-input:focus,
+.neumorphic-textarea:focus {
+  box-shadow: var(--shadow-soft);
+  outline: 2px solid var(--neu-primary);
+  outline-offset: 2px;
+  background: linear-gradient(135deg, var(--neu-surface), rgba(255, 255, 255, 0.5));
+}
+
+.neumorphic-input::placeholder,
+.neumorphic-textarea::placeholder {
+  color: var(--neu-text-muted);
+  font-weight: 400;
+}
+
+.neumorphic-textarea {
+  min-height: 160px;
+  resize: vertical;
+  padding-left: 3rem;
+}
+
+.checkboxField {
+  position: relative;
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+  margin-top: 1.5rem;
+  color: var(--neu-text-primary);
+  font-size: 0.95rem;
+  cursor: pointer;
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.checkboxField:hover {
+  background: rgba(108, 99, 255, 0.03);
+}
+
+.checkboxField input[type="checkbox"] {
+  appearance: none;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-top: 0.1rem;
+  border-radius: 6px;
+  background: var(--neu-surface);
+  box-shadow: var(--shadow-pressed);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.checkboxField input[type="checkbox"]:checked {
+  background: linear-gradient(135deg, var(--neu-primary), var(--neu-secondary));
+  box-shadow: var(--shadow-soft);
+}
+
+.checkboxField input[type="checkbox"]:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.checkboxField input[type="checkbox"]:hover {
+  box-shadow: var(--shadow-soft);
+}
+
+.requiredStar {
+  color: var(--neu-danger);
+}
+
+.fieldError {
+  color: var(--neu-danger);
+  font-size: 0.9rem;
+  margin-top: 0.45rem;
+}
+
+.neumorphic-button {
+  width: 100%;
+  margin-top: 1.8rem;
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  background: var(--neu-surface);
+  color: var(--neu-primary);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: var(--shadow-raised);
+  transition: all 0.3s ease;
+}
+
+.neumorphic-button:hover {
+  box-shadow: var(--shadow-large);
+  transform: translateY(-2px);
+  background: var(--neu-surface);
+}
+
+.neumorphic-button:active {
+  box-shadow: var(--shadow-pressed);
+  transform: translateY(1px);
+}
+
+.neumorphic-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .pageWrapper {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .formCard {
+    padding: 1.5rem;
+  }
+
+  .neumorphic-input,
+  .neumorphic-textarea {
+    padding: 0.9rem 1rem;
+    padding-left: 2.75rem;
+    font-size: 0.95rem;
+  }
+
+  .fieldIcon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .fieldIcon {
+    left: 0.9rem;
+  }
+
+  .neumorphic-button {
+    padding: 0.9rem 1rem;
+    font-size: 0.95rem;
+  }
+}
+

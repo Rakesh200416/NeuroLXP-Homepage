@@ -1,0 +1,648 @@
+.progress-tracking-page {
+  --bg: #e6e7ee;
+  --surface: #e6e7ee;
+  --surface-soft: #f2f6fa;
+  --surface-soft-2: #f8fbfd;
+  --text: #5a6572;
+  --text-light: #7e8896;
+  --heading: #213247;
+  --primary: #0f766e;
+  --secondary: #2563eb;
+  --accent: #d97706;
+  --support: #7c3aed;
+  --danger: #dc2626;
+  --primary-soft: rgba(15, 118, 110, 0.08);
+  --secondary-soft: rgba(37, 99, 235, 0.08);
+  --accent-soft: rgba(217, 119, 6, 0.08);
+  --shadow-light: #ffffff;
+  --shadow-dark: #cfd6de;
+  --radius-2xl: 34px;
+  --radius-xl: 28px;
+  --radius-lg: 22px;
+  --radius-md: 16px;
+  --radius-sm: 12px;
+  --border-soft: rgba(255, 255, 255, 0.62);
+}
+
+.progress-tracking-page * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.progress-tracking-page {
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 34px 0 70px;
+  color: var(--text);
+}
+
+.progress-tracking-page .heroSection,
+.progress-tracking-page .challengesSection,
+.progress-tracking-page .statsSection,
+.progress-tracking-page .whySection,
+.progress-tracking-page .featuresSection,
+.progress-tracking-page .highlightSection {
+  margin-bottom: 44px;
+}
+
+.progress-tracking-page .heroGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: stretch;
+  box-shadow: inset 2px 2px 5px #b8b9be,inset -3px -3px 7px #fff !important;
+  padding: 25px;
+}
+
+.progress-tracking-page .heroContent {
+  position: relative;
+  padding: 34px 34px 34px 42px;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+}
+
+.progress-tracking-page .heroContent::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  bottom: 24px;
+  left: 18px;
+  width: 6px;
+  border-radius: 999px;
+}
+
+.progress-tracking-page .heroTitle {
+  margin: 0 0 12px;
+  font-size: 40px;
+  line-height: 1.02;
+  color: var(--heading);
+}
+
+.progress-tracking-page .heroSubtitle {
+  margin: 0 0 18px;
+  font-size: 32px;
+  line-height: 1.42;
+  color: #3f4d5e;
+  font-weight: 700;
+  max-width: 760px;
+}
+
+.progress-tracking-page .heroText {
+  margin: 0 0 14px;
+  max-width: 760px;
+  font-size: 18px;
+  line-height: 1.86;
+  color: var(--text);
+}
+
+.progress-tracking-page .heroVisualCard {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  padding: 20px;
+  border-radius: var(--radius-2xl);
+  box-shadow: 6px 6px 12px rgba(184, 185, 190, 0.6), -6px -6px 12px rgba(255, 255, 255, 0.78) !important;
+}
+
+.progress-tracking-page .imagePlaceholder,
+.progress-tracking-page .imagePlaceholderAlt {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 22px;
+  background: var(--surface-soft-2);
+  border: 1px solid var(--border-soft);
+  box-shadow: inset 7px 7px 16px rgba(207, 214, 222, 0.74), inset -7px -7px 16px rgba(255, 255, 255, 0.96);
+  overflow: hidden;
+}
+
+.progress-tracking-page .imagePlaceholder {
+  min-height: 160px;
+  max-height: 264px;
+}
+
+.progress-tracking-page .imagePlaceholderAlt {
+  min-height: 180px;
+  max-height: 444px;
+}
+
+.progress-tracking-page .heroImage {
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+}
+
+.progress-tracking-page .imageLabel {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  font-weight: 700;
+}
+
+.progress-tracking-page .floatingStats {
+  display: grid;
+  gap: 12px;
+}
+
+.progress-tracking-page .statPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff !important;
+  color: var(--heading);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.progress-tracking-page .statPill:nth-child(1) { 
+  color: var(--secondary); 
+}
+
+.progress-tracking-page .statPill:nth-child(2) { 
+  color: var(--primary); 
+}
+
+.progress-tracking-page .statPill:nth-child(3) { 
+  color: var(--accent); 
+}
+
+.progress-tracking-page .statPill:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 6px 6px 14px rgba(207, 214, 222, 0.65), -6px -6px 14px rgba(255, 255, 255, 0.78);
+}
+
+.progress-tracking-page .sectionHeader {
+  margin-bottom: 28px;
+}
+
+.progress-tracking-page .centerHeader {
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+}
+
+.progress-tracking-page .sectionTitle {
+  margin: 0 0 12px;
+  font-size: 32px;
+  line-height: 1.2;
+  color: var(--heading);
+}
+
+.progress-tracking-page .sectionDesc {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text);
+  max-width: 680px;
+}
+
+.progress-tracking-page .challengeCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.progress-tracking-page .challengeCard {
+  padding: 26px;
+  border-radius: var(--radius-xl);
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff !important;
+  border-top: 4px solid transparent;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.progress-tracking-page .challengeCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 10px 10px 22px #b8b9be, -10px -10px 22px #fff !important;
+}
+
+.progress-tracking-page .challengeCard:nth-child(1) { 
+  border-top-color: var(--danger); 
+}
+
+.progress-tracking-page .challengeCard:nth-child(2) { 
+  border-top-color: var(--accent); 
+}
+
+.progress-tracking-page .challengeCard:nth-child(3) { 
+  border-top-color: var(--support); 
+}
+
+.progress-tracking-page .challengeCard:nth-child(1) .iconWrap { 
+  color: var(--danger); 
+}
+
+.progress-tracking-page .challengeCard:nth-child(2) .iconWrap { 
+  color: var(--accent); 
+}
+
+.progress-tracking-page .challengeCard:nth-child(3) .iconWrap { 
+  color: var(--support); 
+}
+
+.progress-tracking-page .challengeCard p {
+  margin: 0;
+  line-height: 1.82;
+  color: var(--text);
+  font-size: 18px;
+}
+
+.progress-tracking-page .statsSection {
+  padding: 36px;
+  border-radius: var(--radius-2xl);
+  background: var(--surface);
+  box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff !important;
+}
+
+.progress-tracking-page .statsGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.progress-tracking-page .statsTitle {
+  margin: 0 0 16px;
+  font-size: 32px;
+  line-height: 1.2;
+  color: var(--heading);
+}
+
+.progress-tracking-page .statsDesc {
+  margin: 0 0 12px;
+  font-size: 18px;
+  line-height: 1.84;
+  color: var(--text);
+}
+
+.progress-tracking-page .statsCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.progress-tracking-page .statCard {
+  padding: 22px 18px;
+  border-radius: var(--radius-lg);
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff !important;
+  text-align: center;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.progress-tracking-page .statCard:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 10px 10px 22px #b8b9be, -10px -10px 22px #fff !important;
+}
+
+.progress-tracking-page .statValue {
+  font-size: 2.4rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--primary);
+  margin-bottom: 2px;
+}
+
+.progress-tracking-page .statCard:nth-child(2) .statValue { 
+  color: var(--secondary); 
+}
+
+.progress-tracking-page .statCard:nth-child(3) .statValue { 
+  color: var(--accent); 
+}
+
+.progress-tracking-page .statCard:nth-child(4) .statValue { 
+  color: var(--support); 
+}
+
+.progress-tracking-page .statSuffix {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-light);
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.progress-tracking-page .statLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--heading);
+  line-height: 1.4;
+  width: 176px;
+}
+
+.progress-tracking-page .cardsSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  align-items: start;
+}
+
+.progress-tracking-page .contentCard {
+  position: relative;
+  padding: 28px;
+  border-radius: var(--radius-xl);
+  background: var(--surface);
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff !important;
+  height: 100%;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.progress-tracking-page .contentCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 10px 10px 22px #b8b9be, -10px -10px 22px #fff !important;
+}
+
+.progress-tracking-page .contentCard:nth-child(1) { 
+  border-top: 4px solid var(--primary); 
+}
+
+.progress-tracking-page .contentCard:nth-child(2) { 
+  border-top: 4px solid var(--secondary); 
+}
+
+.progress-tracking-page .contentCard:nth-child(3) { 
+  border-top: 4px solid var(--accent); 
+}
+
+.progress-tracking-page .contentCard:nth-child(4) { 
+  border-top: 4px solid var(--support); 
+}
+
+.progress-tracking-page .contentCard:nth-child(1) .iconWrap { 
+  color: var(--primary); 
+}
+
+.progress-tracking-page .contentCard:nth-child(2) .iconWrap { 
+  color: var(--secondary); 
+}
+
+.progress-tracking-page .contentCard:nth-child(3) .iconWrap { 
+  color: var(--accent); 
+}
+
+.progress-tracking-page .contentCard:nth-child(4) .iconWrap { 
+  color: var(--support); 
+}
+
+.progress-tracking-page .contentCard p,
+.progress-tracking-page .highlightTextCard p {
+  margin: 0 0 14px;
+  line-height: 1.84;
+  color: var(--text);
+  font-size: 18px;
+}
+
+.progress-tracking-page .cardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.progress-tracking-page .cardHeader h3 {
+  margin: 0;
+  color: var(--heading);
+  font-size: 24px;
+  line-height: 1.34;
+}
+
+.progress-tracking-page .iconWrap {
+  width: 54px;
+  height: 54px;
+  min-width: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  box-shadow: inset 4px 4px 10px rgba(207, 214, 222, 0.72), inset -4px -4px 10px rgba(255, 255, 255, 0.96);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  font-size: 27px;
+}
+
+.progress-tracking-page .iconWrap:hover {
+  transform: translateY(-3px) rotate(-4deg);
+}
+
+.progress-tracking-page .featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.progress-tracking-page .featureCard {
+  padding: 26px;
+  border-radius: var(--radius-xl);
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff !important;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.progress-tracking-page .featureCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 18px rgba(207, 214, 222, 0.6), -8px -8px 18px rgba(255, 255, 255, 0.75);
+}
+
+.progress-tracking-page .featureIconWrap {
+  width: 52px;
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  box-shadow: inset 4px 4px 10px rgba(207, 214, 222, 0.72), inset -4px -4px 10px rgba(255, 255, 255, 0.96);
+  font-size: 28px;
+}
+
+.progress-tracking-page .featureCard:nth-child(1) .featureIconWrap { 
+  color: var(--primary); 
+}
+
+.progress-tracking-page .featureCard:nth-child(2) .featureIconWrap { 
+  color: var(--secondary); 
+}
+
+.progress-tracking-page .featureCard:nth-child(3) .featureIconWrap { 
+  color: var(--accent); 
+}
+
+.progress-tracking-page .featureCard:nth-child(4) .featureIconWrap { 
+  color: var(--support); 
+}
+
+.progress-tracking-page .featureCard:nth-child(5) .featureIconWrap { 
+  color: var(--danger); 
+}
+
+.progress-tracking-page .featureCard:nth-child(6) .featureIconWrap { 
+  color: var(--primary); 
+}
+
+.progress-tracking-page .featureCard h4 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: var(--heading);
+  font-weight: 700;
+}
+
+.progress-tracking-page .featureCard p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.progress-tracking-page .highlightGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.progress-tracking-page .highlightTextCard {
+  padding: 30px;
+}
+
+.progress-tracking-page .secondaryVisualCard {
+  padding: 18px;
+  border-radius: var(--radius-2xl);
+  background: var(--surface);
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff !important;
+  height: 100%;
+}
+
+.progress-tracking-page .miniFeatures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.progress-tracking-page .miniFeature {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 16px;
+  border-radius: 999px;
+  box-shadow: 8px 8px 18px rgba(207, 214, 222, 0.84), -8px -8px 18px rgba(255, 255, 255, 1);
+  color: var(--heading);
+  font-size: 0.93rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.progress-tracking-page .miniFeature:nth-child(1) { 
+  color: var(--primary); 
+}
+
+.progress-tracking-page .miniFeature:nth-child(2) { 
+  color: var(--accent); 
+}
+
+.progress-tracking-page .miniFeature:nth-child(3) { 
+  color: var(--secondary); 
+}
+
+.progress-tracking-page .miniFeature:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 6px 6px 14px rgba(207, 214, 222, 0.62), -6px -6px 14px rgba(255, 255, 255, 0.78);
+}
+
+@media (max-width: 1100px) {
+  .progress-tracking-page .heroGrid,
+  .progress-tracking-page .statsGrid,
+  .progress-tracking-page .highlightGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-tracking-page .challengeCards,
+  .progress-tracking-page .featuresGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .progress-tracking-page .cardsSection {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-tracking-page .contentCard:nth-child(2),
+  .progress-tracking-page .contentCard:nth-child(4) {
+    margin-top: 0;
+  }
+
+  .progress-tracking-page .statsCards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .progress-tracking-page .secondaryVisualCard .imagePlaceholderAlt {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .progress-tracking-page {
+    width: min(100%, calc(100% - 20px));
+    padding: 20px 0 44px;
+  }
+
+  .progress-tracking-page .heroContent{
+    padding: 22px 18px 22px 32px;
+  }
+
+  .progress-tracking-page .heroVisualCard,
+  .progress-tracking-page .contentCard,
+  .progress-tracking-page .challengeCard,
+  .progress-tracking-page .highlightTextCard,
+  .progress-tracking-page .secondaryVisualCard,
+  .progress-tracking-page .statsSection {
+    padding: 20px;
+  }
+
+  .progress-tracking-page .heroTitle {
+    font-size: 2rem;
+  }
+
+  .progress-tracking-page .heroSubtitle {
+    font-size: 1.04rem;
+  }
+
+  .progress-tracking-page .challengeCards,
+  .progress-tracking-page .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .progress-tracking-page .statsCards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .progress-tracking-page .miniFeatures {
+    flex-direction: column;
+  }
+
+  .progress-tracking-page .miniFeature {
+    width: 100%;
+  }
+
+  .progress-tracking-page .iconWrap {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+  }
+
+  .progress-tracking-page .imagePlaceholder {
+    min-height: 140px;
+    max-height: 170px;
+  }
+}

@@ -1,0 +1,365 @@
+.access-page {
+  background-color: #e6e7ee;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  padding: 80px 6%;
+  color: #1e293b;
+  overflow-x: hidden;
+}
+
+/* TYPOGRAPHY */
+
+.access-page h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.access-page h2 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.access-page h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.access-page p {
+  font-size: 18px;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.access-page span {
+  font-size: 15px;
+}
+
+/* HERO */
+
+.access-hero {
+  display: grid;
+  grid-template-columns: 1fr 0.6fr;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 80px;
+  padding: 40px;
+  border-radius: 30px;
+  background: #e6e7ee;
+  box-shadow: 12px 12px 24px #c3c6d1, -12px -12px 24px #ffffff;
+  border-left: 6px solid #30c98b;
+}
+
+.access-badge {
+  background: linear-gradient(135deg, #30c98b, #2563eb);
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 999px;
+  display: inline-block;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.access-hero-icon {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: #e6e7ee;
+  box-shadow: 14px 14px 30px #c3c6d1, -14px -14px 30px #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+
+.access-hero-icon svg {
+  font-size: 70px;
+  color: #30c98b;
+}
+
+/* SECTION */
+
+.access-section,
+.access-formats {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.access-section {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* FEATURE GRID */
+
+.access-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.access-feature-grid div {
+  min-height: 150px;
+  padding: 24px;
+  border-radius: 22px;
+  background: #e6e7ee;
+  box-shadow: 6px 6px 14px #c3c6d1, -6px -6px 14px #ffffff;
+  border: 1px solid #cbd1dc;
+  transition: 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.access-feature-grid div:hover {
+  transform: translateY(-6px);
+  box-shadow: 10px 10px 20px #c3c6d1, -10px -10px 20px #ffffff;
+}
+
+.access-feature-grid svg {
+  font-size: 28px;
+  margin-bottom: 12px;
+  color: #30c98b;
+}
+
+/* FORMATS */
+
+.access-format-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+.access-format-grid div {
+  min-height: 110px;
+  padding: 24px;
+  border-radius: 22px;
+  background: #e6e7ee;
+  box-shadow: 8px 8px 16px #c3c6d1, -8px -8px 16px #ffffff;
+  border: 1px solid #cbd1dc;
+  border-bottom: 4px solid transparent;
+  text-align: center;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.access-format-grid div:hover {
+  transform: translateY(-6px);
+  border-bottom-color: #2563eb;
+}
+
+.access-format-grid svg {
+  font-size: 30px;
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+/* SPLIT SECTION - FIXED OVERLAP */
+
+.access-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 80px;
+  align-items: stretch;
+  clear: both;
+}
+
+.access-card {
+  min-height: 360px;
+  padding: 38px;
+  border-radius: 28px;
+  background: #e6e7ee;
+  box-shadow: 10px 10px 22px #c3c6d1, -10px -10px 22px #ffffff;
+  border: 1px solid #cbd1dc;
+  border-top: 5px solid #7c3aed;
+}
+
+.access-card > svg {
+  font-size: 34px;
+  margin-bottom: 18px;
+  color: #7c3aed;
+}
+
+.access-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+}
+
+.access-card li {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+  align-items: center;
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: #e6e7ee;
+  box-shadow: inset 4px 4px 9px #c3c6d1, inset -4px -4px 9px #ffffff;
+}
+
+.access-card li svg {
+  color: #30c98b;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.access-visual {
+  min-height: 360px;
+  border-radius: 28px;
+  background: #e6e7ee;
+  box-shadow: inset 9px 9px 18px #c3c6d1, inset -9px -9px 18px #ffffff;
+  border: 1px solid #cbd1dc;
+  border-top: 5px solid #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #172554;
+  padding: 40px;
+  text-align: center;
+}
+
+.access-visual svg {
+  font-size: 76px;
+  margin-bottom: 18px;
+  color: #2563eb;
+}
+
+.access-visual span {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* INSTITUTION */
+
+.access-institution-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.access-institution-grid div {
+  min-height: 130px;
+  padding: 22px;
+  border-radius: 20px;
+  background: #e6e7ee;
+  box-shadow: inset 5px 5px 10px #c3c6d1, inset -5px -5px 10px #ffffff;
+  border: 1px solid #cbd1dc;
+  text-align: center;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.access-institution-grid div:hover {
+  transform: translateY(-5px);
+}
+
+.access-institution-grid svg {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #7c3aed;
+}
+
+/* FINAL - ICON UPDATED STYLE */
+
+.access-final {
+  text-align: center;
+  margin-top: 80px;
+  padding: 44px;
+  border-radius: 28px;
+  background: #e6e7ee;
+  box-shadow: 12px 12px 24px #c3c6d1, -12px -12px 24px #ffffff;
+  border: 1px solid #cbd1dc;
+  border-top: 6px solid #30c98b;
+}
+
+.access-final svg {
+  width: 70px;
+  height: 70px;
+  padding: 18px;
+  border-radius: 22px;
+  background: #e6e7ee;
+  color: #30c98b;
+  box-shadow: 7px 7px 14px #c3c6d1, -7px -7px 14px #ffffff;
+  border: 1px solid #cbd1dc;
+  margin-bottom: 20px;
+}
+
+.access-final p {
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .access-feature-grid,
+  .access-format-grid,
+  .access-institution-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .access-hero,
+  .access-split {
+    grid-template-columns: 1fr;
+  }
+
+  .access-hero {
+    text-align: center;
+  }
+
+  .access-badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .access-page {
+    padding: 56px 5%;
+  }
+
+  .access-feature-grid,
+  .access-format-grid,
+  .access-institution-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .access-page h1 {
+    font-size: 30px;
+  }
+
+  .access-page h2 {
+    font-size: 24px;
+  }
+
+  .access-page h3 {
+    font-size: 22px;
+  }
+
+  .access-page p {
+    font-size: 17px;
+  }
+
+  .access-hero,
+  .access-card,
+  .access-final {
+    padding: 28px;
+  }
+}

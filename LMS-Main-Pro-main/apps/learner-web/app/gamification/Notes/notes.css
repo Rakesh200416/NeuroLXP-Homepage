@@ -1,0 +1,71 @@
+
+.activityCard:nth-child(1) .activityTitle {
+  font-family: "Poppins"; /* Poppins (SemiBold) */
+  font-weight: 600;
+}
+
+
+.activityCard:nth-child(1) .activitiesGrid {
+  font-family: "Nunito"; /* Nunito (Regular) */
+  font-weight: 400;
+}
+
+.activityCard:nth-child(2) .activityTitle {
+  font-family: "Inter"; /* Inter Bold */
+  font-weight: 600;
+}
+
+.activityCard:nth-child(2) .activitiesGrid {
+  font-family: "Inter"; /* Inter Regular */
+  font-weight: 400;
+}
+
+.activityCard:nth-child(3) .activityTitle {
+  font-family: "Poppins"; /* Poppins */
+  font-weight: 600;
+}
+
+.activityCard:nth-child(3) .activitiesGrid {
+  font-family: "Open Sans"; /* Open Sans */
+  font-weight: 400;
+}
+
+.activityCard:nth-child(4) .activityTitle {
+  font-family: "Montserrat"; /* Montserrat */
+  font-weight: 600;
+}
+
+.activityCard:nth-child(4) .activitiesGrid {
+  font-family: "Lora"; /* Lora */
+  font-weight: 400;
+}
+
+.activityCard:nth-child(5) .activityTitle {
+  font-family: "Roboto Slab"; /* Roboto Slab */
+  font-weight: 600;
+}
+
+.activityCard:nth-child(5) .activitiesGrid {
+  font-family: "Roboto"; /* Roboto */
+  font-weight: 400;
+}
+
+.activityCard:nth-child(6) .activityTitle {
+  font-family: "Nunito"; /* Nunito */
+  font-weight: 600;
+}
+
+.activityCard:nth-child(6) .activitiesGrid {
+  font-family: "Inter"; /* Inter */
+  font-weight: 400;
+}
+
+.activityCard:nth-child(7) .activityTitle {
+  font-family: "Montserrat"; /* Montserrat */
+  font-weight: 600;
+}
+
+.activityCard:nth-child(7) .activitiesGrid {
+  font-family: "Nunito"; /* Nunito */
+  font-weight: 400;
+}

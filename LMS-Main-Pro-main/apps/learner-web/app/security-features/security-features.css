@@ -1,0 +1,237 @@
+.security-page {
+  background-color: #e6e7ee;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  padding: 80px 6%;
+}
+
+/* Typography */
+
+.security-page h1 { font-size: 40px; }
+.security-page h2 { font-size: 32px; }
+.security-page h3 { font-size: 24px; }
+.security-page p { font-size: 18px; color: #475569; }
+.security-page span { font-size: 15px; }
+
+/* Base Card */
+
+.security-card {
+  border-radius: 26px;
+  background: #e6e7ee;
+  box-shadow: 8px 8px 16px #c3c6d1, -8px -8px 16px #ffffff;
+  border: 1px solid #c9ceda;
+  padding: 36px;
+  transition: 0.3s;
+}
+
+.security-card:hover {
+  transform: translateY(-6px);
+}
+
+/* HERO */
+
+.security-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  margin-bottom: 60px;
+  border-top: 5px solid #2563eb;
+}
+
+.security-badge {
+  background: #30354f;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 999px;
+}
+
+.security-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.security-shield {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background: #e6e7ee;
+  box-shadow: 10px 10px 20px #c3c6d1, -10px -10px 20px #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.security-shield svg {
+  font-size: 40px;
+  color: #2563eb;
+}
+
+/* SECTION */
+
+.security-section {
+  max-width: 1000px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+/* GRID ITEMS */
+
+.security-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.security-item {
+  padding: 20px;
+  border-radius: 18px;
+  background: #e6e7ee;
+  box-shadow: inset 5px 5px 10px #c3c6d1, inset -5px -5px 10px #ffffff;
+  border: 1px solid #d4d8e2;
+}
+
+.security-item svg {
+  font-size: 24px;
+  color: #2563eb;
+}
+
+/* SPLIT */
+
+.security-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+/* ROLE */
+
+.security-card ul {
+  margin-top: 20px;
+}
+
+.security-card li {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.security-card li svg {
+  color: #2563eb;
+}
+
+/* DIAGRAM */
+
+.security-diagram {
+  display: grid;
+  gap: 15px;
+  align-content: center;
+}
+
+.security-diagram div {
+  padding: 16px;
+  border-radius: 18px;
+  background: #e6e7ee;
+  box-shadow: 6px 6px 12px #c3c6d1, -6px -6px 12px #ffffff;
+  text-align: center;
+}
+
+/* AUTH */
+
+.security-auth-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.security-auth-grid div {
+  padding: 20px;
+  border-radius: 18px;
+  background: #e6e7ee;
+  box-shadow: inset 5px 5px 10px #c3c6d1, inset -5px -5px 10px #ffffff;
+}
+
+.security-auth-grid svg {
+  color: #30c98b;
+}
+
+/* PROTECTION */
+
+.security-protect-box {
+  padding: 30px;
+  border-radius: 24px;
+  background: #e6e7ee;
+  box-shadow: 8px 8px 16px #c3c6d1, -8px -8px 16px #ffffff;
+  border-top: 4px solid #2563eb;
+}
+
+.security-protect-box.alt {
+  border-top-color: #30c98b;
+}
+
+/* MONITOR */
+
+.security-monitor {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #e6e7ee;
+  box-shadow: inset 5px 5px 10px #c3c6d1, inset -5px -5px 10px #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* SCALE */
+
+.security-scale-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.security-scale-grid div {
+  padding: 20px;
+  border-radius: 18px;
+  background: #e6e7ee;
+  box-shadow: inset 5px 5px 10px #c3c6d1, inset -5px -5px 10px #ffffff;
+  text-align: center;
+}
+
+.security-scale-grid svg {
+  font-size: 24px;
+  color: #7c3aed;
+}
+
+/* FINAL */
+
+.security-final {
+  text-align: center;
+  margin-top: 60px;
+  border-top: 5px solid #2563eb;
+}
+
+.security-final svg {
+  font-size: 40px;
+  color: #2563eb;
+  margin-bottom: 20px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .security-hero,
+  .security-split {
+    grid-template-columns: 1fr;
+  }
+
+  .security-grid,
+  .security-auth-grid,
+  .security-scale-grid {
+    grid-template-columns: 1fr;
+  }
+}

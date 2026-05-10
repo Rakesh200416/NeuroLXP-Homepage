@@ -1,0 +1,455 @@
+.bootcamp-page {
+  min-height: 100vh;
+  padding: 110px 7% 64px;
+  background: #e6e7ee;
+  color: #31344b;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+/* Fixed heading and paragraph sizes */
+.bootcamp-page h1 {
+  margin: 0 0 18px;
+  font-size: 40px;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.bootcamp-page h2 {
+  margin: 0 0 16px;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.bootcamp-page h3 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  color: #31344b;
+}
+
+.bootcamp-page h4 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #31344b;
+}
+
+.bootcamp-page p {
+  margin: 0 0 18px;
+  color: #5f6275;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+/* Shared neumorphic cards */
+.bootcamp-hero,
+.bootcamp-terminal,
+.bootcamp-stats,
+.bootcamp-timeline article,
+.bootcamp-skill-panel,
+.bootcamp-card,
+.bootcamp-bottom,
+.bootcamp-image-placeholder {
+  background: #e6e7ee;
+  border: 1px solid #d1d3dc;
+  box-shadow: 9px 9px 18px #c8cad3, -9px -9px 18px #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* General hover effect */
+.bootcamp-hero:hover,
+.bootcamp-terminal:hover,
+.bootcamp-stats:hover,
+.bootcamp-timeline article:hover,
+.bootcamp-skill-panel:hover,
+.bootcamp-card:hover,
+.bootcamp-bottom:hover,
+.bootcamp-image-placeholder:hover {
+  transform: translateY(-6px);
+  box-shadow: 14px 14px 26px #c5c7d0, -14px -14px 26px #ffffff;
+}
+
+.bootcamp-hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 44px;
+  align-items: center;
+  padding: 52px;
+  border-radius: 34px;
+  margin-bottom: 34px;
+}
+
+.bootcamp-badge {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: #31344b;
+  color: #ffffff;
+  font-size: 0.76rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.bootcamp-badge:hover {
+  background: #5e72e4;
+  transform: scale(1.05);
+}
+
+.bootcamp-hero-content h2 {
+  color: #5e72e4;
+}
+
+.bootcamp-terminal {
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.terminal-top {
+  display: flex;
+  gap: 9px;
+  padding: 18px 22px;
+  border-bottom: 1px solid #d1d3dc;
+}
+
+.terminal-top span {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  box-shadow: inset 2px 2px 4px #c8cad3, inset -2px -2px 4px #ffffff;
+}
+
+.terminal-top span:nth-child(1) {
+  background: #fb6340;
+}
+
+.terminal-top span:nth-child(2) {
+  background: #ffd166;
+}
+
+.terminal-top span:nth-child(3) {
+  background: #2dce89;
+}
+
+.terminal-body {
+  padding: 28px;
+  min-height: 300px;
+  box-shadow: inset 7px 7px 14px #c8cad3, inset -7px -7px 14px #ffffff;
+}
+
+.terminal-body p,
+.terminal-body strong {
+  display: block;
+  margin-bottom: 18px;
+  color: #31344b;
+  font-family: "Courier New", monospace;
+  font-size: 16px;
+}
+
+.terminal-body strong {
+  color: #2dce89;
+}
+
+.bootcamp-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  padding: 24px;
+  border-radius: 28px;
+  margin-bottom: 64px;
+}
+
+.bootcamp-stats div {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 24px;
+  border-radius: 22px;
+  box-shadow: inset 5px 5px 10px #c8cad3, inset -5px -5px 10px #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.bootcamp-stats div:hover {
+  transform: scale(1.04);
+}
+
+.bootcamp-stats svg {
+  margin-bottom: 12px;
+  color: #5e72e4;
+  font-size: 2rem;
+}
+
+.bootcamp-stats strong {
+  margin-bottom: 5px;
+  font-size: 1.15rem;
+}
+
+.bootcamp-stats span {
+  color: #6b6f86;
+  font-weight: 600;
+}
+
+.bootcamp-content-section {
+  max-width: 980px;
+  margin: 0 auto 54px;
+  text-align: center;
+}
+
+.bootcamp-content-section h2 {
+  font-size: 32px;
+}
+
+.bootcamp-content-section p {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bootcamp-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-bottom: 64px;
+}
+
+.bootcamp-timeline article {
+  position: relative;
+  padding: 28px;
+  border-radius: 26px;
+}
+
+.timeline-icon {
+  width: 58px;
+  height: 58px;
+  margin-bottom: 22px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: #31344b;
+  color: #ffffff;
+  font-size: 1.45rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.bootcamp-timeline article:hover .timeline-icon {
+  transform: rotate(8deg) scale(1.08);
+  background: #5e72e4;
+}
+
+.bootcamp-timeline article:nth-child(2) .timeline-icon {
+  background: #5e72e4;
+}
+
+.bootcamp-timeline article:nth-child(3) .timeline-icon {
+  background: #fb6340;
+}
+
+.bootcamp-timeline article:nth-child(4) .timeline-icon {
+  background: #2dce89;
+}
+
+.bootcamp-skill-panel {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 38px;
+  align-items: center;
+  padding: 42px;
+  border-radius: 32px;
+  margin-bottom: 64px;
+}
+
+.skill-list {
+  display: grid;
+  gap: 16px;
+}
+
+.skill-list span,
+.bootcamp-final-points span {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 16px 18px;
+  border-radius: 18px;
+  color: #45485c;
+  font-weight: 700;
+  box-shadow: inset 4px 4px 8px #c8cad3, inset -4px -4px 8px #ffffff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.skill-list span:hover,
+.bootcamp-final-points span:hover {
+  transform: translateX(8px);
+  color: #5e72e4;
+}
+
+.skill-list svg,
+.bootcamp-final-points svg {
+  color: #5e72e4;
+  font-size: 1.25rem;
+  flex: 0 0 auto;
+}
+
+.bootcamp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-bottom: 64px;
+}
+
+.bootcamp-card {
+  padding: 32px;
+  border-radius: 30px;
+}
+
+.card-icon {
+  margin-bottom: 22px;
+  padding: 15px;
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  background: #31344b;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.bootcamp-card:hover .card-icon {
+  transform: scale(1.1) rotate(-6deg);
+}
+
+.bootcamp-card:nth-child(2) .card-icon {
+  background: #5e72e4;
+}
+
+.bootcamp-card:nth-child(3) .card-icon {
+  background: #2dce89;
+}
+
+.bootcamp-page ul {
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bootcamp-page li {
+  margin: 12px 0;
+  padding-left: 24px;
+  position: relative;
+  color: #54586d;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.bootcamp-page li::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  position: absolute;
+  left: 0;
+  top: 8px;
+  border-radius: 50%;
+  background: #5e72e4;
+}
+
+.bootcamp-bottom {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 42px;
+  align-items: center;
+  padding: 44px;
+  border-radius: 34px;
+}
+
+.bootcamp-image-placeholder {
+  min-height: 330px;
+  border-radius: 30px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #6b6f86;
+  font-weight: 800;
+  box-shadow: inset 7px 7px 14px #c8cad3, inset -7px -7px 14px #ffffff;
+}
+
+.bootcamp-image-placeholder svg {
+  color: #5e72e4;
+  font-size: 4rem;
+  transition: transform 0.3s ease;
+}
+
+.bootcamp-image-placeholder:hover svg {
+  transform: scale(1.12);
+}
+
+.bootcamp-final-points {
+  display: grid;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+@media (max-width: 1100px) {
+  .bootcamp-timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bootcamp-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .bootcamp-page {
+    padding: 96px 18px 36px;
+  }
+
+  .bootcamp-hero,
+  .bootcamp-skill-panel,
+  .bootcamp-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .bootcamp-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .bootcamp-hero,
+  .bootcamp-skill-panel,
+  .bootcamp-card,
+  .bootcamp-bottom {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 620px) {
+  .bootcamp-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .bootcamp-page h1 {
+    font-size: 34px;
+  }
+
+  .bootcamp-page h2 {
+    font-size: 28px;
+  }
+
+  .bootcamp-page h3 {
+    font-size: 22px;
+  }
+
+  .bootcamp-page p {
+    font-size: 16px;
+  }
+}
+.bootcamp-image-placeholder {
+  overflow: hidden;
+}
+
+.bootcamp-image {
+  width: 100%;
+  height: 100%;
+  min-height: 330px;
+  object-fit: cover;
+  border-radius: 30px;
+  display: block;
+}

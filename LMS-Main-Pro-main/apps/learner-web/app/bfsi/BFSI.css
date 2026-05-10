@@ -1,0 +1,659 @@
+.bfsi-page {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #e6e6ee;
+  color: #101a3d;
+  padding: 56px 6%;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+.bfsi-page * {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.bfsi-page h1 {
+  font-size: 40px;
+}
+
+.bfsi-page h2 {
+  font-size: 32px;
+}
+
+.bfsi-page h3 {
+  font-size: 24px;
+}
+
+.bfsi-page h4 {
+  font-size: 20px;
+}
+
+.bfsi-page p {
+  font-size: 18px;
+}
+
+/* HERO */
+.bfsi-hero {
+  max-width: 1180px;
+  margin: 0 auto 18px;
+  padding: 48px 42px 28px;
+  text-align: center;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.bfsi-label {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 18px;
+  margin-bottom: 18px;
+  border-radius: 4px;
+  background: #e6e6ee;
+  color: #30344f;
+  border: 1px solid rgba(16, 26, 61, 0.18);
+  box-shadow: 5px 5px 10px #c9c9d1, -5px -5px 10px #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.bfsi-hero h1 {
+  margin: 0 0 12px;
+  color: #20324f;
+  font-weight: 850;
+}
+
+.bfsi-hero h2 {
+  max-width: 900px;
+  margin: 0 auto 22px;
+  color: #20324f;
+  font-weight: 800;
+}
+
+.bfsi-hero p {
+  max-width: 880px;
+  margin: 0 auto;
+  color: #4b5277;
+}
+
+/* IMAGE FRAME */
+.bfsi-image-row {
+  max-width: 1180px;
+  margin: -8px auto 46px;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.bfsi-image-row.single {
+  max-width: 680px;
+}
+
+.bfsi-image-box,
+.bfsi-image-wide {
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  padding: 8px;
+  border-radius: 6px;
+  background: #e6e6ee;
+  border: 1px solid rgba(16, 26, 61, 0.2);
+  box-shadow:
+    8px 8px 16px #c4c4cc,
+    -8px -8px 16px #ffffff;
+  overflow: hidden;
+}
+
+.bfsi-image-box img,
+.bfsi-image-wide img {
+  width: 100%;
+  height: 100%;
+  min-height: 184px;
+  display: block;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.bfsi-image-box.placeholder,
+.bfsi-image-wide.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: #e6e6ee;
+  border: 2px dashed rgba(16, 26, 61, 0.22);
+  box-shadow: inset 6px 6px 14px #cfd1dc, inset -6px -6px 14px #ffffff;
+}
+
+.bfsi-image-box.placeholder svg,
+.bfsi-image-wide.placeholder svg {
+  font-size: 30px;
+  color: #5d6df6;
+}
+
+.bfsi-image-box.placeholder span,
+.bfsi-image-wide.placeholder span {
+  max-width: 240px;
+  text-align: center;
+  color: #5c638d;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* CONTENT BLOCK */
+.bfsi-content-block {
+  max-width: 1180px;
+  margin: 0 auto 58px;
+  padding: 42px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.75fr);
+  gap: 36px;
+  align-items: stretch;
+  border-radius: 6px;
+  background: #e6e6ee;
+  border: 1px solid rgba(16, 26, 61, 0.2);
+  box-shadow: 14px 14px 30px #c4c4cc, -14px -14px 30px #ffffff;
+}
+
+.bfsi-content-block > div:first-child {
+  padding: 12px 6px;
+}
+
+.bfsi-content-block h3,
+.bfsi-text-section h3,
+.bfsi-benefits-heading h3,
+.bfsi-future-card h3,
+.bfsi-closing-card h3 {
+  margin: 0 0 16px;
+  color: #20324f;
+  font-weight: 850;
+}
+
+.bfsi-content-block p,
+.bfsi-text-section p,
+.bfsi-future-card p,
+.bfsi-closing-card p {
+  margin: 0 0 18px;
+  color: #4b5277;
+}
+
+.bfsi-content-block p:last-child,
+.bfsi-text-section p:last-child,
+.bfsi-future-card p:last-child,
+.bfsi-closing-card p:last-child {
+  margin-bottom: 0;
+}
+
+.content-mini-panel,
+.bfsi-mini-panel {
+  padding: 34px;
+  border-radius: 6px;
+  background: #e6e6ee;
+  border: 1px solid rgba(16, 26, 61, 0.18);
+  box-shadow: inset 7px 7px 15px #d1d3dc, inset -7px -7px 15px #ffffff;
+}
+
+.bfsi-mini-panel svg {
+  width: 58px;
+  height: 58px;
+  padding: 14px;
+  margin-bottom: 20px;
+  color: #28ce8b;
+  border-radius: 6px;
+  background: #e6e6ee;
+  border: 1px solid rgba(16, 26, 61, 0.14);
+  box-shadow: 7px 7px 15px #c8c9d2, -7px -7px 15px #ffffff;
+}
+
+.bfsi-mini-panel h4 {
+  margin: 0 0 12px;
+  color: #20324f;
+  font-weight: 850;
+}
+
+.bfsi-mini-panel p {
+  margin: 0;
+}
+
+/* INTRO CARDS */
+.bfsi-intro-grid {
+  max-width: 1180px;
+  margin: 0 auto 64px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  border-radius: 6px;
+  background: #e6e6ee;
+  border: 1px solid rgba(16, 26, 61, 0.2);
+  box-shadow: 12px 12px 26px #c4c4cc, -12px -12px 26px #ffffff;
+}
+
+.bfsi-intro-card {
+  min-height: 140px;
+  padding: 26px;
+  text-align: center;
+  border-radius: 6px;
+  background: #e6e6ee;
+  border: 1px solid rgba(16, 26, 61, 0.14);
+  box-shadow: inset 7px 7px 16px #d0d2dc, inset -7px -7px 16px #ffffff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.bfsi-intro-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 8px 8px 18px #c6c7cf, -8px -8px 18px #ffffff;
+}
+
+.bfsi-intro-card svg {
+  margin-bottom: 12px;
+  color: #5d6df6;
+  font-size: 28px;
+}
+
+.bfsi-intro-card:nth-child(2) svg {
+  color: #28ce8b;
+}
+
+.bfsi-intro-card:nth-child(3) svg {
+  color: #ff6347;
+}
+
+.bfsi-intro-card h3 {
+  margin: 0 0 4px;
+  color: #101a3d;
+  font-weight: 850;
+}
+
+.bfsi-intro-card p {
+  margin: 0;
+  color: #4b5277;
+}
+
+/* SECTION TITLE */
+.bfsi-section-title {
+  max-width: 900px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.bfsi-section-title span,
+.bfsi-benefits-heading span {
+  display: inline-flex;
+  padding: 8px 18px;
+  margin-bottom: 18px;
+  border-radius: 4px;
+  background: #e6e6ee;
+  color: #30344f;
+  border: 1px solid rgba(16, 26, 61, 0.18);
+  box-shadow: 5px 5px 10px #c9c9d1, -5px -5px 10px #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.bfsi-section-title h3,
+.bfsi-section-title p {
+  margin: 0;
+}
+
+.bfsi-section-title h3 {
+  color: #20324f;
+  font-weight: 850;
+}
+
+.bfsi-section-title p {
+  max-width: 760px;
+  margin: 12px auto 0;
+  color: #4b5277;
+}
+
+/* CHALLENGES */
+.bfsi-challenge-grid {
+  max-width: 1180px;
+  margin: 0 auto 64px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.bfsi-challenge-card {
+  min-height: 230px;
+  padding: 26px 22px;
+  border-radius: 6px;
+  background: #e6e6ee;
+  border: 1px solid rgba(16, 26, 61, 0.18);
+  box-shadow: 10px 10px 22px #c4c4cc, -10px -10px 22px #ffffff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.bfsi-challenge-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 14px 14px 28px #bfc0c8, -14px -14px 28px #ffffff;
+}
+
+.bfsi-challenge-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  background: #e6e6ee;
+  color: #30344f;
+  border: 1px solid rgba(16, 26, 61, 0.16);
+  box-shadow: 5px 5px 10px #c9c9d1, -5px -5px 10px #ffffff;
+  font-size: 20px;
+}
+
+.bfsi-challenge-card.green .bfsi-challenge-icon {
+  color: #28ce8b;
+}
+
+.bfsi-challenge-card.orange .bfsi-challenge-icon {
+  color: #ff6347;
+}
+
+.bfsi-challenge-card.purple .bfsi-challenge-icon {
+  color: #8b5cf6;
+}
+
+.bfsi-challenge-card.cyan .bfsi-challenge-icon {
+  color: #00bcd4;
+}
+
+.bfsi-challenge-card h4 {
+  margin: 0 0 10px;
+  color: #101a3d;
+  font-weight: 850;
+}
+
+.bfsi-challenge-card p {
+  margin: 0;
+  color: #4b5277;
+}
+
+/* TEXT SECTION */
+.bfsi-text-section {
+  max-width: 1180px;
+  margin: 0 auto 64px;
+  padding: 42px;
+  border-radius: 6px;
+  background: #e6e6ee;
+  border: 1px solid rgba(16, 26, 61, 0.2);
+  box-shadow: 14px 14px 30px #c4c4cc, -14px -14px 30px #ffffff;
+}
+
+/* BENEFITS */
+.bfsi-benefits-section {
+  max-width: 1180px;
+  margin: 0 auto 64px;
+  padding: 42px;
+  border-radius: 6px;
+  background: #e6e6ee;
+  border: 1px solid rgba(16, 26, 61, 0.2);
+  box-shadow: 14px 14px 30px #c4c4cc, -14px -14px 30px #ffffff;
+}
+
+.bfsi-benefits-heading {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.bfsi-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.bfsi-benefit-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 22px;
+  border-radius: 6px;
+  background: #e6e6ee;
+  border: 1px solid rgba(16, 26, 61, 0.14);
+  box-shadow: inset 5px 5px 12px #d0d2dc, inset -5px -5px 12px #ffffff;
+}
+
+.bfsi-benefit-card svg {
+  margin-top: 5px;
+  color: #28ce8b;
+  font-size: 20px;
+  flex: 0 0 auto;
+}
+
+.bfsi-benefit-card p {
+  margin: 0;
+  color: #18234e;
+  font-weight: 650;
+}
+
+/* FUTURE */
+.bfsi-future-card {
+  max-width: 1180px;
+  margin: 0 auto 42px;
+  padding: 42px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 150px;
+  gap: 32px;
+  align-items: center;
+  border-radius: 6px;
+  background: #e6e6ee;
+  border: 1px solid rgba(16, 26, 61, 0.2);
+  box-shadow: 14px 14px 30px #c4c4cc, -14px -14px 30px #ffffff;
+}
+
+.bfsi-future-icon {
+  width: 140px;
+  height: 140px;
+  justify-self: end;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  background: #e6e6ee;
+  color: #ffb020;
+  font-size: 54px;
+  border: 1px solid rgba(16, 26, 61, 0.16);
+  box-shadow: inset 7px 7px 16px #d0d2dc, inset -7px -7px 16px #ffffff;
+}
+
+/* CLOSING */
+.bfsi-closing-card {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 44px;
+  text-align: center;
+  border-radius: 6px;
+  background: #e6e6ee;
+  border: 1px solid rgba(16, 26, 61, 0.2);
+  box-shadow: 14px 14px 30px #c4c4cc, -14px -14px 30px #ffffff;
+}
+
+/* HOVER EFFECTS */
+.bfsi-image-box,
+.bfsi-content-block,
+.bfsi-mini-panel,
+.bfsi-intro-grid,
+.bfsi-intro-card,
+.bfsi-challenge-card,
+.bfsi-text-section,
+.bfsi-benefits-section,
+.bfsi-benefit-card,
+.bfsi-future-card,
+.bfsi-closing-card,
+.bfsi-label {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.bfsi-content-block:hover,
+.bfsi-text-section:hover,
+.bfsi-benefits-section:hover,
+.bfsi-future-card:hover,
+.bfsi-closing-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(93, 109, 246, 0.32);
+  box-shadow:
+    16px 16px 34px #bfc0c8,
+    -16px -16px 34px #ffffff;
+}
+
+.bfsi-mini-panel:hover,
+.bfsi-intro-card:hover,
+.bfsi-challenge-card:hover,
+.bfsi-benefit-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(93, 109, 246, 0.32);
+  box-shadow:
+    10px 10px 22px #bfc0c8,
+    -10px -10px 22px #ffffff;
+}
+
+.bfsi-label:hover {
+  transform: translateY(-2px);
+  border-color: rgba(93, 109, 246, 0.35);
+  box-shadow:
+    7px 7px 14px #c3c3cb,
+    -7px -7px 14px #ffffff;
+}
+
+.bfsi-mini-panel:hover svg,
+.bfsi-intro-card:hover svg,
+.bfsi-challenge-card:hover .bfsi-challenge-icon,
+.bfsi-benefit-card:hover svg,
+.bfsi-future-card:hover .bfsi-future-icon {
+  transform: scale(1.08);
+}
+
+.bfsi-mini-panel svg,
+.bfsi-intro-card svg,
+.bfsi-challenge-icon,
+.bfsi-benefit-card svg,
+.bfsi-future-icon {
+  transition: transform 0.25s ease;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .bfsi-challenge-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bfsi-benefits-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 960px) {
+  .bfsi-page {
+    padding: 42px 5%;
+  }
+
+  .bfsi-hero {
+    margin-bottom: 16px;
+    padding-bottom: 24px;
+  }
+
+  .bfsi-hero h1 {
+    font-size: 34px;
+  }
+
+  .bfsi-hero h2 {
+    font-size: 26px;
+  }
+
+  .bfsi-image-row,
+  .bfsi-content-block,
+  .bfsi-intro-grid,
+  .bfsi-benefits-grid,
+  .bfsi-future-card {
+    grid-template-columns: 1fr;
+  }
+
+  .bfsi-image-row {
+    margin-top: -6px;
+  }
+
+  .bfsi-image-row.single {
+    max-width: 100%;
+  }
+
+  .bfsi-future-icon {
+    justify-self: start;
+  }
+}
+
+@media (max-width: 560px) {
+  .bfsi-page {
+    padding: 32px 18px;
+  }
+
+  .bfsi-hero {
+    margin-bottom: 12px;
+    padding: 36px 22px 20px;
+  }
+
+  .bfsi-hero,
+  .bfsi-content-block,
+  .bfsi-text-section,
+  .bfsi-benefits-section,
+  .bfsi-future-card,
+  .bfsi-closing-card {
+    border-radius: 6px;
+  }
+
+  .bfsi-content-block,
+  .bfsi-text-section,
+  .bfsi-benefits-section,
+  .bfsi-future-card,
+  .bfsi-closing-card {
+    padding: 28px;
+  }
+
+  .bfsi-hero h1 {
+    font-size: 30px;
+  }
+
+  .bfsi-hero h2 {
+    font-size: 23px;
+  }
+
+  .bfsi-page h3 {
+    font-size: 22px;
+  }
+
+  .bfsi-page p,
+  .bfsi-benefit-card p,
+  .bfsi-challenge-card p,
+  .bfsi-image-box.placeholder span,
+  .bfsi-image-wide.placeholder span {
+    font-size: 16px;
+  }
+
+  .bfsi-challenge-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bfsi-image-row {
+    margin: -4px auto 36px;
+  }
+
+  .bfsi-image-box,
+  .bfsi-image-wide {
+    min-height: 160px;
+    padding: 8px;
+  }
+
+  .bfsi-image-box img,
+  .bfsi-image-wide img {
+    min-height: 144px;
+  }
+}

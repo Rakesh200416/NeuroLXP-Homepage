@@ -1,0 +1,593 @@
+.goal-setting-page {
+  --bg: #e6e7ee;
+  --surface: #e6e7ee;
+  --surface-soft: #f2f6fa;
+  --surface-soft-2: #f8fbfd;
+  --text: #5a6572;
+  --text-light: #7e8896;
+  --heading: #213247;
+  --primary: #0f766e;
+  --secondary: #2563eb;
+  --accent: #d97706;
+  --support: #7c3aed;
+  --primary-soft: rgba(15, 118, 110, 0.08);
+  --secondary-soft: rgba(37, 99, 235, 0.08);
+  --accent-soft: rgba(217, 119, 6, 0.08);
+  --support-soft: rgba(124, 58, 237, 0.08);
+  --shadow-light: #ffffff;
+  --shadow-dark: #cfd6de;
+  --radius-2xl: 34px;
+  --radius-xl: 28px;
+  --radius-lg: 22px;
+  --radius-md: 16px;
+  --radius-sm: 12px;
+  --border-soft: rgba(255, 255, 255, 0.62);
+}
+
+.goal-setting-page * {
+  box-sizing: border-box;
+}
+
+.goal-setting-page {
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 34px 0 70px;
+  color: var(--text);
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.goal-setting-page .heroSection,
+.goal-setting-page .challengesSection,
+.goal-setting-page .cardsSection,
+.goal-setting-page .highlightSection {
+  margin-bottom: 38px;
+}
+
+.goal-setting-page .iconText {
+  font-size: 1.02rem;
+  line-height: 1;
+}
+
+.goal-setting-page .iconWrap {
+  width: 54px;
+  height: 54px;
+  min-width: 54px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: var(--surface-soft);
+  box-shadow: inset 4px 4px 10px rgba(207, 214, 222, 0.72), inset -4px -4px 10px rgba(255, 255, 255, 0.96);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.goal-setting-page .iconWrap:hover {
+  transform: translateY(-3px) rotate(-4deg);
+}
+
+.goal-setting-page .iconWrap-primary  { 
+  color: var(--primary); 
+}
+
+.goal-setting-page .iconWrap-secondary { 
+  color: var(--secondary); 
+}
+
+.goal-setting-page .iconWrap-accent   { 
+  color: var(--accent); 
+}
+
+.goal-setting-page .iconWrap-support  { 
+  color: var(--support); 
+}
+
+.goal-setting-page .cardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.goal-setting-page .cardHeader h3 {
+  margin: 0;
+  color: var(--heading);
+  font-size: 24px;
+  line-height: 1.34;
+}
+
+.goal-setting-page .heroGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: stretch;
+}
+
+.goal-setting-page .heroContent {
+  position: relative;
+  padding: 34px 34px 34px 42px;
+  border-radius: var(--radius-2xl);
+  background: var(--surface);
+  box-shadow: 6px 6px 12px #b8b9be,-6px -6px 12px #fff !important;
+  overflow: hidden;
+}
+
+.goal-setting-page .heroContent::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  bottom: 24px;
+  left: 18px;
+  width: 6px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--primary), var(--secondary), var(--accent));
+  box-shadow: 3px 3px 8px rgba(207, 214, 222, 0.72), -3px -3px 8px rgba(255, 255, 255, 0.96);
+}
+
+.goal-setting-page .heroTitle {
+  margin: 0 0 12px;
+  font-size: 40px;
+  line-height: 1.02;
+  color: var(--heading);
+}
+
+.goal-setting-page .heroSubtitle {
+  margin: 0 0 18px;
+  font-size: 32px;
+  line-height: 1.42;
+  color: #3f4d5e;
+  font-weight: 700;
+  max-width: 760px;
+}
+
+.goal-setting-page .heroText {
+  margin: 0 0 14px;
+  max-width: 760px;
+  font-size: 18px;
+  line-height: 1.86;
+  color: var(--text);
+}
+
+.goal-setting-page .heroVisualCard {
+  display: grid;
+  align-content: start;
+  gap: 16px;
+  padding: 20px;
+  border-radius: var(--radius-2xl);
+}
+
+.goal-setting-page .imageWrapper {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  box-shadow: inset 7px 7px 16px rgba(207, 214, 222, 0.74), inset -7px -7px 16px rgba(255, 255, 255, 0.96);
+}
+
+.goal-setting-page .heroImage {
+  width: 100%;
+  height: 264px;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius-lg);
+  transition: transform 0.4s ease;
+}
+
+.goal-setting-page .imageWrapper:hover .heroImage {
+  transform: scale(1.03);
+}
+
+.goal-setting-page .floatingStats {
+  display: grid;
+  gap: 12px;
+}
+
+.goal-setting-page .statPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: var(--surface);
+  box-shadow: 6px 6px 12px #b8b9be,-6px -6px 12px #fff !important;
+  color: var(--heading);
+  font-size: 0.93rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.goal-setting-page .statPill:nth-child(1) { 
+  color: var(--secondary); 
+}
+
+.goal-setting-page .statPill:nth-child(2) { 
+  color: var(--primary); 
+}
+
+.goal-setting-page .statPill:nth-child(3) { 
+  color: var(--accent); 
+}
+
+.goal-setting-page .statPill:hover {
+  transform: translateX(4px);
+  box-shadow: 12px 12px 24px rgba(207, 214, 222, 0.94), -12px -12px 24px rgba(255, 255, 255, 1);
+}
+
+.goal-setting-page .statPill:hover .iconText {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.goal-setting-page .sectionHeader {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.goal-setting-page .sectionTitle {
+  margin: 0 0 10px;
+  font-size: 32px;
+  color: var(--heading);
+  line-height: 1.2;
+}
+
+.goal-setting-page .sectionSubtext {
+  margin: 0 auto;
+  max-width: 640px;
+  color: var(--text-light);
+  font-size: 18px;
+  line-height: 1.78;
+}
+
+.goal-setting-page .challengeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.goal-setting-page .challengeCard {
+  position: relative;
+  padding: 28px;
+  border-radius: var(--radius-xl);
+  background: var(--surface);
+  box-shadow: 6px 6px 12px #b8b9be,-6px -6px 12px #fff !important;
+  transition: transform 0.3s ease;
+}
+
+.goal-setting-page .challengeCard:hover {
+  transform: translateY(-4px);
+}
+
+.goal-setting-page .challengeCard p {
+  margin: 0;
+  line-height: 1.84;
+  color: var(--text);
+  font-size: 18px;
+}
+
+.goal-setting-page .challenge-primary  { 
+  border-top: 4px solid var(--primary); 
+}
+
+.goal-setting-page .challenge-secondary { 
+  border-top: 4px solid var(--secondary); 
+}
+
+.goal-setting-page .challenge-accent   { 
+  border-top: 4px solid var(--accent); 
+}
+
+.goal-setting-page .cardsSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  align-items: start;
+}
+
+.goal-setting-page .contentCard {
+  position: relative;
+  padding: 28px;
+  border-radius: var(--radius-xl);
+  background: var(--surface);
+  box-shadow: 6px 6px 12px #b8b9be,-6px -6px 12px #fff !important;
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.goal-setting-page .contentCard:hover {
+  transform: translateY(-3px);
+}
+
+.goal-setting-page .contentCard-primary  { 
+  border-top: 4px solid var(--primary); 
+}
+
+.goal-setting-page .contentCard-secondary { 
+  border-top: 4px solid var(--secondary); 
+}
+
+.goal-setting-page .contentCard-accent   { 
+  border-top: 4px solid var(--accent); 
+}
+
+.goal-setting-page .contentCard-support  { 
+  border-top: 4px solid var(--support); 
+}
+
+.goal-setting-page .contentCard p {
+  margin: 0;
+  line-height: 1.84;
+  color: var(--text);
+  font-size: 18px;
+}
+
+.goal-setting-page .highlightGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.goal-setting-page .highlightTextCard {
+  padding: 30px;
+  border-radius: var(--radius-2xl);
+  background: linear-gradient(180deg, var(--surface), var(--surface-soft));
+  box-shadow: 6px 6px 12px #b8b9be,-6px -6px 12px #fff !important;
+  border-left: 6px solid var(--primary);
+}
+
+.goal-setting-page .highlightTextCard p {
+  margin: 0 0 22px;
+  line-height: 1.84;
+  color: var(--text);
+  font-size: 18px;
+}
+
+.goal-setting-page .highlightTextCard .cardHeader h3 {
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+}
+
+.goal-setting-page .featureGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.goal-setting-page .miniFeature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  box-shadow: 6px 6px 12px #b8b9be,-6px -6px 12px #fff !important;
+  cursor: pointer;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.goal-setting-page .miniFeature:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 10px 10px 20px rgba(207, 214, 222, 0.9), -10px -10px 20px rgba(255, 255, 255, 1);
+}
+
+.goal-setting-page .miniFeature:nth-child(1) .miniFeatureIcon { 
+  color: var(--primary); 
+}
+
+.goal-setting-page .miniFeature:nth-child(2) .miniFeatureIcon { 
+  color: var(--secondary); 
+}
+
+.goal-setting-page .miniFeature:nth-child(3) .miniFeatureIcon { 
+  color: var(--accent); 
+}
+
+.goal-setting-page .miniFeature:nth-child(4) .miniFeatureIcon { 
+  color: var(--support); 
+}
+
+.goal-setting-page .miniFeature:nth-child(5) .miniFeatureIcon { 
+  color: var(--primary); 
+}
+
+.goal-setting-page .miniFeature:nth-child(6) .miniFeatureIcon { 
+  color: var(--secondary); 
+}
+
+.goal-setting-page .miniFeatureIcon {
+  min-width: 32px;
+  font-size: 1.1rem;
+  padding-top: 2px;
+}
+
+.goal-setting-page .miniFeature > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.goal-setting-page .miniFeatureLabel {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--heading);
+  line-height: 1.2;
+}
+
+.goal-setting-page .miniFeatureDesc {
+  font-size: 15px;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.goal-setting-page .secondaryVisualCard {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 20px;
+  border-radius: var(--radius-2xl);
+  background: var(--surface);
+  box-shadow: 6px 6px 12px #b8b9be,-6px -6px 12px #fff !important;
+  height: 100%;
+}
+
+.goal-setting-page .imageWrapperAlt {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  box-shadow: inset 7px 7px 16px rgba(207, 214, 222, 0.74), inset -7px -7px 16px rgba(255, 255, 255, 0.96);
+}
+
+.goal-setting-page .secondaryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius-lg);
+  transition: transform 0.4s ease;
+}
+
+.goal-setting-page .imageWrapperAlt:hover .secondaryImage {
+  transform: scale(1.03);
+}
+
+.goal-setting-page .statsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.goal-setting-page .statBubble {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 10px;
+  border-radius: var(--radius-md);
+  background: var(--surface-soft);
+  box-shadow: 10px 10px 14px #b8b9be,-10px -10px 14px #fff !important;
+  text-align: center;
+  transition: transform 0.28s ease;
+}
+
+.goal-setting-page .statBubble:hover {
+  transform: translateY(-3px);
+}
+
+.goal-setting-page .statBubble:nth-child(1) .statValue { 
+  color: var(--primary); 
+}
+
+.goal-setting-page .statBubble:nth-child(2) .statValue { 
+  color: var(--secondary); 
+}
+
+.goal-setting-page .statBubble:nth-child(3) .statValue { 
+  color: var(--accent); 
+}
+
+.goal-setting-page .statBubble:nth-child(4) .statValue { 
+  color: var(--support); 
+}
+
+.goal-setting-page .statValue {
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.goal-setting-page .statDesc {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 480px) {
+  .goal-setting-page .statsRow {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .goal-setting-page .featureGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .goal-setting-page {
+    width: min(100%, calc(100% - 20px));
+    padding: 20px 0 44px;
+  }
+
+  .goal-setting-page .heroContent{
+    padding: 22px 18px 22px 32px;
+  }
+
+  .goal-setting-page .heroVisualCard,
+  .goal-setting-page .challengeCard,
+  .goal-setting-page .contentCard,
+  .goal-setting-page .highlightTextCard,
+  .goal-setting-page .secondaryVisualCard {
+    padding: 20px;
+  }
+
+  .goal-setting-page .heroTitle {
+    font-size: 2rem;
+  }
+
+  .goal-setting-page .heroSubtitle {
+    font-size: 1.04rem;
+  }
+
+  .goal-setting-page .challengeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .goal-setting-page .cardsSection {
+    grid-template-columns: 1fr;
+  }
+
+  .goal-setting-page .contentCard:nth-child(2),
+  .goal-setting-page .contentCard:nth-child(4) {
+    margin-top: 0;
+  }
+
+  .goal-setting-page .featureGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .goal-setting-page .statsRow {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .goal-setting-page .iconWrap {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+  }
+
+  .goal-setting-page .heroImage,
+  .goal-setting-page .secondaryImage {
+    height: 160px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .goal-setting-page .heroGrid,
+  .goal-setting-page .highlightGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .goal-setting-page .cardsSection {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .goal-setting-page .contentCard:nth-child(2),
+  .goal-setting-page .contentCard:nth-child(4) {
+    margin-top: 0;
+  }
+
+  .goal-setting-page .featureGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

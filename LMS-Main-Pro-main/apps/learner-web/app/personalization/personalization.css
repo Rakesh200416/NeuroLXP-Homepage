@@ -1,0 +1,1242 @@
+.personalization-page {
+  --neu-bg: #e6e7ee;
+  --neu-bg-dark: #d1d9e6;
+  --neu-shadow-light: #ffffff;
+  --neu-shadow-dark: #d1d9e6;
+  --neu-primary: #5e72e4;
+  --neu-primary-light: #7a8ff0;
+  --neu-primary-dark: #324cdd;
+  --neu-secondary: #00b4d8;
+  --neu-accent: #7c3aed;
+  --neu-success: #10b981;
+  --neu-text-primary: #2c3e50;
+  --neu-text-secondary: #5e6b7f;
+  --neu-text-muted: #8a99b0;
+  --neu-text-light: #a0aec0;
+  --neu-radius-sm: 8px;
+  --neu-radius-md: 16px;
+  --neu-radius-lg: 24px;
+  --neu-radius-xl: 32px;
+  --neu-radius-full: 50px;
+  --neu-shadow-flat: 9px 9px 16px var(--neu-shadow-dark), -9px -9px 16px var(--neu-shadow-light);
+  --neu-shadow-md: 6px 6px 12px var(--neu-shadow-dark), -6px -6px 12px var(--neu-shadow-light);
+  --neu-shadow-lg: 12px 12px 24px var(--neu-shadow-dark), -12px -12px 24px var(--neu-shadow-light);
+  --neu-shadow-xl: 14px 14px 28px var(--neu-shadow-dark), -14px -14px 28px var(--neu-shadow-light);
+  --neu-shadow-inset: inset 6px 6px 12px var(--neu-shadow-dark), inset -6px -6px 12px var(--neu-shadow-light);
+  --neu-shadow-inset-sm: inset 3px 3px 8px var(--neu-shadow-dark), inset -3px -3px 8px var(--neu-shadow-light);
+  --font-display: Segoe UI, sans-serif;
+  --font-body: Segoe UI, sans-serif;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.personalization-page * {
+  box-sizing: border-box;
+}
+
+.personalization-page {
+  min-height: 100vh;
+  background-color: var(--neu-bg);
+  font-family: var(--font-body);
+  color: var(--neu-text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.personalization-page .divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--neu-bg-dark), transparent);
+  margin: 0 2rem;
+}
+
+.personalization-page .hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 2rem 64px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.55; transform: scale(0.8); }
+}
+
+.personalization-page .heroTitle {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900;
+  color: var(--neu-text-primary);
+  line-height: 1.15;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+
+.personalization-page .highlight {
+  color: var(--neu-primary);
+}
+
+.personalization-page .heroText {
+  font-size: 0.97rem;
+  color: var(--neu-text-secondary);
+  line-height: 1.75;
+  margin-bottom: 12px;
+  text-align: justify;
+}
+
+.personalization-page .heroTextLast {
+  font-size: 0.97rem;
+  color: var(--neu-text-secondary);
+  line-height: 1.75;
+  margin-bottom: 36px;
+  text-align: justify;
+}
+
+.personalization-page .heroActions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.personalization-page .btnPrimary {
+  padding: 14px 32px;
+  border-radius: var(--neu-radius-full);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--neu-primary);
+  background: var(--neu-bg);
+  box-shadow: var(--neu-shadow-flat);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-block;
+  font-family: var(--font-body);
+}
+
+.personalization-page .btnPrimary:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--neu-shadow-md);
+  color: #4a5fdf;
+}
+
+.personalization-page .btnPrimary:active {
+  box-shadow: var(--neu-shadow-inset);
+  transform: translateY(1px);
+}
+
+.personalization-page .btnSecondary {
+  padding: 14px 32px;
+  border-radius: var(--neu-radius-full);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--neu-text-secondary);
+  background: var(--neu-bg);
+  box-shadow: var(--neu-shadow-flat);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-block;
+  font-family: var(--font-body);
+}
+
+.personalization-page .btnSecondary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--neu-shadow-md);
+  color: var(--neu-primary);
+}
+
+.personalization-page .btnSecondary:active {
+  box-shadow: var(--neu-shadow-inset);
+}
+
+.personalization-page .btnWhite {
+  padding: 14px 32px;
+  border-radius: var(--neu-radius-full);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--neu-text-secondary);
+  background: var(--neu-bg);
+  box-shadow: var(--neu-shadow-inset);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-body);
+}
+
+.personalization-page .btnWhite:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--neu-shadow-inset-sm);
+}
+
+.personalization-page .btnOutlineWhite {
+  padding: 14px 32px;
+  border-radius: var(--neu-radius-full);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--neu-text-secondary);
+  background: var(--neu-bg);
+  box-shadow: var(--neu-shadow-inset);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-body);
+}
+
+.personalization-page .btnOutlineWhite:hover {
+  box-shadow: var(--neu-shadow-inset-sm);
+  transform: translateY(-3px);
+  color: var(--neu-primary);
+}
+
+.personalization-page .heroVisual {
+  display: flex;
+  justify-content: center;
+}
+
+.personalization-page .heroCard {
+  background: var(--neu-bg);
+  border-radius: var(--neu-radius-xl);
+  box-shadow: var(--neu-shadow-xl);
+  padding: 32px;
+  width: 100%;
+  max-width: 380px;
+}
+
+.personalization-page .heroCardHeader {
+  margin-bottom: 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--neu-bg-dark);
+}
+
+.personalization-page .heroCardTitle {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--neu-text-primary);
+  margin-bottom: 4px;
+}
+
+.personalization-page .heroCardSub {
+  font-size: 1rem;
+  color: var(--neu-text-muted);
+}
+
+.personalization-page .heroProgressList {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.personalization-page .heroProgressItem {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.personalization-page .heroProgressLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.79rem;
+  font-weight: 600;
+  color: var(--neu-text-secondary);
+}
+
+.personalization-page .heroProgressPct {
+  font-weight: 700;
+  color: var(--neu-primary);
+}
+
+.personalization-page .heroProgressBar {
+  height: 10px;
+  border-radius: var(--neu-radius-full);
+  box-shadow: var(--neu-shadow-inset-sm);
+  overflow: hidden;
+}
+
+.personalization-page .heroProgressFill {
+  height: 100%;
+  border-radius: var(--neu-radius-full);
+}
+
+.personalization-page .fill1 {
+  width: 78%;
+  background: linear-gradient(90deg, var(--neu-primary), var(--neu-primary-light));
+}
+
+.personalization-page .fill2 {
+  width: 64%;
+  background: linear-gradient(90deg, var(--neu-success), #34d399);
+}
+
+.personalization-page .fill3 {
+  width: 91%;
+  background: linear-gradient(90deg, var(--neu-secondary), #48cae4);
+}
+
+.personalization-page .fill4 {
+  width: 85%;
+  background: linear-gradient(90deg, var(--neu-accent), #a78bfa);
+}
+
+.personalization-page .heroCardFooter {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--neu-bg-dark);
+  display: flex;
+  justify-content: space-around;
+}
+
+.personalization-page .heroCardStat {
+  text-align: center;
+}
+
+.personalization-page .heroCardStatNum {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: var(--neu-primary);
+  margin-bottom: 4px;
+}
+
+.personalization-page .heroCardStatLabel {
+  font-size: 0.68rem;
+  color: var(--neu-text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.personalization-page .section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 54px 2rem;
+}
+
+.personalization-page .sectionHeader {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.personalization-page .sectionTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+  font-weight: 900;
+  color: var(--neu-text-primary);
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+
+.personalization-page .sectionDesc {
+  font-size: 0.97rem;
+  color: var(--neu-text-secondary);
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+.personalization-page .statsBar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 2rem;
+}
+
+.personalization-page .statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.personalization-page .statCard {
+  background: var(--neu-bg);
+  border-radius: var(--neu-radius-lg);
+  box-shadow: var(--neu-shadow-md);
+  padding: 28px 20px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.personalization-page .statCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--neu-shadow-lg);
+}
+
+.personalization-page .statNumber {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--neu-primary);
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.personalization-page .statLabel {
+  font-size: 0.8rem;
+  color: var(--neu-text-muted);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.personalization-page .whatIsGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.personalization-page .whatIsTitle {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 900;
+  color: var(--neu-text-primary);
+  letter-spacing: -0.5px;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+.personalization-page .bodyText {
+  font-size: 0.95rem;
+  color: var(--neu-text-secondary);
+  line-height: 1.75;
+  margin-bottom: 14px;
+  text-align: justify;
+}
+
+.personalization-page .listHeading {
+  font-size: 0.87rem;
+  font-weight: 700;
+  color: var(--neu-text-primary);
+  margin-top: 22px;
+  margin-bottom: 14px;
+}
+
+.personalization-page .checkList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.personalization-page .checkItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 13px 16px;
+  border-radius: var(--neu-radius-md);
+  box-shadow: var(--neu-shadow-flat);
+  font-size: 0.88rem;
+  color: var(--neu-text-secondary);
+  font-weight: 500;
+  line-height: 1.5;
+  transition: var(--transition);
+}
+
+.personalization-page .checkItem:hover {
+  box-shadow: var(--neu-shadow-md);
+  color: var(--neu-text-primary);
+  transform: translateX(3px);
+}
+
+.personalization-page .checkDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--neu-primary);
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.personalization-page .closingStatement {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--neu-primary);
+  margin-top: 20px;
+  padding: 14px 18px;
+  border-radius: var(--neu-radius-md);
+  box-shadow: var(--neu-shadow-inset-sm);
+  line-height: 1.6;
+}
+
+.personalization-page .accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.personalization-page .accordionItem {
+  background: var(--neu-bg);
+  border-radius: var(--neu-radius-lg);
+  box-shadow: var(--neu-shadow-md);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.personalization-page .accordionTrigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--neu-text-primary);
+  text-align: left;
+  transition: var(--transition);
+}
+
+.personalization-page .accordionTrigger:hover {
+  color: var(--neu-primary);
+}
+
+.personalization-page .accordionChevron {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  background: var(--neu-bg);
+  box-shadow: var(--neu-shadow-flat);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  color: var(--neu-primary);
+  font-weight: 900;
+  transition: var(--transition);
+}
+
+.personalization-page .accordionItemOpen .accordionChevron {
+  transform: rotate(180deg);
+  background: var(--neu-primary);
+  color: #fff;
+  box-shadow: var(--neu-shadow-md);
+}
+
+.personalization-page .accordionBody {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.38s ease, padding 0.25s ease;
+  font-size: 0.88rem;
+  color: var(--neu-text-secondary);
+  line-height: 1.75;
+}
+
+.personalization-page .accordionItemOpen .accordionBody {
+  max-height: 400px;
+  padding: 0 22px 20px;
+}
+
+.personalization-page .approachGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.personalization-page .approachCard {
+  background: var(--neu-bg);
+  border-radius: var(--neu-radius-lg);
+  box-shadow: var(--neu-shadow-md);
+  padding: 28px 26px;
+  transition: var(--transition);
+}
+
+.personalization-page .approachCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--neu-shadow-lg);
+}
+
+.personalization-page .approachCardNum {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--neu-radius-sm);
+  box-shadow: var(--neu-shadow-flat);
+  background: var(--neu-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 0.9rem;
+  color: var(--neu-primary);
+  margin-bottom: 16px;
+}
+
+.personalization-page .approachCardTitle {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--neu-text-primary);
+  margin-bottom: 8px;
+}
+
+.personalization-page .approachCardDesc {
+  font-size: 0.86rem;
+  color: var(--neu-text-secondary);
+  line-height: 1.65;
+}
+
+.personalization-page .stepsIntroText {
+  font-size: 0.97rem;
+  color: var(--neu-text-secondary);
+  max-width: 640px;
+  margin: -32px auto 48px;
+  line-height: 1.75;
+  text-align: center;
+}
+
+.personalization-page .stepsTimeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.personalization-page .stepsTimeline::before {
+  content: "";
+  position: absolute;
+  left: 27px;
+  top: 28px;
+  bottom: 28px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--neu-primary), var(--neu-accent), var(--neu-secondary), var(--neu-success));
+  border-radius: 2px;
+}
+
+.personalization-page .stepRow {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 28px;
+  padding: 22px 0;
+}
+
+.personalization-page .stepMarker {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.personalization-page .stepCircle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  box-shadow: var(--neu-shadow-md);
+  background: var(--neu-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.personalization-page .stepCircleInner {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+
+.personalization-page .stepBody {
+  background: var(--neu-bg);
+  border-radius: var(--neu-radius-lg);
+  box-shadow: var(--neu-shadow-md);
+  padding: 28px 32px;
+  transition: var(--transition);
+}
+
+.personalization-page .stepBody:hover {
+  box-shadow: var(--neu-shadow-lg);
+  transform: translateX(5px);
+}
+
+.personalization-page .stepTag {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: var(--neu-radius-full);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  box-shadow: var(--neu-shadow-inset-sm);
+}
+
+.personalization-page .stepTitle {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--neu-text-primary);
+  margin-bottom: 4px;
+}
+
+.personalization-page .stepSubtitle {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--neu-text-muted);
+  margin-bottom: 18px;
+}
+
+.personalization-page .stepList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 16px;
+}
+
+.personalization-page .stepListItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: var(--neu-text-secondary);
+  line-height: 1.5;
+}
+
+.personalization-page .stepDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.personalization-page .stepClosing {
+  font-size: 0.87rem;
+  color: var(--neu-text-muted);
+  font-style: italic;
+  padding-top: 14px;
+  border-top: 1px solid var(--neu-bg-dark);
+}
+
+.personalization-page .tagColor1 { color: #2d4edc; background: #dbeafe; }
+.personalization-page .tagColor2 { color: #6d28d9; background: #ede9fe; }
+.personalization-page .tagColor3 { color: #0369a1; background: #e0f2fe; }
+.personalization-page .tagColor4 { color: #065f46; background: #d1fae5; }
+
+.personalization-page .dot1 { background: var(--neu-primary); }
+.personalization-page .dot2 { background: var(--neu-accent); }
+.personalization-page .dot3 { background: var(--neu-secondary); }
+.personalization-page .dot4 { background: var(--neu-success); }
+
+.personalization-page .circle1 { background: linear-gradient(135deg, #dbeafe, #bfdbfe); }
+.personalization-page .circle2 { background: linear-gradient(135deg, #ede9fe, #ddd6fe); }
+.personalization-page .circle3 { background: linear-gradient(135deg, #e0f2fe, #bae6fd); }
+.personalization-page .circle4 { background: linear-gradient(135deg, #d1fae5, #a7f3d0); }
+
+.personalization-page .whyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.personalization-page .whyTitle {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 900;
+  color: var(--neu-text-primary);
+  letter-spacing: -0.5px;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+.personalization-page .outcomesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.personalization-page .outcomeCard {
+  background: var(--neu-bg);
+  border-radius: var(--neu-radius-lg);
+  box-shadow: var(--neu-shadow-md);
+  padding: 22px 16px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.personalization-page .outcomeCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--neu-shadow-lg);
+}
+
+.personalization-page .outcomeLabel {
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: var(--neu-text-primary);
+  line-height: 1.4;
+}
+
+.personalization-page .benefitsTabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.personalization-page .tabBtn {
+  padding: 10px 26px;
+  border-radius: var(--neu-radius-full);
+  font-size: 0.87rem;
+  font-weight: 700;
+  border: none;
+  background: var(--neu-bg);
+  color: var(--neu-text-secondary);
+  cursor: pointer;
+  box-shadow: var(--neu-shadow-flat);
+  transition: var(--transition);
+  font-family: var(--font-body);
+}
+
+.personalization-page .tabBtn:hover {
+  color: var(--neu-primary);
+}
+
+.personalization-page .tabBtnActive {
+  box-shadow: var(--neu-shadow-inset);
+  color: var(--neu-primary);
+}
+
+.personalization-page .benefitsTabContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.personalization-page .benefitsLeft {
+  background: var(--neu-bg);
+  border-radius: var(--neu-radius-lg);
+  box-shadow: var(--neu-shadow-md);
+  padding: 32px;
+}
+
+.personalization-page .benefitsLeftTitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--neu-text-primary);
+  margin-bottom: 8px;
+}
+
+.personalization-page .benefitsLeftSub {
+  font-size: 0.85rem;
+  color: var(--neu-text-muted);
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+
+.personalization-page .benefitsCheckList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.personalization-page .benefitsCheckItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.88rem;
+  color: var(--neu-text-secondary);
+  line-height: 1.55;
+  padding: 11px 14px;
+  border-radius: var(--neu-radius-md);
+  box-shadow: var(--neu-shadow-flat);
+  transition: var(--transition);
+}
+
+.personalization-page .benefitsCheckItem:hover {
+  box-shadow: var(--neu-shadow-md);
+  color: var(--neu-text-primary);
+}
+
+.personalization-page .benefitsCheck {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  box-shadow: var(--neu-shadow-inset-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.personalization-page .benefitsCheckMark {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--neu-success);
+}
+
+.personalization-page .benefitsRight {
+  background: var(--neu-bg);
+  border-radius: var(--neu-radius-lg);
+  box-shadow: var(--neu-shadow-md);
+  padding: 32px;
+}
+
+.personalization-page .benefitsRightLabel {
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--neu-primary);
+  margin-bottom: 16px;
+}
+
+.personalization-page .benefitsClosingBox {
+  padding: 18px 20px;
+  border-radius: var(--neu-radius-md);
+  box-shadow: var(--neu-shadow-inset-sm);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--neu-text-primary);
+  line-height: 1.6;
+}
+
+.personalization-page .intelGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.personalization-page .intelTitle {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 900;
+  color: var(--neu-text-primary);
+  letter-spacing: -0.5px;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+.personalization-page .pillGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.personalization-page .pill {
+  padding: 7px 16px;
+  border-radius: var(--neu-radius-full);
+  background: var(--neu-bg);
+  box-shadow: var(--neu-shadow-flat);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--neu-text-secondary);
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: var(--transition);
+}
+
+.personalization-page .pill:hover {
+  color: var(--neu-primary);
+}
+
+.personalization-page .pillActive {
+  box-shadow: var(--neu-shadow-inset);
+  color: var(--neu-primary);
+}
+
+.personalization-page .intelCards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.personalization-page .intelCard {
+  background: var(--neu-bg);
+  border-radius: var(--neu-radius-lg);
+  box-shadow: var(--neu-shadow-md);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transition: var(--transition);
+}
+
+.personalization-page .intelCard:hover {
+  box-shadow: var(--neu-shadow-lg);
+  transform: translateX(4px);
+}
+
+.personalization-page .intelCardTitle {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--neu-text-primary);
+  margin-bottom: 3px;
+}
+
+.personalization-page .intelCardDesc {
+  font-size: 0.8rem;
+  color: var(--neu-text-muted);
+  line-height: 1.5;
+}
+
+.personalization-page .eraGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+.personalization-page .eraCard {
+  background: var(--neu-bg);
+  border-radius: var(--neu-radius-lg);
+  box-shadow: var(--neu-shadow-md);
+  padding: 32px 26px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.personalization-page .eraCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--neu-shadow-lg);
+}
+
+.personalization-page .eraCardTitle {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--neu-text-primary);
+  margin-bottom: 8px;
+}
+
+.personalization-page .eraCardDesc {
+  font-size: 0.86rem;
+  color: var(--neu-text-secondary);
+  line-height: 1.65;
+}
+
+.personalization-page .eraClosingBox {
+  text-align: center;
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: var(--neu-text-primary);
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 28px;
+  border-radius: var(--neu-radius-lg);
+  box-shadow: var(--neu-shadow-inset-sm);
+  line-height: 1.6;
+}
+
+.personalization-page .eraClosingBox span {
+  color: var(--neu-primary);
+}
+
+.personalization-page .futureBanner {
+  background: var(--neu-bg);
+  border-radius: var(--neu-radius-xl);
+  padding: 64px 48px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--neu-shadow-xl);
+}
+
+.personalization-page .futureBanner::before {
+  content: "";
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  top: -120px;
+  right: -80px;
+  pointer-events: none;
+}
+
+.personalization-page .futureBanner::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  bottom: -60px;
+  left: 60px;
+  pointer-events: none;
+}
+
+.personalization-page .futureBannerContent {
+  position: relative;
+  z-index: 1;
+}
+
+.personalization-page .futureBannerTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 900;
+  color: var(--neu-text-primary);
+  margin-bottom: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+.personalization-page .futureBannerBody {
+  font-size: 0.97rem;
+  color: var(--neu-text-secondary);
+  max-width: 640px;
+  margin: 0 auto 12px;
+  line-height: 1.75;
+}
+
+.personalization-page .futureBannerBodyLast {
+  font-size: 0.97rem;
+  color: var(--neu-text-secondary);
+  max-width: 640px;
+  margin: 0 auto 36px;
+  line-height: 1.75;
+}
+
+.personalization-page .futureBannerActions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.personalization-page .btnBannerPrimary {
+  padding: 14px 32px;
+  border-radius: var(--neu-radius-full);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--neu-primary);
+  background: var(--neu-bg);
+  box-shadow: var(--neu-shadow-inset);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-body);
+}
+
+.personalization-page .btnBannerPrimary:hover {
+  box-shadow: var(--neu-shadow-inset-sm);
+}
+
+.personalization-page .btnBannerSecondary {
+  padding: 14px 32px;
+  border-radius: var(--neu-radius-full);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--neu-text-secondary);
+  background: var(--neu-bg);
+  box-shadow: var(--neu-shadow-inset);
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-body);
+}
+
+.personalization-page .btnBannerSecondary:hover {
+  box-shadow: var(--neu-shadow-inset-sm);
+  color: var(--neu-primary);
+}
+
+.personalization-page .lnkToggle {
+  cursor: pointer;
+  color: var(--neu-primary);
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .personalization-page .statsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .personalization-page .outcomesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .personalization-page .heroActions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .personalization-page .hero {
+    grid-template-columns: 1fr;
+    padding: 40px 1.5rem;
+    gap: 40px;
+  }
+
+  .personalization-page .heroVisual {
+    order: -1;
+  }
+
+  .personalization-page .whatIsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .personalization-page .statsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .personalization-page .approachGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .personalization-page .stepsTimeline::before {
+    display: none;
+  }
+
+  .personalization-page .stepRow {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .personalization-page .whyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .personalization-page .outcomesGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .personalization-page .benefitsTabContent {
+    grid-template-columns: 1fr;
+  }
+
+  .personalization-page .intelGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .personalization-page .eraGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .personalization-page .futureBanner {
+    padding: 44px 24px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .personalization-page .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .personalization-page .eraGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .personalization-page .heroProgressLabel {
+    font-size: 1rem;
+  }
+}
