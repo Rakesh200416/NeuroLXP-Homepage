@@ -1047,3 +1047,90 @@
   .dl__cta-btns { flex-direction: column; align-items: center; }
   .dl__btn { width: 100%; max-width: 300px; justify-content: center; }
 }
+
+.dl .dl-breadcrumb-nav {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 6px;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 0;
+}
+
+.dl .dl-breadcrumb {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0 0 0 auto;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  gap: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.dl .dl-breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.dl .dl-breadcrumb-item + .dl-breadcrumb-item::before {
+  content: "›";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 8px;
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.dl .dl-breadcrumb-item a {
+  display: inline-flex;
+  align-items: center;
+  color: #bd081c;
+  text-decoration: none;
+  transition: color 0.25s ease, text-decoration-color 0.25s ease;
+  line-height: 1;
+}
+
+.dl .dl-breadcrumb-item a:hover {
+  color: #8f0615;
+  text-decoration: underline;
+}
+
+.dl .dl-breadcrumb-item.active {
+  display: inline-flex;
+  align-items: center;
+  color: #1e90ff;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.dl .dl__hero {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+@media (max-width: 768px) {
+  .dl .dl-breadcrumb-nav {
+    padding: 0 1rem;
+    justify-content: flex-end;
+  }
+
+  .dl .dl-breadcrumb {
+    margin-left: auto;
+    justify-content: flex-end;
+  }
+}
