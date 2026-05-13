@@ -2,7 +2,7 @@
   font-family: "Segoe UI", system-ui, sans-serif;
   background: #e6e6ee;
   color: #101a3d;
-  padding: 56px 6%;
+  padding: 0 6% 56px;
   line-height: 1.7;
 }
 
@@ -243,9 +243,117 @@
   font-size: 18px;
 }
 
+/* Breadcrumb */
+
+.coding-page .coding-breadcrumb-nav {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 8px;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  line-height: 1;
+}
+
+.coding-page .coding-breadcrumb {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0 0 0 auto;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  gap: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.coding-page .coding-breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  padding-left: 0;
+  position: static;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  list-style: none;
+}
+
+.coding-page .coding-breadcrumb-item::before {
+  content: none !important;
+  display: none !important;
+}
+
+.coding-page .coding-breadcrumb-item + .coding-breadcrumb-item::before {
+  content: "›" !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  position: static;
+  margin: 0 8px;
+  padding: 0;
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.coding-page .coding-breadcrumb-item a {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #bd081c;
+  text-decoration: none;
+  line-height: 1;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.coding-page .coding-breadcrumb-item a:hover {
+  color: #8f0615;
+  text-decoration: underline;
+}
+
+.coding-page .coding-breadcrumb-item.active {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #1e90ff;
+  font-weight: 600;
+  line-height: 1;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
 @media (max-width: 900px) {
   .coding-page {
-    padding: 40px 5%;
+    padding: 0 5% 40px;
   }
 
   .coding-hero h1 {
@@ -263,6 +371,19 @@
 
   .coding-image-box {
     height: 300px;
+  }
+}
+
+@media (max-width: 640px) {
+  .coding-page .coding-breadcrumb-nav {
+    padding: 0 1rem;
+    margin-bottom: 8px;
+    justify-content: flex-end;
+  }
+
+  .coding-page .coding-breadcrumb {
+    margin-left: auto;
+    justify-content: flex-end;
   }
 }
 
