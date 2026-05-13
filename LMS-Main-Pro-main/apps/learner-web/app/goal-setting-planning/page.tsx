@@ -86,6 +86,16 @@ const moduleFeatures = [
 export default function GoalSettingPlanningPage() {
   return (
     <main className="goal-setting-page page">
+      <div className="goal-breadcrumb-nav">
+        <ol className="goal-breadcrumb">
+          <li className="goal-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="goal-breadcrumb-item active" aria-current="page">
+            Goal Setting &amp; Planning
+          </li>
+        </ol>
+      </div>
 
       <section className="heroSection">
         <div className="heroGrid">
