@@ -1,6 +1,19 @@
 import "./content-formats.css";
-import { FaFileAlt, FaVideo, FaCode, FaPuzzlePiece, FaPalette, FaVrCardboard, FaRocket, FaLayerGroup, FaCheckCircle,
-  FaStar, FaShieldAlt,  FaInfinity, FaPlay, FaGlobe, FaBrain, FaMobile, } from "react-icons/fa";
+import {
+  FaFileAlt,
+  FaVideo,
+  FaCode,
+  FaPuzzlePiece,
+  FaPalette,
+  FaRocket,
+  FaLayerGroup,
+  FaCheckCircle,
+  FaStar,
+  FaPlay,
+  FaGlobe,
+  FaBrain,
+  FaMobile,
+} from "react-icons/fa";
 import Image from "next/image";
 
 const coreFormats = [
@@ -132,10 +145,20 @@ const differentiatorFeatures = [
 export default function ContentFormatsPage() {
   return (
     <main className="content-formats-page page">
+      <div className="content-formats-breadcrumb-nav">
+        <ol className="content-formats-breadcrumb">
+          <li className="content-formats-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="content-formats-breadcrumb-item active" aria-current="page">
+            Content Formats
+          </li>
+        </ol>
+      </div>
+
       <section className="heroSection">
         <div className="heroGrid">
           <div className="heroContent">
-
             <h1 className="heroTitle">
               Advanced Content Compatibility
             </h1>
@@ -169,7 +192,6 @@ export default function ContentFormatsPage() {
               <button className="ctaSecondary">Request Demo</button>
             </div>
           </div>
-          
         </div>
       </section>
 
@@ -244,14 +266,12 @@ export default function ContentFormatsPage() {
               </ul>
             </div>
           </div>
-
         </div>
       </section>
 
       <section className="differentiatorSection">
         <div className="diffInner">
           <div className="diffTextWrap">
-      
             <h2 className="diffTitle">
               Complete Content Freedom — Only on NeuroLXP
             </h2>
@@ -285,7 +305,6 @@ export default function ContentFormatsPage() {
 
       <section className="ctaSection">
         <div className="ctaCard">
-          
           <h2 className="ctaTitle">
             Ready to unlock unlimited content possibilities?
           </h2>
