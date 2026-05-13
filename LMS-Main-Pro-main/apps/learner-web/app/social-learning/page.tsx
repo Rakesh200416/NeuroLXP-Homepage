@@ -1,10 +1,21 @@
 import "./social-learning.css";
-import { FaUsers, FaShieldAlt, FaComments, FaLightbulb, FaHandshake, FaGlobe, FaStar, FaChalkboardTeacher, FaShareAlt, } from "react-icons/fa";
+import {
+  FaUsers,
+  FaShieldAlt,
+  FaComments,
+  FaLightbulb,
+  FaHandshake,
+  FaGlobe,
+  FaStar,
+  FaChalkboardTeacher,
+  FaShareAlt,
+} from "react-icons/fa";
 
 const peerSharingPoints = [
   {
-    items: "Learners participate in discussion forums and communities, share insights and resources, collaborate on ideas and problem-solving, and engage in peer feedback and meaningful knowledge exchange.",
-  }
+    items:
+      "Learners participate in discussion forums and communities, share insights and resources, collaborate on ideas and problem-solving, and engage in peer feedback and meaningful knowledge exchange.",
+  },
 ];
 
 const collaborationFeatures = [
@@ -28,11 +39,20 @@ const collaborationFeatures = [
 export default function SocialLearningPage() {
   return (
     <main className="social-learning-page page">
+      <div className="social-learning-breadcrumb-nav">
+        <ol className="social-learning-breadcrumb">
+          <li className="social-learning-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="social-learning-breadcrumb-item active" aria-current="page">
+            Social Learning
+          </li>
+        </ol>
+      </div>
 
       <section className="heroSection">
         <div className="heroGrid">
           <div className="heroContent">
-
             <h1 className="heroTitle">Social Learning</h1>
 
             <h2 className="heroSubtitle">
@@ -55,7 +75,6 @@ export default function SocialLearningPage() {
 
           <div className="heroVisualCard">
             <div className="imagePlaceholder">
-
               <img
                 src="/photo-1522071820081-009f0129c71c.jpeg"
                 alt="A diverse team collaborating and learning together around a table"
@@ -82,7 +101,6 @@ export default function SocialLearningPage() {
       </section>
 
       <section className="cardsSection">
-
         <article className="contentCard">
           <div className="cardHeader">
             <div className="iconWrap">
@@ -126,7 +144,7 @@ export default function SocialLearningPage() {
 
           <div className="insetBox">
             <h4>Confidence through structure:</h4>
-            <p className="insetText">              
+            <p className="insetText">
               In this safe and supportive environment, learners confidently
               share ideas, ask questions, and engage in open conversations.
               Free from judgment and rich in mutual respect,
@@ -155,7 +173,6 @@ export default function SocialLearningPage() {
               {peerSharingPoints[0].items}
             </p>
           </div>
-
         </article>
 
         <article className="contentCard">
@@ -243,7 +260,6 @@ export default function SocialLearningPage() {
           </div>
         </div>
       </section>
-
     </main>
   );
 }
