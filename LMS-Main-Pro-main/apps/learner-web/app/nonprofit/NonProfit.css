@@ -1,6 +1,6 @@
 .nonprofit-page {
   min-height: 100vh;
-  padding: 100px 7% 64px;
+  padding: 0 7% 64px;
   background: #e6e6ee;
   color: #24304f;
   font-family: "Segoe UI", system-ui, sans-serif;
@@ -39,7 +39,132 @@
   line-height: 1.75;
 }
 
+/* BREADCRUMB */
+
+.nonprofit-page .nonprofit-breadcrumb-nav {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto 18px;
+  padding: 14px 0 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  line-height: 1;
+}
+
+.nonprofit-page .nonprofit-breadcrumb,
+.nonprofit-page ol.nonprofit-breadcrumb {
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row !important;
+  gap: 0;
+  width: fit-content;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  list-style-type: none !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  counter-reset: none !important;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.nonprofit-page .nonprofit-breadcrumb-item,
+.nonprofit-page .nonprofit-breadcrumb li {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: static !important;
+  list-style: none !important;
+  list-style-type: none !important;
+  counter-increment: none !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.nonprofit-page .nonprofit-breadcrumb-item::marker,
+.nonprofit-page .nonprofit-breadcrumb li::marker {
+  content: "" !important;
+  display: none !important;
+}
+
+.nonprofit-page .nonprofit-breadcrumb-item::before,
+.nonprofit-page .nonprofit-breadcrumb li::before {
+  content: none !important;
+  display: none !important;
+}
+
+.nonprofit-page .nonprofit-breadcrumb-item + .nonprofit-breadcrumb-item::before,
+.nonprofit-page .nonprofit-breadcrumb li + li::before {
+  content: "›" !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 8px !important;
+  padding: 0 !important;
+  position: static !important;
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.nonprofit-page .nonprofit-breadcrumb-item a,
+.nonprofit-page .nonprofit-breadcrumb li a {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #bd081c;
+  text-decoration: none;
+  line-height: 1;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.nonprofit-page .nonprofit-breadcrumb-item a:hover,
+.nonprofit-page .nonprofit-breadcrumb li a:hover {
+  color: #8f0615;
+  text-decoration: underline;
+}
+
+.nonprofit-page .nonprofit-breadcrumb-item.active,
+.nonprofit-page .nonprofit-breadcrumb li.active {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #1e90ff;
+  font-weight: 600;
+  line-height: 1;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
 /* HERO */
+
 .nonprofit-hero {
   max-width: 1180px;
   margin: 0 auto 54px;
@@ -135,6 +260,7 @@
 }
 
 /* INTRO */
+
 .nonprofit-intro {
   max-width: 1180px;
   margin: 0 auto 56px;
@@ -146,6 +272,7 @@
 }
 
 /* HEADINGS */
+
 .nonprofit-section-heading {
   max-width: 900px;
   margin: 0 auto 30px;
@@ -163,6 +290,7 @@
 }
 
 /* CHALLENGES */
+
 .nonprofit-challenge-grid {
   max-width: 1180px;
   margin: 0 auto 64px;
@@ -208,6 +336,7 @@
 }
 
 /* DETAIL PANEL */
+
 .nonprofit-detail-panel {
   max-width: 1180px;
   margin: 0 auto 64px;
@@ -226,6 +355,7 @@
 }
 
 /* IMAGE FRAME */
+
 .nonprofit-image-box {
   width: 100%;
   max-width: 420px;
@@ -259,6 +389,7 @@
 }
 
 /* USE CASES */
+
 .nonprofit-usecase-section {
   max-width: 1180px;
   margin: 0 auto 64px;
@@ -296,6 +427,7 @@
 }
 
 /* BENEFITS */
+
 .nonprofit-benefits-panel {
   max-width: 1180px;
   margin: 0 auto 64px;
@@ -331,6 +463,7 @@
 }
 
 /* FOOTER */
+
 .nonprofit-footer {
   max-width: 1180px;
   margin: 0 auto;
@@ -339,69 +472,8 @@
   border-radius: 30px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1100px) {
-  .nonprofit-challenge-grid,
-  .nonprofit-usecase-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .nonprofit-hero,
-  .nonprofit-detail-panel,
-  .nonprofit-benefits-panel {
-    grid-template-columns: 1fr;
-  }
-
-  .nonprofit-image-box {
-    max-width: 520px;
-    height: 320px;
-  }
-}
-
-@media (max-width: 760px) {
-  .nonprofit-page {
-    padding: 80px 18px 40px;
-  }
-
-  .nonprofit-page h1 {
-    font-size: 34px;
-  }
-
-  .nonprofit-page h2 {
-    font-size: 28px;
-  }
-
-  .nonprofit-page h3 {
-    font-size: 22px;
-  }
-
-  .nonprofit-page p,
-  .nonprofit-usecase,
-  .nonprofit-benefits-list span {
-    font-size: 16px;
-  }
-
-  .nonprofit-hero-content,
-  .nonprofit-impact-card,
-  .nonprofit-intro,
-  .nonprofit-detail-panel,
-  .nonprofit-benefits-panel,
-  .nonprofit-footer {
-    padding: 28px;
-  }
-
-  .nonprofit-intro,
-  .nonprofit-challenge-grid,
-  .nonprofit-usecase-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .nonprofit-image-box {
-    max-width: 100%;
-    height: 240px;
-  }
-}
 /* IMAGE FRAME */
+
 .nonprofit-image-frame {
   width: 100%;
   max-width: 420px;
@@ -429,7 +501,21 @@
   position: static !important;
 }
 
+/* RESPONSIVE */
+
 @media (max-width: 1100px) {
+  .nonprofit-challenge-grid,
+  .nonprofit-usecase-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nonprofit-hero,
+  .nonprofit-detail-panel,
+  .nonprofit-benefits-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .nonprofit-image-box,
   .nonprofit-image-frame {
     max-width: 520px;
     height: 320px;
@@ -437,6 +523,61 @@
 }
 
 @media (max-width: 760px) {
+  .nonprofit-page {
+    padding: 0 18px 40px;
+  }
+
+  .nonprofit-page h1 {
+    font-size: 34px;
+  }
+
+  .nonprofit-page h2 {
+    font-size: 28px;
+  }
+
+  .nonprofit-page h3 {
+    font-size: 22px;
+  }
+
+  .nonprofit-page p,
+  .nonprofit-usecase,
+  .nonprofit-benefits-list span {
+    font-size: 16px;
+  }
+
+  .nonprofit-page .nonprofit-breadcrumb-nav {
+    padding: 12px 0 0;
+    margin-bottom: 14px;
+    justify-content: flex-end;
+  }
+
+  .nonprofit-page .nonprofit-breadcrumb,
+  .nonprofit-page ol.nonprofit-breadcrumb {
+    margin-left: auto !important;
+    justify-content: flex-end;
+  }
+
+  .nonprofit-page .nonprofit-breadcrumb-item,
+  .nonprofit-page .nonprofit-breadcrumb li {
+    font-size: 15px;
+  }
+
+  .nonprofit-hero-content,
+  .nonprofit-impact-card,
+  .nonprofit-intro,
+  .nonprofit-detail-panel,
+  .nonprofit-benefits-panel,
+  .nonprofit-footer {
+    padding: 28px;
+  }
+
+  .nonprofit-intro,
+  .nonprofit-challenge-grid,
+  .nonprofit-usecase-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nonprofit-image-box,
   .nonprofit-image-frame {
     max-width: 100%;
     height: 240px;
