@@ -72,6 +72,16 @@ const stats = [
 export default function LearningStyleAnalysisPage() {
   return (
     <main className="lsa-page page">
+      <div className="lsa-breadcrumb-nav">
+        <ol className="lsa-breadcrumb">
+          <li className="lsa-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="lsa-breadcrumb-item active" aria-current="page">
+            Learning Style Analysis
+          </li>
+        </ol>
+      </div>
 
       <section className="heroSection">
         <div className="heroGrid">
