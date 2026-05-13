@@ -2,7 +2,7 @@
   font-family: "Segoe UI", system-ui, sans-serif;
   background: #e6e6ee;
   color: #101a3d;
-  padding: 56px 6%;
+  padding: 0 6% 56px;
   line-height: 1.7;
   overflow-x: hidden;
 }
@@ -475,6 +475,114 @@
   box-shadow: 14px 14px 30px #c4c4cc, -14px -14px 30px #ffffff;
 }
 
+/* Breadcrumb */
+
+.bfsi-page .bfsi-breadcrumb-nav {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 8px;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  line-height: 1;
+}
+
+.bfsi-page .bfsi-breadcrumb {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0 0 0 auto;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  gap: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.bfsi-page .bfsi-breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  padding-left: 0;
+  position: static;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  list-style: none;
+}
+
+.bfsi-page .bfsi-breadcrumb-item::before {
+  content: none !important;
+  display: none !important;
+}
+
+.bfsi-page .bfsi-breadcrumb-item + .bfsi-breadcrumb-item::before {
+  content: "›" !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  position: static;
+  margin: 0 8px;
+  padding: 0;
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.bfsi-page .bfsi-breadcrumb-item a {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #bd081c;
+  text-decoration: none;
+  line-height: 1;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.bfsi-page .bfsi-breadcrumb-item a:hover {
+  color: #8f0615;
+  text-decoration: underline;
+}
+
+.bfsi-page .bfsi-breadcrumb-item.active {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #1e90ff;
+  font-weight: 600;
+  line-height: 1;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
 /* HOVER EFFECTS */
 .bfsi-image-box,
 .bfsi-content-block,
@@ -554,7 +662,7 @@
 
 @media (max-width: 960px) {
   .bfsi-page {
-    padding: 42px 5%;
+    padding: 0 5% 42px;
   }
 
   .bfsi-hero {
@@ -591,9 +699,22 @@
   }
 }
 
+@media (max-width: 640px) {
+  .bfsi-page .bfsi-breadcrumb-nav {
+    padding: 0 1rem;
+    margin-bottom: 8px;
+    justify-content: flex-end;
+  }
+
+  .bfsi-page .bfsi-breadcrumb {
+    margin-left: auto;
+    justify-content: flex-end;
+  }
+}
+
 @media (max-width: 560px) {
   .bfsi-page {
-    padding: 32px 18px;
+    padding: 0 18px 32px;
   }
 
   .bfsi-hero {
