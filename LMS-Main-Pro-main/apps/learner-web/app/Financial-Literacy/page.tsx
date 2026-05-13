@@ -13,6 +13,19 @@ import "./FinancialLiteracy.css";
 export default function FinancialLiteracy() {
   return (
     <section className="financial-page">
+
+       <div className="financial-breadcrumb-nav">
+    <ol className="financial-breadcrumb">
+      <li className="financial-breadcrumb-item">
+        <a href="/">Home</a>
+      </li>
+      <li className="financial-breadcrumb-item active" aria-current="page">
+        Financial Literacy
+      </li>
+    </ol>
+  </div>
+
+
       <div className="financial-hero">
         <div className="financial-hero-content">
           <span className="financial-badge">
