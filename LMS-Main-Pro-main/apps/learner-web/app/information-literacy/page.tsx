@@ -111,6 +111,16 @@ const IPlay = () => (
 export default function InformationLiteracyPage() {
   return (
     <main className="il">
+      <div className="il-breadcrumb-nav">
+        <ol className="il-breadcrumb">
+          <li className="il-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="il-breadcrumb-item active" aria-current="page">
+            Information Literacy
+          </li>
+        </ol>
+      </div>
 
       <section className="il__hero">
         <div className="il__hero-text">
@@ -330,7 +340,6 @@ export default function InformationLiteracyPage() {
           </div>
         </div>
       </section>
-
     </main>
   );
 }
