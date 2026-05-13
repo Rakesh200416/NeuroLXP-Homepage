@@ -6,13 +6,10 @@ import {
   FaChartPie,
   FaNetworkWired,
   FaUsers,
-  FaRegCheckCircle,
-  FaBuilding,
   FaRocket,
 } from "react-icons/fa";
 import {
   MdOutlinePolicy,
-  MdOutlineQuiz,
   MdOutlineAnalytics,
   MdGroups,
 } from "react-icons/md";
@@ -21,6 +18,17 @@ import "./EmployeeInduction.css";
 export default function Page() {
   return (
     <main className="induction-page">
+      <div className="induction-breadcrumb-nav">
+        <ol className="induction-breadcrumb">
+          <li className="induction-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="induction-breadcrumb-item active" aria-current="page">
+            Employee Induction
+          </li>
+        </ol>
+      </div>
+
       <section className="induction-hero">
         <div className="induction-hero-content">
           <span className="induction-badge">NeuroLXP Employee Induction</span>
@@ -228,12 +236,12 @@ export default function Page() {
 
       <section className="induction-final">
         <div className="final-visual">
-        <img
-          src="/pexels-divinetechygirl-1181396.jpg"
-          alt="Learners using digital learning resources"
-          className="placeholder-image"
-        />
-      </div>
+          <img
+            src="/pexels-divinetechygirl-1181396.jpg"
+            alt="Learners using digital learning resources"
+            className="placeholder-image"
+          />
+        </div>
 
         <div>
           <span className="induction-badge">Smarter Employee Onboarding</span>
