@@ -14,6 +14,16 @@ import {
 export default function NeuroLXP() {
   return (
     <main className="nlxp-page">
+      <div className="nlxp-breadcrumb-nav">
+        <ol className="nlxp-breadcrumb">
+          <li className="nlxp-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="nlxp-breadcrumb-item active" aria-current="page">
+            Training Management
+          </li>
+        </ol>
+      </div>
 
       {/* HERO */}
       <section className="nlxp-section">
@@ -127,7 +137,6 @@ export default function NeuroLXP() {
           </div>
         </div>
       </section>
-
     </main>
   );
 }
