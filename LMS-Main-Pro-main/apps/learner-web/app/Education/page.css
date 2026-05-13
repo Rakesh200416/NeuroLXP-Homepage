@@ -57,13 +57,136 @@ p {
   overflow-x: hidden;
 }
 
+/* Breadcrumb */
+
+.edu-page .edu-breadcrumb-nav {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto 18px;
+  padding: 14px 0 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  line-height: 1;
+}
+
+.edu-page .edu-breadcrumb,
+.edu-page ol.edu-breadcrumb {
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row !important;
+  gap: 0;
+  width: fit-content;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  list-style-type: none !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  counter-reset: none !important;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.edu-page .edu-breadcrumb-item,
+.edu-page .edu-breadcrumb li {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: static !important;
+  list-style: none !important;
+  list-style-type: none !important;
+  counter-increment: none !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.edu-page .edu-breadcrumb-item::marker,
+.edu-page .edu-breadcrumb li::marker {
+  content: "" !important;
+  display: none !important;
+}
+
+.edu-page .edu-breadcrumb-item::before,
+.edu-page .edu-breadcrumb li::before {
+  content: none !important;
+  display: none !important;
+}
+
+.edu-page .edu-breadcrumb-item + .edu-breadcrumb-item::before,
+.edu-page .edu-breadcrumb li + li::before {
+  content: "›" !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 8px !important;
+  padding: 0 !important;
+  position: static !important;
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.edu-page .edu-breadcrumb-item a,
+.edu-page .edu-breadcrumb li a {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #bd081c;
+  text-decoration: none;
+  line-height: 1;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.edu-page .edu-breadcrumb-item a:hover,
+.edu-page .edu-breadcrumb li a:hover {
+  color: #8f0615;
+  text-decoration: underline;
+}
+
+.edu-page .edu-breadcrumb-item.active,
+.edu-page .edu-breadcrumb li.active {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #1e90ff;
+  font-weight: 600;
+  line-height: 1;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
 .edu-container {
   width: min(1180px, calc(100% - 48px));
   margin: 0 auto;
 }
 
 .edu-hero {
-  padding: 24px 0 32px;
+  padding: 0 0 32px;
 }
 
 .edu-section {
@@ -433,8 +556,26 @@ p {
     width: min(100%, calc(100% - 32px));
   }
 
+  .edu-page .edu-breadcrumb-nav {
+    width: min(100%, calc(100% - 32px));
+    padding: 12px 0 0;
+    margin-bottom: 14px;
+    justify-content: flex-end;
+  }
+
+  .edu-page .edu-breadcrumb,
+  .edu-page ol.edu-breadcrumb {
+    margin-left: auto !important;
+    justify-content: flex-end;
+  }
+
+  .edu-page .edu-breadcrumb-item,
+  .edu-page .edu-breadcrumb li {
+    font-size: 15px;
+  }
+
   .edu-hero {
-    padding: 24px 0 28px;
+    padding: 0 0 28px;
   }
 
   .edu-section {
@@ -465,6 +606,10 @@ p {
     width: min(100%, calc(100% - 24px));
   }
 
+  .edu-page .edu-breadcrumb-nav {
+    width: min(100%, calc(100% - 24px));
+  }
+
   .edu-hero-content h1,
   h1 {
     font-size: 40px;
@@ -485,6 +630,7 @@ p {
     padding: 24px 20px;
   }
 }
+
 .edu-get-started-btn {
   transition: transform 0.14s ease, box-shadow 0.14s ease;
 }
