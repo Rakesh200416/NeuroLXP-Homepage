@@ -3,7 +3,7 @@
   background-color: #e6e7ee;
   font-family: "Segoe UI", system-ui, sans-serif;
   color: #172554;
-  padding: 80px 6%;
+  padding: 0 6% 80px;
 }
 
 .assessments-page h1 {
@@ -44,6 +44,129 @@
 
 .assessments-page span {
   font-size: 15px;
+}
+
+/* Breadcrumb */
+
+.assessments-page .assessments-breadcrumb-nav {
+  max-width: 1200px;
+  margin: 0 auto 18px;
+  padding: 14px 0 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  line-height: 1;
+}
+
+.assessments-page .assessments-breadcrumb,
+.assessments-page ol.assessments-breadcrumb {
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row !important;
+  gap: 0;
+  width: fit-content;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  list-style-type: none !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  counter-reset: none !important;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.assessments-page .assessments-breadcrumb-item,
+.assessments-page .assessments-breadcrumb li {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: static !important;
+  list-style: none !important;
+  list-style-type: none !important;
+  counter-increment: none !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.assessments-page .assessments-breadcrumb-item::marker,
+.assessments-page .assessments-breadcrumb li::marker {
+  content: "" !important;
+  display: none !important;
+}
+
+.assessments-page .assessments-breadcrumb-item::before,
+.assessments-page .assessments-breadcrumb li::before {
+  content: none !important;
+  display: none !important;
+}
+
+.assessments-page .assessments-breadcrumb-item + .assessments-breadcrumb-item::before,
+.assessments-page .assessments-breadcrumb li + li::before {
+  content: "›" !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 8px !important;
+  padding: 0 !important;
+  position: static !important;
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.assessments-page .assessments-breadcrumb-item a,
+.assessments-page .assessments-breadcrumb li a {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #bd081c;
+  text-decoration: none;
+  line-height: 1;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.assessments-page .assessments-breadcrumb-item a:hover,
+.assessments-page .assessments-breadcrumb li a:hover {
+  color: #8f0615;
+  text-decoration: underline;
+}
+
+.assessments-page .assessments-breadcrumb-item.active,
+.assessments-page .assessments-breadcrumb li.active {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #1e90ff;
+  font-weight: 600;
+  line-height: 1;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .assessments-neumorphic-card {
@@ -556,7 +679,24 @@
 
 @media (max-width: 960px) {
   .assessments-page {
-    padding: 56px 5%;
+    padding: 0 5% 56px;
+  }
+
+  .assessments-page .assessments-breadcrumb-nav {
+    padding: 12px 0 0;
+    margin-bottom: 14px;
+    justify-content: flex-end;
+  }
+
+  .assessments-page .assessments-breadcrumb,
+  .assessments-page ol.assessments-breadcrumb {
+    margin-left: auto !important;
+    justify-content: flex-end;
+  }
+
+  .assessments-page .assessments-breadcrumb-item,
+  .assessments-page .assessments-breadcrumb li {
+    font-size: 15px;
   }
 
   .assessments-hero,
@@ -614,6 +754,7 @@
     font-size: 17px;
   }
 }
+
 .placeholder-image {
   width: 100%;
   height: 100%;
