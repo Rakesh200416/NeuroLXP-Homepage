@@ -1,6 +1,16 @@
 import "./gamification.css";
 import Image from "next/image";
-import { FaGamepad, FaMousePointer, FaPuzzlePiece, FaBrain, FaTrophy, FaLightbulb, FaRandom, FaChartLine, FaRocket, } from "react-icons/fa";
+import {
+  FaGamepad,
+  FaMousePointer,
+  FaPuzzlePiece,
+  FaBrain,
+  FaTrophy,
+  FaLightbulb,
+  FaRandom,
+  FaChartLine,
+  FaRocket,
+} from "react-icons/fa";
 
 const gameActivities = [
   {
@@ -38,20 +48,66 @@ const gameActivities = [
 ];
 
 const benefitItems = [
-  { icon: <FaBrain />, color: "purple", dot: "#7c3aed", label: "Active Participation", desc: "Learners engage directly with the material, not just read it." },
-  { icon: <FaLightbulb />, color: "teal", dot: "#0f766e", label: "Critical Thinking", desc: "Challenges learners to evaluate and apply concepts deeply." },
-  { icon: <FaRandom />, color: "amber", dot: "#d97706", label: "Exploration", desc: "Encourages curiosity-driven discovery through interactive content." },
+  {
+    icon: <FaBrain />,
+    color: "purple",
+    dot: "#7c3aed",
+    label: "Active Participation",
+    desc: "Learners engage directly with the material, not just read it.",
+  },
+  {
+    icon: <FaLightbulb />,
+    color: "teal",
+    dot: "#0f766e",
+    label: "Critical Thinking",
+    desc: "Challenges learners to evaluate and apply concepts deeply.",
+  },
+  {
+    icon: <FaRandom />,
+    color: "amber",
+    dot: "#d97706",
+    label: "Exploration",
+    desc: "Encourages curiosity-driven discovery through interactive content.",
+  },
 ];
 
 const miniFeatureItems = [
-  { icon: <FaChartLine />, color: "teal", dot: "#0f766e", label: "Better Retention", desc: "Active engagement helps knowledge stick longer." },
-  { icon: <FaTrophy />, color: "amber", dot: "#d97706", label: "Focused Practice", desc: "Targeted activities reinforce specific concepts effectively." },
-  { icon: <FaRocket />, color: "blue", dot: "#2563eb", label: "Enjoyable Learning", desc: "Games and interactivity make the experience genuinely fun." },
+  {
+    icon: <FaChartLine />,
+    color: "teal",
+    dot: "#0f766e",
+    label: "Better Retention",
+    desc: "Active engagement helps knowledge stick longer.",
+  },
+  {
+    icon: <FaTrophy />,
+    color: "amber",
+    dot: "#d97706",
+    label: "Focused Practice",
+    desc: "Targeted activities reinforce specific concepts effectively.",
+  },
+  {
+    icon: <FaRocket />,
+    color: "blue",
+    dot: "#2563eb",
+    label: "Enjoyable Learning",
+    desc: "Games and interactivity make the experience genuinely fun.",
+  },
 ];
 
 export default function GamificationPage() {
   return (
     <main className="gamification-page page">
+      <div className="gamification-breadcrumb-nav">
+        <ol className="gamification-breadcrumb">
+          <li className="gamification-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="gamification-breadcrumb-item active" aria-current="page">
+            Gamification
+          </li>
+        </ol>
+      </div>
 
       <section className="heroSection">
         <div className="heroGrid">
@@ -78,7 +134,13 @@ export default function GamificationPage() {
 
           <div className="heroVisualCard">
             <div className="imagePlaceholder">
-              <Image src="/photo-1522202176988-66273c2fd55f.webp" alt="Students engaging with interactive gamified learning on digital devices" width={600} height={340} className="heroImg" />
+              <Image
+                src="/photo-1522202176988-66273c2fd55f.webp"
+                alt="Students engaging with interactive gamified learning on digital devices"
+                width={600}
+                height={340}
+                className="heroImg"
+              />
             </div>
 
             <div className="floatingStats">
@@ -185,7 +247,6 @@ export default function GamificationPage() {
       </section>
 
       <section className="activitiesSection">
-
         <div className="activitiesGrid">
           {gameActivities.map((activity, i) => (
             <div className="activityCard" key={activity.title} data-index={i}>
@@ -225,7 +286,7 @@ export default function GamificationPage() {
               <div className="benefitsOutcomes">
                 <p className="outcomesLabel"><strong>Learning outcomes</strong></p>
                 <div className="iconList">
-                  {benefitItems.map(item => (
+                  {benefitItems.map((item) => (
                     <div className="iconListItem" key={item.label}>
                       <div className={`iconListIcon ${item.color}`}>{item.icon}</div>
                       <div className="iconListText">
@@ -240,7 +301,7 @@ export default function GamificationPage() {
               <div className="benefitsResults">
                 <p className="outcomesLabel"><strong>Results</strong></p>
                 <div className="iconList">
-                  {miniFeatureItems.map(item => (
+                  {miniFeatureItems.map((item) => (
                     <div className="iconListItem" key={item.label}>
                       <div className={`iconListIcon ${item.color}`}>{item.icon}</div>
                       <div className="iconListText">
@@ -251,9 +312,7 @@ export default function GamificationPage() {
                   ))}
                 </div>
               </div>
-
             </div>
-
           </div>
         </div>
       </section>
