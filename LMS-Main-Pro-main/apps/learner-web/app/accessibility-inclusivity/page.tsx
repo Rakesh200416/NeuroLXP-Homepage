@@ -44,6 +44,16 @@ const institutionSupport = [
 export default function AccessibilityInclusivity() {
   return (
     <main className="access-page">
+      <div className="access-breadcrumb-nav">
+        <ol className="access-breadcrumb">
+          <li className="access-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="access-breadcrumb-item active" aria-current="page">
+            Accessibility &amp; Inclusivity
+          </li>
+        </ol>
+      </div>
 
       {/* HERO */}
       <section className="access-hero">
@@ -142,7 +152,6 @@ export default function AccessibilityInclusivity() {
           learner has the opportunity to succeed without barriers.
         </p>
       </section>
-
     </main>
   );
 }
