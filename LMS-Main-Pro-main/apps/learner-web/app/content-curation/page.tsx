@@ -1,7 +1,18 @@
 import "./content-curation.css";
 import {
-  FaBrain, FaFileAlt, FaClipboardList, FaChartBar, FaComments, FaLightbulb, FaUniversity, FaChalkboardTeacher,
-  FaUserGraduate, FaRocket, FaMagic, FaBolt, } from "react-icons/fa";
+  FaBrain,
+  FaFileAlt,
+  FaClipboardList,
+  FaChartBar,
+  FaComments,
+  FaLightbulb,
+  FaUniversity,
+  FaChalkboardTeacher,
+  FaUserGraduate,
+  FaRocket,
+  FaMagic,
+  FaBolt,
+} from "react-icons/fa";
 
 const examContentPoints = [
   "Concise exam-focused summaries from detailed notes",
@@ -31,6 +42,16 @@ const learnerPoints = [
 export default function AIContentCurationPage() {
   return (
     <main className="content-curation-page page">
+      <div className="content-curation-breadcrumb-nav">
+        <ol className="content-curation-breadcrumb">
+          <li className="content-curation-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="content-curation-breadcrumb-item active" aria-current="page">
+            AI-Powered Content Curation
+          </li>
+        </ol>
+      </div>
 
       <section className="heroSection">
         <div className="heroGrid">
@@ -59,7 +80,6 @@ export default function AIContentCurationPage() {
           </div>
 
           <div className="heroVisualCard">
-            
             <div className="floatingStats">
               <div className="statPill">
                 <FaBrain className="iconText" />
@@ -87,7 +107,6 @@ export default function AIContentCurationPage() {
       </section>
 
       <section className="cardsSection">
-
         <article className="contentCard">
           <div className="cardHeader">
             <div className="iconWrap">
@@ -252,7 +271,6 @@ export default function AIContentCurationPage() {
 
       <section className="insightSection">
         <div className="insightGrid">
-         
           <article className="contentCard insightCard">
             <div className="cardHeader">
               <div className="iconWrap">
@@ -296,7 +314,6 @@ export default function AIContentCurationPage() {
 
       <section className="stakeholderSection">
         <div className="stakeholderGrid">
-
           <article className="stakeholderCard stakeholderCard--institution">
             <div className="cardHeader">
               <div className="iconWrap">
@@ -353,7 +370,6 @@ export default function AIContentCurationPage() {
               </ul>
             </div>
           </article>
-
         </div>
       </section>
 
@@ -394,7 +410,7 @@ export default function AIContentCurationPage() {
           <div className="secondaryVisualCard">
             <div className="imagePlaceholderAlt">
               <img
-                src="photo-1620712943543-bcc4688e7485.jpeg"
+                src="/photo-1620712943543-bcc4688e7485.jpeg"
                 alt="Intelligent learning powered by AI"
                 className="heroImage"
               />
@@ -402,7 +418,6 @@ export default function AIContentCurationPage() {
           </div>
         </div>
       </section>
-
     </main>
   );
 }
