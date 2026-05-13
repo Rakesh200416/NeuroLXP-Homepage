@@ -54,6 +54,17 @@ const bridgeOutcomes = [
 export default function CareerPathways() {
   return (
     <main className="career-page">
+      <div className="career-breadcrumb-nav">
+        <ol className="career-breadcrumb">
+          <li className="career-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="career-breadcrumb-item active" aria-current="page">
+            Career Pathways
+          </li>
+        </ol>
+      </div>
+
       <section className="career-hero career-neumorphic-card">
         <div className="career-hero-content">
           <span className="career-eyebrow">Career Pathways for Learners</span>
