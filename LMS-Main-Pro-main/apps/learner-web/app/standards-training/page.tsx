@@ -2,11 +2,8 @@ import {
   FaBookOpen,
   FaGraduationCap,
   FaChartBar,
-  FaClipboardCheck,
   FaUsers,
   FaBuilding,
-  FaBullseye,
-  FaAward,
   FaBriefcase,
   FaCheckCircle,
 } from "react-icons/fa";
@@ -15,6 +12,17 @@ import "./standards-training.css";
 export default function StandardsTraining() {
   return (
     <main className="standards-page">
+      <div className="standards-breadcrumb-nav">
+        <ol className="standards-breadcrumb">
+          <li className="standards-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="standards-breadcrumb-item active" aria-current="page">
+            Standards Training
+          </li>
+        </ol>
+      </div>
+
       <section className="standards-hero">
         <div className="standards-hero-content">
           <span className="standards-badge">Standards Training</span>
