@@ -1,9 +1,121 @@
 .induction-page {
+  position: relative;
   min-height: 100vh;
-  padding: 64px 7%;
+  padding: 0 7% 64px;
   background-color: #e6e7ee;
   color: #31344b;
   font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+/* Breadcrumb */
+.induction-page .induction-breadcrumb-nav {
+  position: absolute;
+  top: 0;
+  right: 7%;
+  width: auto;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 0;
+  line-height: 1;
+  z-index: 2;
+}
+
+.induction-page .induction-breadcrumb {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  gap: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.induction-page .induction-breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  position: static;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  list-style: none;
+}
+
+.induction-page .induction-breadcrumb-item::before {
+  content: none !important;
+  display: none !important;
+}
+
+.induction-page .induction-breadcrumb-item + .induction-breadcrumb-item::before {
+  content: "›" !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  position: static;
+  margin: 0 8px;
+  padding: 0;
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.induction-page .induction-breadcrumb-item a {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #bd081c;
+  text-decoration: none;
+  line-height: 1;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.induction-page .induction-breadcrumb-item a:hover {
+  color: #8f0615;
+  text-decoration: underline;
+}
+
+.induction-page .induction-breadcrumb-item.active {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #1e90ff;
+  font-weight: 600;
+  line-height: 1;
+  background: transparent;
+  box-shadow: none;
+  border: none;
 }
 
 .induction-page h1 {
@@ -32,6 +144,7 @@
 
 /* HERO */
 .induction-hero {
+  padding-top: 48px;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 44px;
@@ -440,7 +553,12 @@
 
 @media (max-width: 900px) {
   .induction-page {
-    padding: 36px 18px;
+    padding: 0 18px 36px;
+  }
+
+  .induction-page .induction-breadcrumb-nav {
+    top: 0;
+    right: 18px;
   }
 
   .induction-hero,
@@ -472,6 +590,21 @@
   .benefits-section,
   .induction-final {
     padding: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .induction-page .induction-breadcrumb-nav {
+    top: 0;
+    right: 18px;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-end;
+  }
+
+  .induction-page .induction-breadcrumb {
+    margin: 0;
+    justify-content: flex-end;
   }
 }
 
