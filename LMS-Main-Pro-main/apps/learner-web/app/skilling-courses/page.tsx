@@ -77,6 +77,17 @@ const idealFor = [
 export default function SkillingCourses() {
   return (
     <main className="skilling-page">
+      <div className="skilling-breadcrumb-nav">
+        <ol className="skilling-breadcrumb">
+          <li className="skilling-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="skilling-breadcrumb-item active" aria-current="page">
+            Skilling Courses
+          </li>
+        </ol>
+      </div>
+
       <section className="skilling-hero skilling-neumorphic-card">
         <div className="skilling-hero-content">
           <span className="skilling-eyebrow">Skilling Courses</span>
