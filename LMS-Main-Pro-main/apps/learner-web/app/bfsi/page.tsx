@@ -58,8 +58,18 @@ export default function BFSI() {
 
   return (
     <section className="bfsi-page">
-      <div className="bfsi-hero">
+      <div className="bfsi-breadcrumb-nav">
+        <ol className="bfsi-breadcrumb">
+          <li className="bfsi-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="bfsi-breadcrumb-item active" aria-current="page">
+            BFSI
+          </li>
+        </ol>
+      </div>
 
+      <div className="bfsi-hero">
         <h1>BFSI</h1>
 
         <h2>Secure, Scalable Learning for the BFSI Industry</h2>
@@ -72,13 +82,13 @@ export default function BFSI() {
       </div>
 
       <div className="bfsi-image-row single">
-  <div className="bfsi-image-box">
-    <img
-      src="/pexels-polina-tankilevitch-6927375.jpg"
-      alt="BFSI training and compliance learning"
-    />
-  </div>
-</div>
+        <div className="bfsi-image-box">
+          <img
+            src="/pexels-polina-tankilevitch-6927375.jpg"
+            alt="BFSI training and compliance learning"
+          />
+        </div>
+      </div>
 
       <div className="bfsi-content-block">
         <div>
