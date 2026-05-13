@@ -1,6 +1,19 @@
 import "./interactivities.css";
 import Image from "next/image";
-import { FaBolt, FaBrain, FaChalkboardTeacher, FaCogs, FaCompass, FaFlask, FaGraduationCap, FaHandPointer, FaLightbulb, FaRocket, FaSlidersH, FaStar, } from "react-icons/fa";
+import {
+  FaBolt,
+  FaBrain,
+  FaChalkboardTeacher,
+  FaCogs,
+  FaCompass,
+  FaFlask,
+  FaGraduationCap,
+  FaHandPointer,
+  FaLightbulb,
+  FaRocket,
+  FaSlidersH,
+  FaStar,
+} from "react-icons/fa";
 
 const modernLearnerPoints = [
   {
@@ -42,6 +55,17 @@ const empowerPoints = [
 export default function InteractivitiesPage() {
   return (
     <main className="interactivities-page page">
+      <div className="interactivities-breadcrumb-nav">
+        <ol className="interactivities-breadcrumb">
+          <li className="interactivities-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="interactivities-breadcrumb-item active" aria-current="page">
+            Interactivities
+          </li>
+        </ol>
+      </div>
+
       {/* ── Hero ── */}
       <section className="heroSection">
         <div className="heroGrid">
@@ -191,9 +215,13 @@ export default function InteractivitiesPage() {
         <div className="ctaCard">
           <div className="ctaVisual">
             <div className="imagePlaceholderAlt">
-              <Image src="/pexels-pavel-danilyuk-6340629.jpg"
+              <Image
+                src="/pexels-pavel-danilyuk-6340629.jpg"
                 alt="Learner confidently engaged in a digital learning experience"
-                width={800} height={560} className="ctaImg" />
+                width={800}
+                height={560}
+                className="ctaImg"
+              />
             </div>
           </div>
 
