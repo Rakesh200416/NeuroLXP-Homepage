@@ -7,7 +7,6 @@ import {
   FaLaptopCode,
   FaBug,
   FaCubes,
-  FaUserGraduate,
   FaBuilding,
 } from "react-icons/fa";
 import { MdAutoStories, MdOutlineUpdate } from "react-icons/md";
@@ -16,6 +15,17 @@ import "./CodingResources.css";
 export default function Page() {
   return (
     <main className="resources-page">
+      <div className="resources-breadcrumb-nav">
+        <ol className="resources-breadcrumb">
+          <li className="resources-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="resources-breadcrumb-item active" aria-current="page">
+            Coding Resources
+          </li>
+        </ol>
+      </div>
+
       {/* HERO */}
       <section className="resources-hero">
         <div className="resources-hero-content">
@@ -41,11 +51,11 @@ export default function Page() {
         </div>
 
         <div className="resources-image vertical">
-        <img
-          src="/pexels-mizunokozuki-12899188.jpg"
-          alt="Learning resources"
-        />
-      </div>
+          <img
+            src="/pexels-mizunokozuki-12899188.jpg"
+            alt="Learning resources"
+          />
+        </div>
       </section>
 
       {/* SECTION */}
@@ -127,89 +137,89 @@ export default function Page() {
       </section>
 
       {/* CARDS */}
- <section className="resources-cards">
-  <div className="resource-card">
-    <FaCubes className="card-icon" />
+      <section className="resources-cards">
+        <div className="resource-card">
+          <FaCubes className="card-icon" />
 
-    <div>
-      <h2>Support for Multiple Programming Domains</h2>
+          <div>
+            <h2>Support for Multiple Programming Domains</h2>
 
-      <p>
-        NeuroLabs Coding Resources support learners across key areas of
-        technology and software development.
-      </p>
+            <p>
+              NeuroLabs Coding Resources support learners across key areas of
+              technology and software development.
+            </p>
 
-      <ul>
-        <li>Programming fundamentals</li>
-        <li>Web development</li>
-        <li>Software development practices</li>
-        <li>Data structures and algorithms</li>
-        <li>Application development</li>
-      </ul>
+            <ul>
+              <li>Programming fundamentals</li>
+              <li>Web development</li>
+              <li>Software development practices</li>
+              <li>Data structures and algorithms</li>
+              <li>Application development</li>
+            </ul>
 
-      <p>
-        This helps learners explore domains and build stronger technical skills.
-      </p>
-    </div>
-  </div>
+            <p>
+              This helps learners explore domains and build stronger technical skills.
+            </p>
+          </div>
+        </div>
 
-  <div className="resource-card">
-  <MdOutlineUpdate className="card-icon" />
+        <div className="resource-card">
+          <MdOutlineUpdate className="card-icon" />
 
-  <div>
-    <h2>Continuous Learning for Developers</h2>
+          <div>
+            <h2>Continuous Learning for Developers</h2>
 
-    <p>
-      NeuroLabs helps developers stay updated with new tools, frameworks, best
-      practices, and industry trends.
-    </p>
+            <p>
+              NeuroLabs helps developers stay updated with new tools, frameworks, best
+              practices, and industry trends.
+            </p>
 
-    <ul>
-      <li>Modern frameworks and libraries</li>
-      <li>Updated coding best practices</li>
-      <li>New development tools</li>
-      <li>Industry-relevant programming trends</li>
-    </ul>
+            <ul>
+              <li>Modern frameworks and libraries</li>
+              <li>Updated coding best practices</li>
+              <li>New development tools</li>
+              <li>Industry-relevant programming trends</li>
+            </ul>
 
-    <p>
-      Learners can deepen expertise and stay aligned with modern development.
-    </p>
-  </div>
-</div>
+            <p>
+              Learners can deepen expertise and stay aligned with modern development.
+            </p>
+          </div>
+        </div>
 
-  <div className="resource-card">
-    <FaBuilding className="card-icon" />
+        <div className="resource-card">
+          <FaBuilding className="card-icon" />
 
-    <div>
-      <h2>Ideal for Learning, Teaching, and Skill Development</h2>
+          <div>
+            <h2>Ideal for Learning, Teaching, and Skill Development</h2>
 
-      <p>
-        NeuroLabs Coding Resources support institutions, bootcamps, corporate
-        training, and individual learners.
-      </p>
+            <p>
+              NeuroLabs Coding Resources support institutions, bootcamps, corporate
+              training, and individual learners.
+            </p>
 
-      <ul>
-        <li>Universities and engineering institutions</li>
-        <li>Coding bootcamps and academies</li>
-        <li>Corporate technology training</li>
-        <li>Career-focused individual learners</li>
-      </ul>
+            <ul>
+              <li>Universities and engineering institutions</li>
+              <li>Coding bootcamps and academies</li>
+              <li>Corporate technology training</li>
+              <li>Career-focused individual learners</li>
+            </ul>
 
-      <p>
-        Educators can use these resources in classroom and online courses.
-      </p>
-    </div>
-  </div>
-</section>
+            <p>
+              Educators can use these resources in classroom and online courses.
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* FINAL */}
       <section className="resources-final">
         <div className="resources-image">
-        <img
-          src="/pexels-dkomov-34804006.jpg"
-          alt="Coding resources illustration"
-        />
-      </div>
+          <img
+            src="/pexels-dkomov-34804006.jpg"
+            alt="Coding resources illustration"
+          />
+        </div>
 
         <div>
           <span className="resources-badge">Programming Growth</span>
