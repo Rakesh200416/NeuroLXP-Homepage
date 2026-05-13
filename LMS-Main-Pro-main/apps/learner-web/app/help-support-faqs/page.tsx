@@ -6,12 +6,10 @@ import {
   FaChalkboardTeacher,
   FaQuestionCircle,
   FaBookOpen,
-  FaCogs,
   FaChartLine,
   FaClipboardCheck,
   FaCertificate,
   FaArrowRight,
-  FaLifeRing,
 } from "react-icons/fa";
 
 const supportServices = [
@@ -56,6 +54,17 @@ const faqTopics = [
 export default function SupportFaq() {
   return (
     <main className="support-page">
+      <div className="support-breadcrumb-nav">
+        <ol className="support-breadcrumb">
+          <li className="support-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="support-breadcrumb-item active" aria-current="page">
+            Help, Support & FAQs
+          </li>
+        </ol>
+      </div>
+
       <section className="support-hero support-neumorphic-card">
         <div className="support-hero-content">
           <span className="support-eyebrow">Help, Support & FAQs</span>
@@ -72,7 +81,11 @@ export default function SupportFaq() {
         </div>
 
         <div className="support-image-placeholder">
-         <img src="/pexels-pixabay-221164.jpg" alt="Learners using digital learning resources" className="placeholder-image"/>
+          <img
+            src="/pexels-pixabay-221164.jpg"
+            alt="Learners using digital learning resources"
+            className="placeholder-image"
+          />
         </div>
       </section>
 
@@ -132,7 +145,11 @@ export default function SupportFaq() {
 
         <article className="support-neumorphic-card support-image-card">
           <div className="support-image-placeholder">
-          <img src="/pexels-mart-production-7709105.jpg" alt="Learners using digital learning resources" className="placeholder-image"/>
+            <img
+              src="/pexels-mart-production-7709105.jpg"
+              alt="Learners using digital learning resources"
+              className="placeholder-image"
+            />
           </div>
         </article>
       </section>
