@@ -3,7 +3,7 @@
   background-color: #e6e7ee;
   font-family: "Segoe UI", system-ui, sans-serif;
   color: #172554;
-  padding: 80px 6%;
+  padding: 0 6% 80px;
 }
 
 .skilling-page h1 {
@@ -44,6 +44,129 @@
 
 .skilling-page span {
   font-size: 15px;
+}
+
+/* Breadcrumb */
+
+.skilling-page .skilling-breadcrumb-nav {
+  max-width: 1200px;
+  margin: 0 auto 18px;
+  padding: 14px 0 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  line-height: 1;
+}
+
+.skilling-page .skilling-breadcrumb,
+.skilling-page ol.skilling-breadcrumb {
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row !important;
+  gap: 0;
+  width: fit-content;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  list-style-type: none !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  counter-reset: none !important;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.skilling-page .skilling-breadcrumb-item,
+.skilling-page .skilling-breadcrumb li {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: static !important;
+  list-style: none !important;
+  list-style-type: none !important;
+  counter-increment: none !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.skilling-page .skilling-breadcrumb-item::marker,
+.skilling-page .skilling-breadcrumb li::marker {
+  content: "" !important;
+  display: none !important;
+}
+
+.skilling-page .skilling-breadcrumb-item::before,
+.skilling-page .skilling-breadcrumb li::before {
+  content: none !important;
+  display: none !important;
+}
+
+.skilling-page .skilling-breadcrumb-item + .skilling-breadcrumb-item::before,
+.skilling-page .skilling-breadcrumb li + li::before {
+  content: "›" !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 8px !important;
+  padding: 0 !important;
+  position: static !important;
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.skilling-page .skilling-breadcrumb-item a,
+.skilling-page .skilling-breadcrumb li a {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #bd081c;
+  text-decoration: none;
+  line-height: 1;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.skilling-page .skilling-breadcrumb-item a:hover,
+.skilling-page .skilling-breadcrumb li a:hover {
+  color: #8f0615;
+  text-decoration: underline;
+}
+
+.skilling-page .skilling-breadcrumb-item.active,
+.skilling-page .skilling-breadcrumb li.active {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #1e90ff;
+  font-weight: 600;
+  line-height: 1;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .skilling-neumorphic-card {
@@ -608,7 +731,24 @@
 
 @media (max-width: 760px) {
   .skilling-page {
-    padding: 56px 5%;
+    padding: 0 5% 56px;
+  }
+
+  .skilling-page .skilling-breadcrumb-nav {
+    padding: 12px 0 0;
+    margin-bottom: 14px;
+    justify-content: flex-end;
+  }
+
+  .skilling-page .skilling-breadcrumb,
+  .skilling-page ol.skilling-breadcrumb {
+    margin-left: auto !important;
+    justify-content: flex-end;
+  }
+
+  .skilling-page .skilling-breadcrumb-item,
+  .skilling-page .skilling-breadcrumb li {
+    font-size: 15px;
   }
 
   .skilling-benefit-grid {
