@@ -138,7 +138,16 @@ const IMG = {
 export default function MediaLiteracyPage() {
   return (
     <main className="ml">
-
+        <div className="ml-breadcrumb-nav">
+            <ol className="ml-breadcrumb">
+              <li className="ml-breadcrumb-item">
+                <a href="/">Home</a>
+              </li>
+              <li className="ml-breadcrumb-item active" aria-current="page">
+                Media Literacy
+              </li>
+            </ol>
+          </div>
       <section className="ml__hero">
         <div className="ml__hero-img-panel">
           <img src={IMG.hero} alt="Learners engaging with media" className="ml__hero-img"/>
