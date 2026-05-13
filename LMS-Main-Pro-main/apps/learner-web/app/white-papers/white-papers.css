@@ -3,7 +3,118 @@
   background-color: #e6e7ee;
   font-family: "Segoe UI", system-ui, sans-serif;
   color: #172554;
-  padding: 80px 6%;
+  padding: 0 6% 80px;
+}
+
+/* Breadcrumb */
+.white-paper-page .white-paper-breadcrumb-nav {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 14px;
+  padding: 16px 0 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 0;
+  line-height: 1;
+  position: relative;
+  z-index: 5;
+}
+
+.white-paper-page .white-paper-breadcrumb {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  gap: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.white-paper-page .white-paper-breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  position: static;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  list-style: none;
+}
+
+.white-paper-page .white-paper-breadcrumb-item::before {
+  content: none !important;
+  display: none !important;
+}
+
+.white-paper-page
+  .white-paper-breadcrumb-item
+  + .white-paper-breadcrumb-item::before {
+  content: "›" !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  position: static;
+  margin: 0 8px;
+  padding: 0;
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.white-paper-page .white-paper-breadcrumb-item a {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #bd081c;
+  text-decoration: none;
+  line-height: 1;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.white-paper-page .white-paper-breadcrumb-item a:hover {
+  color: #8f0615;
+  text-decoration: underline;
+}
+
+.white-paper-page .white-paper-breadcrumb-item.active {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #1e90ff;
+  font-weight: 600;
+  line-height: 1;
+  background: transparent;
+  box-shadow: none;
+  border: none;
 }
 
 .white-paper-page h1 {
@@ -327,7 +438,12 @@
 
 @media (max-width: 960px) {
   .white-paper-page {
-    padding: 56px 5%;
+    padding: 0 5% 56px;
+  }
+
+  .white-paper-page .white-paper-breadcrumb-nav {
+    padding-top: 16px;
+    margin-bottom: 14px;
   }
 
   .white-paper-page .white-paper-hero,
@@ -350,6 +466,17 @@
 }
 
 @media (max-width: 560px) {
+  .white-paper-page .white-paper-breadcrumb-nav {
+    padding-top: 16px;
+    margin-bottom: 14px;
+    justify-content: flex-end;
+  }
+
+  .white-paper-page .white-paper-breadcrumb {
+    margin: 0;
+    justify-content: flex-end;
+  }
+
   .white-paper-page .neumorphic-card {
     padding: 26px;
     border-radius: 22px;
