@@ -71,6 +71,17 @@ const useCases = [
 export default function ELearningPage() {
   return (
     <main className="el-page">
+      <div className="el-breadcrumb-nav">
+        <ol className="el-breadcrumb">
+          <li className="el-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="el-breadcrumb-item active" aria-current="page">
+            E-Learning Solutions
+          </li>
+        </ol>
+      </div>
+
       <section className="el-hero">
         <div className="el-container el-hero-grid">
           <div className="el-hero-content">
