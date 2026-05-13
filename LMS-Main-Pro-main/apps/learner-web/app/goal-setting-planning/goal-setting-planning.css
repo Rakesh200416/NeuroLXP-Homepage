@@ -31,9 +31,132 @@
 .goal-setting-page {
   width: min(1200px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 34px 0 70px;
+  padding: 0 0 70px;
   color: var(--text);
   font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Breadcrumb */
+
+.goal-setting-page .goal-breadcrumb-nav {
+  width: 100%;
+  margin: 0 auto 18px;
+  padding: 14px 0 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  line-height: 1;
+}
+
+.goal-setting-page .goal-breadcrumb,
+.goal-setting-page ol.goal-breadcrumb {
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row !important;
+  gap: 0;
+  width: fit-content;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  list-style-type: none !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  counter-reset: none !important;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.goal-setting-page .goal-breadcrumb-item,
+.goal-setting-page .goal-breadcrumb li {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: static !important;
+  list-style: none !important;
+  list-style-type: none !important;
+  counter-increment: none !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.goal-setting-page .goal-breadcrumb-item::marker,
+.goal-setting-page .goal-breadcrumb li::marker {
+  content: "" !important;
+  display: none !important;
+}
+
+.goal-setting-page .goal-breadcrumb-item::before,
+.goal-setting-page .goal-breadcrumb li::before {
+  content: none !important;
+  display: none !important;
+}
+
+.goal-setting-page .goal-breadcrumb-item + .goal-breadcrumb-item::before,
+.goal-setting-page .goal-breadcrumb li + li::before {
+  content: "›" !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 8px !important;
+  padding: 0 !important;
+  position: static !important;
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.goal-setting-page .goal-breadcrumb-item a,
+.goal-setting-page .goal-breadcrumb li a {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #bd081c;
+  text-decoration: none;
+  line-height: 1;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.goal-setting-page .goal-breadcrumb-item a:hover,
+.goal-setting-page .goal-breadcrumb li a:hover {
+  color: #8f0615;
+  text-decoration: underline;
+}
+
+.goal-setting-page .goal-breadcrumb-item.active,
+.goal-setting-page .goal-breadcrumb li.active {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #1e90ff;
+  font-weight: 600;
+  line-height: 1;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .goal-setting-page .heroSection,
@@ -516,7 +639,24 @@
 @media (max-width: 768px) {
   .goal-setting-page {
     width: min(100%, calc(100% - 20px));
-    padding: 20px 0 44px;
+    padding: 0 0 44px;
+  }
+
+  .goal-setting-page .goal-breadcrumb-nav {
+    padding: 12px 0 0;
+    margin-bottom: 14px;
+    justify-content: flex-end;
+  }
+
+  .goal-setting-page .goal-breadcrumb,
+  .goal-setting-page ol.goal-breadcrumb {
+    margin-left: auto !important;
+    justify-content: flex-end;
+  }
+
+  .goal-setting-page .goal-breadcrumb-item,
+  .goal-setting-page .goal-breadcrumb li {
+    font-size: 15px;
   }
 
   .goal-setting-page .heroContent{
@@ -590,4 +730,4 @@
   .goal-setting-page .featureGrid {
     grid-template-columns: 1fr 1fr;
   }
-}
+}s
