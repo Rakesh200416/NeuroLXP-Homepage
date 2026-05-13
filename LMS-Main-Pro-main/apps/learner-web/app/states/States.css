@@ -1,6 +1,6 @@
 .states-page {
   min-height: 100vh;
-  padding: 110px 7% 64px;
+  padding: 0 7% 64px;
   background: #e6e7ee;
   color: #31344b;
   font-family: "Segoe UI", system-ui, sans-serif;
@@ -412,6 +412,114 @@
   border-radius: 34px;
 }
 
+/* Breadcrumb */
+
+.states-page .states-breadcrumb-nav {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 8px;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  line-height: 1;
+}
+
+.states-page .states-breadcrumb {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0 0 0 auto;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  gap: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.states-page .states-breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  padding-left: 0;
+  position: static;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  list-style: none;
+}
+
+.states-page .states-breadcrumb-item::before {
+  content: none !important;
+  display: none !important;
+}
+
+.states-page .states-breadcrumb-item + .states-breadcrumb-item::before {
+  content: "›" !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  position: static;
+  margin: 0 8px;
+  padding: 0;
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.states-page .states-breadcrumb-item a {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #bd081c;
+  text-decoration: none;
+  line-height: 1;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.states-page .states-breadcrumb-item a:hover {
+  color: #8f0615;
+  text-decoration: underline;
+}
+
+.states-page .states-breadcrumb-item.active {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #1e90ff;
+  font-weight: 600;
+  line-height: 1;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
 /* RESPONSIVE */
 @media (max-width: 1100px) {
   .states-challenge-grid {
@@ -427,7 +535,7 @@
 
 @media (max-width: 900px) {
   .states-page {
-    padding: 96px 18px 36px;
+    padding: 0 18px 36px;
   }
 
   .states-hero,
@@ -445,6 +553,19 @@
   .states-bottom,
   .states-footer {
     padding: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .states-page .states-breadcrumb-nav {
+    padding: 0 1rem;
+    margin-bottom: 8px;
+    justify-content: flex-end;
+  }
+
+  .states-page .states-breadcrumb {
+    margin-left: auto;
+    justify-content: flex-end;
   }
 }
 
@@ -469,6 +590,7 @@
     font-size: 16px;
   }
 }
+
 .states-image-placeholder {
   min-height: 330px;
   border-radius: 30px;
