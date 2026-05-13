@@ -84,6 +84,17 @@ const organizationTypes = [
 export default function ComplianceTraining() {
   return (
     <main className="compliance-page">
+      <div className="compliance-breadcrumb-nav">
+        <ol className="compliance-breadcrumb">
+          <li className="compliance-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="compliance-breadcrumb-item active" aria-current="page">
+            Compliance Training
+          </li>
+        </ol>
+      </div>
+
       <section className="compliance-hero compliance-card">
         <div className="compliance-hero-content">
           <span className="compliance-eyebrow">Compliance Training Modules</span>
