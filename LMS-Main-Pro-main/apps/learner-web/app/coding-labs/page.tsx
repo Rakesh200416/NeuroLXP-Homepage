@@ -1,6 +1,5 @@
 import {
   FaCode,
-  FaLaptopCode,
   FaTerminal,
   FaBug,
   FaCodeBranch,
@@ -11,6 +10,17 @@ import "./CodingLabs.css";
 export default function Page() {
   return (
     <section className="coding-page">
+      <div className="coding-breadcrumb-nav">
+        <ol className="coding-breadcrumb">
+          <li className="coding-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="coding-breadcrumb-item active" aria-current="page">
+            Coding Labs
+          </li>
+        </ol>
+      </div>
+
       <div className="coding-hero">
         <h1>NeuroLabs Coding Labs</h1>
         <h2>Practice, Build, and Master Coding Skills</h2>
@@ -69,7 +79,7 @@ export default function Page() {
         <li>Prepare for technical interviews and coding assessments</li>
       </ul>
 
-       <div className="coding-image-box">
+      <div className="coding-image-box">
         <img src="/pexels-mikhail-nilov-7988116.jpg" alt="Interactive coding environment" />
       </div>
 
