@@ -42,6 +42,16 @@ const ecosystem = [
 export default function SecurityFeatures() {
   return (
     <main className="security-page">
+      <div className="security-breadcrumb-nav">
+        <ol className="security-breadcrumb">
+          <li className="security-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="security-breadcrumb-item active" aria-current="page">
+            Security Features
+          </li>
+        </ol>
+      </div>
 
       {/* HERO */}
       <section className="security-hero security-card">
@@ -179,7 +189,6 @@ export default function SecurityFeatures() {
           NeuroLXP delivers a safe and reliable LMS experience.
         </p>
       </section>
-
     </main>
   );
 }
