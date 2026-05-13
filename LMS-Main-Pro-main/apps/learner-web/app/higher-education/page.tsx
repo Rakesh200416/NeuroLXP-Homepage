@@ -15,7 +15,6 @@ import {
 import "./HigherEducation.css";
 
 export default function HigherEducation() {
-
   // 🔹 SHORT CARD TEXT ONLY
   const challenges = [
     {
@@ -61,10 +60,19 @@ export default function HigherEducation() {
 
   return (
     <section className="higher-page">
+      <div className="higher-breadcrumb-nav">
+        <ol className="higher-breadcrumb">
+          <li className="higher-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="higher-breadcrumb-item active" aria-current="page">
+            Higher Education
+          </li>
+        </ol>
+      </div>
 
       {/* HERO */}
       <div className="higher-hero">
-
         <h1>Higher Education</h1>
 
         <h2>
@@ -79,21 +87,21 @@ export default function HigherEducation() {
       </div>
 
       {/* IMAGES */}
-<div className="higher-image-row">
-  <div className="higher-image-box">
-    <img
-      src="/pexels-clmcdk-fejcn-2057437867-29646491.jpg"
-      alt="University campus learning environment"
-    />
-  </div>
+      <div className="higher-image-row">
+        <div className="higher-image-box">
+          <img
+            src="/pexels-clmcdk-fejcn-2057437867-29646491.jpg"
+            alt="University campus learning environment"
+          />
+        </div>
 
-  <div className="higher-image-box">
-    <img
-      src="/pexels-zandatsu-31367512.jpg"
-      alt="Digital learning platform for higher education"
-    />
-  </div>
-</div>
+        <div className="higher-image-box">
+          <img
+            src="/pexels-zandatsu-31367512.jpg"
+            alt="Digital learning platform for higher education"
+          />
+        </div>
+      </div>
 
       {/* MAIN CONTENT */}
       <div className="higher-content-block">
