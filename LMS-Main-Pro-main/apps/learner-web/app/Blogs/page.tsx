@@ -1,6 +1,5 @@
 import "./page.css";
 import {
-  FaBlog,
   FaRobot,
   FaChartLine,
   FaLightbulb,
@@ -10,7 +9,6 @@ import {
   FaBookOpen,
   FaBullseye,
   FaArrowRight,
-  FaNewspaper,
 } from "react-icons/fa";
 
 const blogTopics = [
@@ -57,6 +55,17 @@ const practicalInsights = [
 export default function Blogs() {
   return (
     <main className="blogs-page">
+      <div className="blogs-breadcrumb-nav">
+        <ol className="blogs-breadcrumb">
+          <li className="blogs-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="blogs-breadcrumb-item active" aria-current="page">
+            Blogs
+          </li>
+        </ol>
+      </div>
+
       <section className="blogs-hero blogs-neumorphic-card">
         <div className="blogs-hero-content">
           <span className="blogs-eyebrow">Blogs</span>
@@ -74,7 +83,11 @@ export default function Blogs() {
         </div>
 
         <div className="blogs-image-placeholder">
-         <img src="/pexels-cottonbro-3584969.jpg" alt="Learners using digital learning resources" className="placeholder-image"/>
+          <img
+            src="/pexels-cottonbro-3584969.jpg"
+            alt="Learners using digital learning resources"
+            className="placeholder-image"
+          />
         </div>
       </section>
 
@@ -133,7 +146,11 @@ export default function Blogs() {
 
         <article className="blogs-neumorphic-card blogs-image-card">
           <div className="blogs-image-placeholder">
-         <img src="/pexels-ivan-s-4240497.jpg" alt="Learners using digital learning resources" className="placeholder-image"/>
+            <img
+              src="/pexels-ivan-s-4240497.jpg"
+              alt="Learners using digital learning resources"
+              className="placeholder-image"
+            />
           </div>
         </article>
       </section>
