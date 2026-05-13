@@ -16,7 +16,19 @@ import "./genZgalaxy.css";
 
 export default function GenZGalaxyPage() {
   return (
+
     <main className="genzgalaxy-page genz-page">
+
+      <div className="neu-breadcrumb-nav">
+        <ol className="neu-breadcrumb">
+          <li className="neu-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="neu-breadcrumb-item active" aria-current="page">
+            GenZgalaxy
+          </li>
+        </ol>
+      </div>
       {/* HERO */}
       <section className="hero-section">
         <div className="hero-content neu-card">
