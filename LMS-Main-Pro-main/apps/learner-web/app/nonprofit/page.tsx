@@ -12,7 +12,7 @@ import {
   FaBullhorn,
   FaClipboardCheck,
 } from "react-icons/fa";
-import "./NonProfit.css";
+import "./Nonprofit.css";
 
 export default function NonprofitPage() {
   const challenges = [
@@ -57,6 +57,17 @@ export default function NonprofitPage() {
 
   return (
     <main className="nonprofit-page">
+      <div className="nonprofit-breadcrumb-nav">
+        <ol className="nonprofit-breadcrumb">
+          <li className="nonprofit-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="nonprofit-breadcrumb-item active" aria-current="page">
+            Nonprofit Organizations
+          </li>
+        </ol>
+      </div>
+
       <section className="nonprofit-hero">
         <div className="nonprofit-hero-content">
           <span className="nonprofit-badge">
@@ -151,11 +162,11 @@ export default function NonprofitPage() {
         </div>
 
         <div className="nonprofit-image-frame">
-  <img
-    src="/pexels-gustavo-fring-7156186.jpg"
-    alt="Nonprofit learning and volunteer training"
-  />
-</div>
+          <img
+            src="/pexels-gustavo-fring-7156186.jpg"
+            alt="Nonprofit learning and volunteer training"
+          />
+        </div>
       </section>
 
       <section className="nonprofit-usecase-section">
