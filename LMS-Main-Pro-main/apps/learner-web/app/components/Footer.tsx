@@ -85,18 +85,19 @@ export default function Footer() {
           <div className="footer-column">
             <h3 className="column-title">Quick Links</h3>
             <ul className="footer-links">
-              <li onClick={() => router.push("/privacy-policy")}>
+              <li onClick={() => router.push("/PrivacyPolicyAcceptance")}>
                 Privacy Policy
               </li>
-              <li onClick={() => router.push("/terms-of-use")}>
+              <li onClick={() => router.push("/TermsAndCondition")}>
                 Terms of Use
+              </li>
+              <li onClick={() => router.push("/TermsAcceptanceDeclaration")}>
+                Terms of Declaration
               </li>
               <li onClick={() => router.push("/talk-to-our-expert")}>
                 Support
               </li>
-              <li onClick={() => router.push("/contact-us")}>
-                Contact Us
-              </li>
+              
             </ul>
           </div>
 
