@@ -68,6 +68,17 @@ const benefits = [
 export default function EducationPage() {
   return (
     <main className="edu-page">
+      <div className="edu-breadcrumb-nav">
+        <ol className="edu-breadcrumb">
+          <li className="edu-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="edu-breadcrumb-item active" aria-current="page">
+            Education
+          </li>
+        </ol>
+      </div>
+
       <section className="edu-hero">
         <div className="edu-container edu-hero-grid">
           <div className="edu-hero-content">
@@ -86,7 +97,7 @@ export default function EducationPage() {
             </p>
 
             <div className="edu-actions">
-              <a href="/contact-us" className="edu-btn edu-btn-primary">
+              <a href="/contact" className="edu-btn edu-btn-primary">
                 Get Started
               </a>
               <a href="#challenges" className="edu-btn">
@@ -181,9 +192,9 @@ export default function EducationPage() {
               educational institutions create innovative learning environments that empower students, support
               educators, and drive better academic outcomes.
             </p>
-           <a href="" className="edu-btn edu-btn-primary edu-get-started-btn">
-            Get Started
-          </a>
+            <a href="" className="edu-btn edu-btn-primary edu-get-started-btn">
+              Get Started
+            </a>
           </div>
         </div>
       </section>
