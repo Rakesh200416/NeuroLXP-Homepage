@@ -2,12 +2,10 @@ import "./white-papers.css";
 import {
   FaBrain,
   FaChartLine,
-  FaFileAlt,
   FaGraduationCap,
   FaLightbulb,
   FaUsersCog,
   FaRobot,
-  FaDatabase,
   FaBookOpen,
   FaArrowRight,
 } from "react-icons/fa";
@@ -50,6 +48,17 @@ const decisionInsights = [
 export default function WhitePapers() {
   return (
     <main className="white-paper-page">
+      <div className="white-paper-breadcrumb-nav">
+        <ol className="white-paper-breadcrumb">
+          <li className="white-paper-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="white-paper-breadcrumb-item active" aria-current="page">
+            White Papers
+          </li>
+        </ol>
+      </div>
+
       <section className="white-paper-hero neumorphic-card">
         <div className="hero-text">
           <span className="eyebrow">White Papers</span>
@@ -67,7 +76,11 @@ export default function WhitePapers() {
         </div>
 
         <div className="image-placeholder hero-image">
-         <img src="/pexels-pixabay-159682.jpg" alt="Learners using digital learning resources" className="placeholder-image"/>
+          <img
+            src="/pexels-pixabay-159682.jpg"
+            alt="Learners using digital learning resources"
+            className="placeholder-image"
+          />
         </div>
       </section>
 
@@ -124,7 +137,11 @@ export default function WhitePapers() {
 
         <article className="neumorphic-card image-card">
           <div className="image-placeholder">
-           <img src="/pexels-anna-nekrashevich-8534050.jpg" alt="Learners using digital learning resources" className="placeholder-image"/>
+            <img
+              src="/pexels-anna-nekrashevich-8534050.jpg"
+              alt="Learners using digital learning resources"
+              className="placeholder-image"
+            />
           </div>
         </article>
       </section>
@@ -143,11 +160,17 @@ export default function WhitePapers() {
         <div className="innovation-points">
           <div>
             <h3>Inclusive Learning</h3>
-            <p>Supporting institutions and enterprises in creating effective learning environments.</p>
+            <p>
+              Supporting institutions and enterprises in creating effective
+              learning environments.
+            </p>
           </div>
           <div>
             <h3>Strategic Growth</h3>
-            <p>Helping organizations make informed decisions about digital learning technologies.</p>
+            <p>
+              Helping organizations make informed decisions about digital
+              learning technologies.
+            </p>
           </div>
         </div>
       </section>
@@ -159,7 +182,10 @@ export default function WhitePapers() {
           emerging trends, best practices, and innovative strategies transforming
           digital learning.
         </p>
-        <h3>NeuroLXP White Papers — Research-Driven Insights for the Future of Learning.</h3>
+        <h3>
+          NeuroLXP White Papers — Research-Driven Insights for the Future of
+          Learning.
+        </h3>
       </section>
     </main>
   );
