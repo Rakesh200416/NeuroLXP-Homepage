@@ -25,6 +25,17 @@ const sectors = [
 export default function MediaPresence() {
   return (
     <main className="media-page">
+      <div className="media-breadcrumb-nav">
+        <ol className="media-breadcrumb">
+          <li className="media-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="media-breadcrumb-item active" aria-current="page">
+            Media Presence
+          </li>
+        </ol>
+      </div>
+
       <section className="media-hero">
         <div className="hero-content neumorphic-card hover-card">
           <span className="eyebrow">Media Presence</span>
@@ -43,7 +54,10 @@ export default function MediaPresence() {
 
         <div className="image-placeholder hero-image">
           <img
-          src="/pexels-thefullonmonet-17609924.jpg" alt="Learners using digital learning resources" className="placeholder-image"/>
+            src="/pexels-thefullonmonet-17609924.jpg"
+            alt="Learners using digital learning resources"
+            className="placeholder-image"
+          />
         </div>
       </section>
 
@@ -76,7 +90,11 @@ export default function MediaPresence() {
 
         <article className="neumorphic-card hover-card image-card">
           <div className="image-placeholder">
-             <img src="/pexels-a-darmel-9040282.jpg" alt="Learners using digital learning resources" className="placeholder-image"/>
+            <img
+              src="/pexels-a-darmel-9040282.jpg"
+              alt="Learners using digital learning resources"
+              className="placeholder-image"
+            />
           </div>
         </article>
       </section>
