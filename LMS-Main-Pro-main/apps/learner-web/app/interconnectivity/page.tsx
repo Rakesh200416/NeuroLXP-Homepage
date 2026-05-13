@@ -1,260 +1,270 @@
-import "./interconnectivity.css";
 import {
-  FaRocket,
-  FaGamepad,
-  FaMobileAlt,
+  FaNetworkWired,
   FaUsers,
-  FaBrain,
-  FaStar,
-  FaBolt,
-  FaGlobe,
-  FaComments,
-  FaLaptopCode,
-  FaLightbulb,
-  FaRoute,
+  FaPlug,
+  FaChartLine,
+  FaUniversity,
+  FaBuilding,
+  FaLaptopHouse,
+  FaGraduationCap,
+  FaCheck,
   FaArrowRight,
-  FaMedal,
+  FaProjectDiagram,
+  FaDatabase,
 } from "react-icons/fa";
+import "./interconnectivity.css";
 
-const digitalNativeItems = [
-  { icon: <FaGamepad />, title: "Gamified learning" },
-  { icon: <FaBolt />, title: "Interactive content" },
-  { icon: <FaMobileAlt />, title: "Mobile-first access" },
-  { icon: <FaUsers />, title: "Collaborative communities" },
+const coreFeatures = [
+  {
+    icon: <FaProjectDiagram />,
+    title: "Unified Learning Ecosystem",
+    text: "Integrate multiple learning systems, content sources, and tools into one connected platform.",
+  },
+  {
+    icon: <FaUsers />,
+    title: "Collaborative Learning Experience",
+    text: "Foster peer-to-peer learning, discussions, and knowledge sharing across academic and training environments.",
+  },
+  {
+    icon: <FaPlug />,
+    title: "System Integrations",
+    text: "Seamlessly connect with LMS, HRMS, content libraries, and third-party tools for smooth data flow.",
+  },
+  {
+    icon: <FaDatabase />,
+    title: "Centralized Data & Insights",
+    text: "Bring all learner data into one place for better tracking, analytics, and decision-making.",
+  },
 ];
 
-const immersiveItems = [
-  "Gamified challenges and rewards",
-  "Interactive simulations and quizzes",
-  "Creative problem-solving activities",
-  "Collaborative discussions and peer learning",
+const benefits = [
+  "Unified platform for all learning activities",
+  "Seamless integration across systems",
+  "Improved collaboration and engagement",
+  "Enhanced visibility into learning performance",
 ];
 
-const personalizedItems = [
-  "Skill development pathways",
-  "Relevant learning resources",
-  "Practice challenges and assessments",
-  "Career-focused learning modules",
+const useCases = [
+  {
+    icon: <FaUniversity />,
+    title: "Universities & Higher Education Institutions",
+  },
+  {
+    icon: <FaBuilding />,
+    title: "Corporate Training Academies",
+  },
+  {
+    icon: <FaGraduationCap />,
+    title: "Skill Development Centers",
+  },
+  {
+    icon: <FaLaptopHouse />,
+    title: "Hybrid & Remote Learning Environments",
+  },
 ];
 
-const futureSkills = [
-  "Digital and technological literacy",
-  "Creative problem solving",
-  "Critical thinking and innovation",
-  "Communication and collaboration skills",
-  "Career-oriented technical skills",
+const steps = [
+  "Integrate existing systems and tools",
+  "Connect learners, educators, and admins",
+  "Enable collaborative and social learning",
+  "Track and optimize through unified analytics",
 ];
 
-const communityItems = [
-  "Share ideas and insights",
-  "Learn from peers and mentors",
-  "Collaborate on projects and challenges",
-  "Participate in knowledge-driven communities",
-];
-
-export default function GenZGalaxy() {
+export default function InterconnectivityPage() {
   return (
-    <main className="genz-page">
-      <section className="genz-hero">
-        <div className="genz-hero-content">
-          <span className="genz-badge">GenZgalaxy</span>
-          <h1>A Learning Universe Designed for the Gen Z Generation</h1>
+    <main className="interconnectivity-page">
+      <div className="interconnectivity-breadcrumb-nav">
+            <ol className="interconnectivity-breadcrumb">
+              <li className="interconnectivity-breadcrumb-item">
+                <a href="/">Home</a>
+              </li>
+              <li
+                className="interconnectivity-breadcrumb-item active"
+                aria-current="page"
+              >
+                Interconnectivity
+              </li>
+            </ol>
+          </div>
+
+      <section className="interconnectivity-hero">
+        <div className="interconnectivity-hero-content">
+          <span className="interconnectivity-eyebrow">
+            <FaNetworkWired />
+            Learning Platform Integration
+          </span>
+
+          <h1>Enable Seamless Interconnectivity with NeuroLXP</h1>
+
           <p>
-            GenZgalaxy by NeuroLXP is a dynamic learning ecosystem created for
-            digital-native learners who expect speed, engagement, interaction,
-            and visually rich learning experiences.
+            Connect learners, educators, and training ecosystems through
+            NeuroLXP, the AI-powered Learning Experience Platform designed for
+            unified, collaborative, and scalable learning.
           </p>
-          <p>
-            It reimagines learning as an immersive, interactive, and highly
-            engaging digital journey where learners explore knowledge, build
-            skills, and connect with communities.
-          </p>
+
+          <div className="interconnectivity-hero-actions">
+            <a href="#demo" className="interconnectivity-btn primary">
+              Request Demo
+              <FaArrowRight />
+            </a>
+            <a href="#start" className="interconnectivity-btn secondary">
+              Get Started
+            </a>
+          </div>
         </div>
 
-        <div className="genz-orbit">
-          <div className="genz-planet">
-            <FaRocket />
-            <span>GenZgalaxy</span>
+        <div className="interconnectivity-visual-panel">
+          <div className="network-center">
+            <FaNetworkWired />
+            <span>NeuroLXP</span>
           </div>
 
-          <div className="genz-orbit-chip genz-chip-one">
-            <FaGamepad />
-            <span>Gamified</span>
-          </div>
-
-          <div className="genz-orbit-chip genz-chip-two">
-            <FaBrain />
-            <span>AI-guided</span>
-          </div>
-
-          <div className="genz-orbit-chip genz-chip-three">
+          <div className="network-node node-one">
             <FaUsers />
-            <span>Social</span>
+            <span>Learners</span>
+          </div>
+
+          <div className="network-node node-two">
+            <FaUniversity />
+            <span>Educators</span>
+          </div>
+
+          <div className="network-node node-three">
+            <FaPlug />
+            <span>Systems</span>
+          </div>
+
+          <div className="network-node node-four">
+            <FaChartLine />
+            <span>Insights</span>
           </div>
         </div>
       </section>
 
-      <section className="genz-intro">
-        <span>Digital Native Learning</span>
-        <h2>Learning That Feels Fast, Visual, and Interactive</h2>
-        <p>
-          GenZgalaxy aligns with how Gen Z learners explore content, interact
-          with technology, and participate in learning communities.
-        </p>
-      </section>
-
-      <section className="genz-native-section">
-        <div className="genz-section-heading">
-          <h2>Learning Designed for Digital Natives</h2>
-          <p>
-            GenZgalaxy brings together modern learning approaches that transform
-            learning from a passive activity into an engaging exploratory
-            experience.
-          </p>
+      <section className="interconnectivity-core">
+        <div className="interconnectivity-section-heading">
+          <span>Core Features</span>
+          <h2>One connected platform for modern learning ecosystems</h2>
         </div>
 
-        <div className="genz-native-grid">
-          {digitalNativeItems.map((item) => (
-            <article className="genz-native-card" key={item.title}>
-              <div className="genz-native-icon">{item.icon}</div>
-              <h4>{item.title}</h4>
+        <div className="interconnectivity-feature-grid">
+          {coreFeatures.map((feature, index) => (
+            <article
+              className="interconnectivity-feature-card"
+              data-index={index}
+              key={feature.title}
+            >
+              <div className="feature-icon">{feature.icon}</div>
+              <h3>{feature.title}</h3>
+              <p>{feature.text}</p>
             </article>
           ))}
         </div>
       </section>
 
-      <section className="genz-immersive-section">
-        <article className="genz-card genz-immersive-card">
-          <div className="genz-icon-box">
-            <FaStar />
-          </div>
-          <h2>Interactive and Immersive Learning Experiences</h2>
+      <section className="interconnectivity-why">
+        <div className="why-left">
+          <span className="interconnectivity-eyebrow">
+            <FaProjectDiagram />
+            Why NeuroLXP
+          </span>
+
+          <h2>Break Silos. Build Connected Learning.</h2>
+
           <p>
-            GenZgalaxy keeps learners actively involved with engaging activities
-            that make learning more memorable and enjoyable.
-          </p>
-
-          <ul className="genz-list">
-            {immersiveItems.map((item) => (
-              <li key={item}>
-                <FaArrowRight />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </article>
-
-        <article className="genz-challenge-panel">
-          <div className="genz-challenge-top">
-            <span>Challenge Progress</span>
-            <FaMedal />
-          </div>
-
-          <div className="genz-progress-row">
-            <p>Quizzes</p>
-            <div><strong className="genz-progress-one"></strong></div>
-            <span>86%</span>
-          </div>
-
-          <div className="genz-progress-row">
-            <p>Projects</p>
-            <div><strong className="genz-progress-two"></strong></div>
-            <span>72%</span>
-          </div>
-
-          <div className="genz-progress-row">
-            <p>Rewards</p>
-            <div><strong className="genz-progress-three"></strong></div>
-            <span>94%</span>
-          </div>
-        </article>
-      </section>
-
-      <section className="genz-personal-section genz-card">
-        <div>
-          <span className="genz-badge">AI Personalization</span>
-          <h2>Personalized Learning Journeys</h2>
-          <p>
-            GenZgalaxy uses AI-powered personalization to recommend learning
-            paths, resources, challenges, and career-focused modules that evolve
-            with each learner.
+            Academic institutions and training organizations often operate in
+            disconnected systems. NeuroLXP bridges these gaps by enabling
+            interconnected learning environments where content, users, and
+            systems work together—driving efficiency, engagement, and smarter
+            outcomes.
           </p>
         </div>
 
-        <div className="genz-path-grid">
-          {personalizedItems.map((item, index) => (
-            <div key={item}>
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <h4>{item}</h4>
+        <div className="why-benefits">
+          <h3>Key Benefits</h3>
+
+          <div className="benefit-list">
+            {benefits.map((item) => (
+              <div className="benefit-item" key={item}>
+                <span>
+                  <FaCheck />
+                </span>
+                <p>{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="interconnectivity-usecases">
+        <div className="interconnectivity-section-heading">
+          <span>Use Cases</span>
+          <h2>Built for institutions, enterprises, and hybrid learning teams</h2>
+        </div>
+
+        <div className="usecase-grid">
+          {useCases.map((item) => (
+            <div className="usecase-card" key={item.title}>
+              <div>{item.icon}</div>
+              <h4>{item.title}</h4>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="genz-skills-section">
-        <div className="genz-section-heading">
-          <h2>Building Skills for the Future</h2>
+      <section className="interconnectivity-process">
+        <div className="process-content">
+          <span className="interconnectivity-eyebrow">
+            <FaPlug />
+            How It Works
+          </span>
+
+          <h2>Connect your ecosystem in four clear steps</h2>
+
           <p>
-            GenZgalaxy focuses on practical, career-ready capabilities that
-            support modern careers and digital environments.
+            NeuroLXP helps organizations move from disconnected learning tools
+            to a unified, insight-driven digital learning ecosystem.
           </p>
         </div>
 
-        <div className="genz-skill-grid">
-          {futureSkills.map((item, index) => (
-            <article className="genz-skill-card" key={item}>
-              {index === 0 && <FaLaptopCode />}
-              {index === 1 && <FaLightbulb />}
-              {index === 2 && <FaBrain />}
-              {index === 3 && <FaComments />}
-              {index === 4 && <FaRoute />}
-              <h4>{item}</h4>
-            </article>
+        <div className="process-steps">
+          {steps.map((step, index) => (
+            <div className="process-step" key={step}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <p>{step}</p>
+            </div>
           ))}
         </div>
       </section>
 
-      <section className="genz-community-section">
-        <article className="genz-community-visual">
-          <FaGlobe />
-          <h3>Community Galaxy</h3>
-          <p>Social, shared, and collaborative learning spaces.</p>
-        </article>
-
-        <article className="genz-card genz-community-card">
-          <div className="genz-icon-box genz-community-icon">
-            <FaUsers />
-          </div>
-          <h2>A Community-Driven Learning Ecosystem</h2>
-          <p>
-            Gen Z values collaboration, social interaction, and shared
-            experiences. GenZgalaxy helps learners connect through communities,
-            forums, and collaborative activities.
-          </p>
-
-          <ul className="genz-list">
-            {communityItems.map((item) => (
-              <li key={item}>
-                <FaArrowRight />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </article>
+      <section className="interconnectivity-keywords">
+        <span>Learning Platform Integration</span>
+        <span>Interconnected Learning Systems</span>
+        <span>Academic Learning Platform</span>
+        <span>Training Ecosystem</span>
+        <span>LMS Integration</span>
+        <span>Collaborative Learning Platform</span>
+        <span>Digital Learning Ecosystem</span>
       </section>
 
-      <section className="genz-final genz-card">
-        <div className="genz-final-icon">
-          <FaRocket />
+      <section className="interconnectivity-cta" id="demo">
+        <div>
+          <h2>Ready to connect your learning ecosystem?</h2>
+          <p>
+            Unlock the power of interconnectivity with NeuroLXP and create a
+            connected, collaborative, and data-driven learning environment.
+          </p>
         </div>
-        <h2>GenZgalaxy — Where Learning Meets Exploration</h2>
-        <p>
-          GenZgalaxy transforms learning into a journey of discovery, creativity,
-          and growth. By combining interactive technology, personalized learning,
-          and community-driven engagement, NeuroLXP empowers the next generation
-          to explore knowledge, build skills, and shape their future.
-        </p>
-        <h3>GenZgalaxy by NeuroLXP — A Universe of Learning for the Next Generation.</h3>
+
+        <div className="interconnectivity-cta-actions">
+          <a href="#book-demo" className="interconnectivity-btn primary">
+            Book a Demo
+            <FaArrowRight />
+          </a>
+          <a href="#trial" className="interconnectivity-btn secondary">
+            Start Free Trial
+          </a>
+        </div>
       </section>
     </main>
   );
