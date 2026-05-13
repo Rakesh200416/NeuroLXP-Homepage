@@ -6,7 +6,6 @@ import {
   FaTrophy,
   FaStopwatch,
   FaChartLine,
-  FaUserGraduate,
   FaBuilding,
 } from "react-icons/fa";
 import { MdQuiz, MdOutlineSpeed, MdWorkOutline } from "react-icons/md";
@@ -15,6 +14,17 @@ import "./CodingChallenges.css";
 export default function Page() {
   return (
     <main className="challenge-page">
+      <div className="challenge-breadcrumb-nav">
+        <ol className="challenge-breadcrumb">
+          <li className="challenge-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="challenge-breadcrumb-item active" aria-current="page">
+            Coding Challenges
+          </li>
+        </ol>
+      </div>
+
       <section className="challenge-hero">
         <div className="challenge-hero-content">
           <span className="challenge-badge">NeuroLabs Coding Challenges</span>
@@ -220,14 +230,14 @@ export default function Page() {
 
       <section className="challenge-final">
         <div className="challenge-image-placeholder">
-  <Image
-    src="/pexels-mizunokozuki-12903294 (1).jpg"
-    alt="Challenge learning illustration"
-    width={700}
-    height={520}
-    className="challenge-image"
-  />
-</div>
+          <Image
+            src="/pexels-mizunokozuki-12903294 (1).jpg"
+            alt="Challenge learning illustration"
+            width={700}
+            height={520}
+            className="challenge-image"
+          />
+        </div>
 
         <div>
           <span className="challenge-badge">Strengthen Programming Skills</span>
