@@ -105,6 +105,17 @@ const idealFor = [
 export default function Assessments() {
   return (
     <main className="assessments-page">
+      <div className="assessments-breadcrumb-nav">
+        <ol className="assessments-breadcrumb">
+          <li className="assessments-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="assessments-breadcrumb-item active" aria-current="page">
+            Assessments
+          </li>
+        </ol>
+      </div>
+
       <section className="assessments-hero assessments-neumorphic-card">
         <div className="assessments-hero-content">
           <span className="assessments-eyebrow">Advanced Online Assessments</span>
@@ -122,7 +133,11 @@ export default function Assessments() {
         </div>
 
         <div className="assessments-image-placeholder">
-          <img src="/pexels-andy-barbour-6684255.jpg" alt="Descriptive image text" className="placeholder-image"/>
+          <img
+            src="/pexels-andy-barbour-6684255.jpg"
+            alt="Descriptive image text"
+            className="placeholder-image"
+          />
         </div>
       </section>
 
@@ -239,7 +254,11 @@ export default function Assessments() {
 
         <article className="assessments-neumorphic-card assessments-image-card">
           <div className="assessments-image-placeholder">
-            <img src="/pexels-pavel-danilyuk-6716014.jpg" alt="Learners using digital learning resources" className="placeholder-image"/>
+            <img
+              src="/pexels-pavel-danilyuk-6716014.jpg"
+              alt="Learners using digital learning resources"
+              className="placeholder-image"
+            />
           </div>
         </article>
       </section>
