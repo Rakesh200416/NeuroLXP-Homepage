@@ -1,5 +1,20 @@
 import "./progress-tracking.css";
-import { FaChartLine, FaShieldAlt, FaLightbulb, FaBrain, FaRobot, FaRoute, FaChartBar, FaBolt, FaMedal, FaTrophy, FaSearch, FaUserGraduate, FaDatabase, FaExclamationTriangle, FaLock, } from "react-icons/fa";
+import {
+  FaChartLine,
+  FaShieldAlt,
+  FaLightbulb,
+  FaBrain,
+  FaRobot,
+  FaRoute,
+  FaChartBar,
+  FaBolt,
+  FaMedal,
+  FaTrophy,
+  FaSearch,
+  FaUserGraduate,
+  FaDatabase,
+  FaLock,
+} from "react-icons/fa";
 
 const challengeItems = [
   {
@@ -85,7 +100,17 @@ const moduleFeatures = [
 export default function ProgressTrackingPage() {
   return (
     <main className="progress-tracking-page page">
-      
+      <div className="progress-breadcrumb-nav">
+        <ol className="progress-breadcrumb">
+          <li className="progress-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="progress-breadcrumb-item active" aria-current="page">
+            Progress Tracking
+          </li>
+        </ol>
+      </div>
+
       <section className="heroSection">
         <div className="heroGrid">
           <div className="heroContent">
@@ -111,7 +136,6 @@ export default function ProgressTrackingPage() {
 
           <div className="heroVisualCard">
             <div className="imagePlaceholder">
-            
               <img
                 src="/photo-1551288049-bebda4e38f71.jpeg"
                 alt="Learning analytics dashboard showing progress charts and metrics"
@@ -163,7 +187,6 @@ export default function ProgressTrackingPage() {
       <section className="statsSection">
         <div className="statsGrid">
           <div className="statsTextBlock">
-
             <h2 className="statsTitle">Progress Tracking Module</h2>
             <p className="statsDesc">
               NeuroLXP&apos;s Progress Tracking module harnesses the power of
@@ -211,7 +234,6 @@ export default function ProgressTrackingPage() {
 
       <section className="featuresSection">
         <div className="sectionHeader centerHeader">
-        
           <h2 className="sectionTitle">NeuroLXP Progress Tracking Module</h2>
           <p className="sectionDesc">
             A sophisticated toolset that redefines how educators and learners
