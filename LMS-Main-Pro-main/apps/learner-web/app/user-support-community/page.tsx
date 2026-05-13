@@ -93,6 +93,17 @@ const ecosystemGroups = [
 export default function UserSupportCommunity() {
   return (
     <main className="community-page">
+      <div className="community-breadcrumb-nav">
+        <ol className="community-breadcrumb">
+          <li className="community-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="community-breadcrumb-item active" aria-current="page">
+            User Support &amp; Learning Community
+          </li>
+        </ol>
+      </div>
+
       <section className="community-hero community-card">
         <div className="community-hero-content">
           <span className="community-eyebrow">User Support & Learning Community</span>
