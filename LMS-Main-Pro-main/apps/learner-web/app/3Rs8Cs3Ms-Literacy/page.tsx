@@ -3,6 +3,17 @@ import "./3Rs8Cs3MsLiteracy.css";
 export default function Page() {
   return (
     <main className="literacy-page">
+      <div className="literacy-breadcrumb-nav">
+        <ol className="literacy-breadcrumb">
+          <li className="literacy-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="literacy-breadcrumb-item active" aria-current="page">
+            3Rs 8Cs 3Ms Literacy
+          </li>
+        </ol>
+      </div>
+
       {/* HERO */}
       <section className="literacy-hero">
         <div className="literacy-hero-content">
