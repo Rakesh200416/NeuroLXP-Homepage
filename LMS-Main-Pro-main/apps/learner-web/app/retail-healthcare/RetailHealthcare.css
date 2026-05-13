@@ -2,7 +2,7 @@
   font-family: "Segoe UI", system-ui, sans-serif;
   background: #e6e6ee;
   color: #101a3d;
-  padding: 56px 6%;
+  padding: 0 6% 56px;
   line-height: 1.7;
   overflow-x: hidden;
 }
@@ -406,6 +406,114 @@
   color: #4b5277;
 }
 
+/* Breadcrumb */
+
+.retail-health-page .rh-breadcrumb-nav {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 8px;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  line-height: 1;
+}
+
+.retail-health-page .rh-breadcrumb {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0 0 0 auto;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  gap: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.retail-health-page .rh-breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  padding-left: 0;
+  position: static;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  list-style: none;
+}
+
+.retail-health-page .rh-breadcrumb-item::before {
+  content: none !important;
+  display: none !important;
+}
+
+.retail-health-page .rh-breadcrumb-item + .rh-breadcrumb-item::before {
+  content: "›" !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  position: static;
+  margin: 0 8px;
+  padding: 0;
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.retail-health-page .rh-breadcrumb-item a {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #bd081c;
+  text-decoration: none;
+  line-height: 1;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.retail-health-page .rh-breadcrumb-item a:hover {
+  color: #8f0615;
+  text-decoration: underline;
+}
+
+.retail-health-page .rh-breadcrumb-item.active {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #1e90ff;
+  font-weight: 600;
+  line-height: 1;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
 /* RESPONSIVE */
 @media (max-width: 1100px) {
   .rh-hero,
@@ -424,7 +532,7 @@
 
 @media (max-width: 760px) {
   .retail-health-page {
-    padding: 36px 18px;
+    padding: 0 18px 36px;
   }
 
   .retail-health-page h1 {
@@ -466,5 +574,16 @@
   .rh-challenge-card,
   .rh-benefit-card {
     min-height: auto;
+  }
+
+  .retail-health-page .rh-breadcrumb-nav {
+    padding: 0 1rem;
+    margin-bottom: 8px;
+    justify-content: flex-end;
+  }
+
+  .retail-health-page .rh-breadcrumb {
+    margin-left: auto;
+    justify-content: flex-end;
   }
 }
