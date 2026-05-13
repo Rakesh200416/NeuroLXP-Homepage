@@ -66,6 +66,17 @@ const idealFor = [
 export default function ContentManagement() {
   return (
     <main className="content-page">
+      <div className="content-breadcrumb-nav">
+        <ol className="content-breadcrumb">
+          <li className="content-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="content-breadcrumb-item active" aria-current="page">
+            Content Creation &amp; Management
+          </li>
+        </ol>
+      </div>
+
       <section className="content-hero content-card">
         <div className="content-hero-text">
           <span className="content-eyebrow">Content Creation & Management</span>
