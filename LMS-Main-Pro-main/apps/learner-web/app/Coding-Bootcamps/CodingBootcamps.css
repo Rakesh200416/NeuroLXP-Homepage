@@ -1,6 +1,6 @@
 .bootcamp-page {
   min-height: 100vh;
-  padding: 110px 7% 64px;
+  padding: 0 7% 64px;
   background: #e6e7ee;
   color: #31344b;
   font-family: Inter, system-ui, sans-serif;
@@ -387,6 +387,127 @@
   margin-top: 24px;
 }
 
+.bootcamp-image-placeholder {
+  overflow: hidden;
+}
+
+.bootcamp-image {
+  width: 100%;
+  height: 100%;
+  min-height: 330px;
+  object-fit: cover;
+  border-radius: 30px;
+  display: block;
+}
+
+/* Breadcrumb */
+
+.bootcamp-page .bootcamp-breadcrumb-nav {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 8px;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  line-height: 1;
+}
+
+.bootcamp-page .bootcamp-breadcrumb {
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0 0 0 auto;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  gap: 0;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.bootcamp-page .bootcamp-breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  padding-left: 0;
+  position: static;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  list-style: none;
+}
+
+.bootcamp-page .bootcamp-breadcrumb-item::before {
+  content: none !important;
+  display: none !important;
+}
+
+.bootcamp-page .bootcamp-breadcrumb-item + .bootcamp-breadcrumb-item::before {
+  content: "›" !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  position: static;
+  margin: 0 8px;
+  padding: 0;
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.bootcamp-page .bootcamp-breadcrumb-item a {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #bd081c;
+  text-decoration: none;
+  line-height: 1;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.bootcamp-page .bootcamp-breadcrumb-item a:hover {
+  color: #8f0615;
+  text-decoration: underline;
+}
+
+.bootcamp-page .bootcamp-breadcrumb-item.active {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #1e90ff;
+  font-weight: 600;
+  line-height: 1;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
 @media (max-width: 1100px) {
   .bootcamp-timeline {
     grid-template-columns: repeat(2, 1fr);
@@ -399,7 +520,7 @@
 
 @media (max-width: 900px) {
   .bootcamp-page {
-    padding: 96px 18px 36px;
+    padding: 0 18px 36px;
   }
 
   .bootcamp-hero,
@@ -417,6 +538,19 @@
   .bootcamp-card,
   .bootcamp-bottom {
     padding: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .bootcamp-page .bootcamp-breadcrumb-nav {
+    padding: 0 1rem;
+    margin-bottom: 8px;
+    justify-content: flex-end;
+  }
+
+  .bootcamp-page .bootcamp-breadcrumb {
+    margin-left: auto;
+    justify-content: flex-end;
   }
 }
 
@@ -440,16 +574,4 @@
   .bootcamp-page p {
     font-size: 16px;
   }
-}
-.bootcamp-image-placeholder {
-  overflow: hidden;
-}
-
-.bootcamp-image {
-  width: 100%;
-  height: 100%;
-  min-height: 330px;
-  object-fit: cover;
-  border-radius: 30px;
-  display: block;
 }
