@@ -8,10 +8,9 @@ import {
   FaChartLine,
   FaCheckCircle,
   FaArrowRight,
-  FaClipboardCheck,
   FaGraduationCap,
 } from "react-icons/fa";
-import "./States.css";
+import "./State.css";
 
 export default function StatesPage() {
   const highlights = [
@@ -85,6 +84,17 @@ export default function StatesPage() {
 
   return (
     <main className="states-page">
+      <div className="states-breadcrumb-nav">
+        <ol className="states-breadcrumb">
+          <li className="states-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="states-breadcrumb-item active" aria-current="page">
+            Government & State Institutions
+          </li>
+        </ol>
+      </div>
+
       <section className="states-hero">
         <div className="states-hero-content">
           <span className="states-badge">
@@ -183,12 +193,12 @@ export default function StatesPage() {
       </section>
 
       <section className="states-bottom">
-       <div className="states-image-placeholder">
-  <img
-    src="/pexels-droosmo-2982449.jpg"
-    alt="Public sector learning dashboard"
-  />
-</div>
+        <div className="states-image-placeholder">
+          <img
+            src="/pexels-droosmo-2982449.jpg"
+            alt="Public sector learning dashboard"
+          />
+        </div>
 
         <div>
           <h2>Enabling Digital Transformation in Public Sector Learning</h2>
