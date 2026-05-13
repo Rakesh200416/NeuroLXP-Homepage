@@ -16,6 +16,17 @@ import "./ExtendedEnterpriseLearning.css";
 export default function ExtendedEnterpriseLearning() {
   return (
     <main className="enterprise-page">
+      <div className="enterprise-breadcrumb-nav">
+        <ol className="enterprise-breadcrumb">
+          <li className="enterprise-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="enterprise-breadcrumb-item active" aria-current="page">
+            Extended Enterprise Learning
+          </li>
+        </ol>
+      </div>
+
       <section className="enterprise-hero">
         <div className="enterprise-hero-content">
           <span className="enterprise-badge">Extended Enterprise Learning</span>
