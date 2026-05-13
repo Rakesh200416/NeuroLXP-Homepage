@@ -308,6 +308,17 @@ const LearningPaths: React.FC = () => {
 
   return (
     <div className="learning-path-page">
+      <div className="learning-path-breadcrumb-nav">
+        <ol className="learning-path-breadcrumb">
+          <li className="learning-path-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="learning-path-breadcrumb-item active" aria-current="page">
+            Learning Path
+          </li>
+        </ol>
+      </div>
+
       <section className="hero">
         <div>
           <h1 className="heroTitle">
