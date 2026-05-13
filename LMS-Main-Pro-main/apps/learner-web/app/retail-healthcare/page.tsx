@@ -151,6 +151,17 @@ export default function RetailHealthcarePage() {
 
   return (
     <main className="retail-health-page">
+      <div className="rh-breadcrumb-nav">
+        <ol className="rh-breadcrumb">
+          <li className="rh-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="rh-breadcrumb-item active" aria-current="page">
+            Retail & Healthcare
+          </li>
+        </ol>
+      </div>
+
       <section className="rh-hero">
         <div className="rh-hero-text">
           <span className="rh-label">
