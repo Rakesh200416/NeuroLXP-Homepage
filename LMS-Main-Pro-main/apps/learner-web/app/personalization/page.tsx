@@ -1,6 +1,8 @@
 'use client';
-import { useState } from "react";
+
+import React, { useState } from "react";
 import "./personalization.css";
+import Image from "next/image";
 
 type BenefitTab = "learners" | "institutions" | "corporate";
 
@@ -25,6 +27,7 @@ interface StepData {
   subtitle: string;
   items: string[];
   closing: string;
+  svg: React.ReactNode;
 }
 
 interface BenefitItem {
@@ -43,10 +46,10 @@ interface IntelCard {
 }
 
 const heroProgress = [
-  { label: "Knowledge Mastery", pct: "78%", fillClass: "fill1" },
-  { label: "Skill Development", pct: "64%", fillClass: "fill2" },
-  { label: "Goal Progress", pct: "91%", fillClass: "fill3" },
-  { label: "Engagement Score", pct: "85%", fillClass: "fill4" },
+  { label: "Knowledge Mastery", pct: "78%", value: 78, swatchClass: "swatch1" },
+  { label: "Skill Development", pct: "64%", value: 64, swatchClass: "swatch2" },
+  { label: "Goal Progress", pct: "91%", value: 91, swatchClass: "swatch3" },
+  { label: "Engagement Score", pct: "85%", value: 85, swatchClass: "swatch4" },
 ];
 
 const heroStats = [
@@ -111,6 +114,154 @@ const approachCards: ApproachCard[] = [
   },
 ];
 
+const step1Visual = (
+  <div className="stepViz">
+    <div className="stepVizRingWrap">
+      <svg className="stepVizRing" viewBox="0 0 80 80" style={{ width: 90, height: 90 }} xmlns="http://www.w3.org/2000/svg">
+        <circle cx="40" cy="40" r="30" fill="none" stroke="var(--neu-bg-dark)" strokeWidth="6" />
+        <circle
+          className="stepVizRingFill ring1Animate"
+          cx="40"
+          cy="40"
+          r="30"
+          fill="none"
+          stroke="#5e72e4"
+          strokeWidth="6"
+          strokeLinecap="round"
+          strokeDasharray="188.4"
+          strokeDashoffset="48.984"
+          transform="rotate(-90 40 40)"
+        />
+        <text x="40" y="37" textAnchor="middle" fontSize="13" fontWeight="900" fill="var(--neu-text-primary)">74</text>
+        <text x="40" y="49" textAnchor="middle" fontSize="8" fill="var(--neu-text-muted)">baseline</text>
+      </svg>
+
+      <div className="stepVizBars">
+        {[
+          { label: "Knowledge", pct: 78, color: "#5e72e4" },
+          { label: "Skills", pct: 62, color: "#7c3aed" },
+          { label: "Goals", pct: 91, color: "#10b981" },
+          { label: "Pace", pct: 55, color: "#f59e0b" },
+        ].map((bar) => (
+          <div key={bar.label} className="stepVizBarRow">
+            <span className="stepVizBarLabel">{bar.label}</span>
+            <div className="stepVizBarTrack">
+              <div
+                className="stepVizBarFill"
+                style={{ width: `${bar.pct}%`, background: bar.color }}
+              />
+            </div>
+            <span className="stepVizBarPct">{bar.pct}%</span>
+          </div>
+        ))}
+      </div>
+    </div>
+    <div className="stepVizCaption">Capability snapshot generated</div>
+  </div>
+);
+
+const step2Visual = (
+  <div className="stepViz">
+    <svg viewBox="0 0 220 130" width="100%" height="160" xmlns="http://www.w3.org/2000/svg">
+      <line x1="58" y1="65" x2="100" y2="65" stroke="#7c3aed" strokeWidth="2.5" strokeLinecap="round" strokeDasharray="44" className="pathDraw pathDraw1" />
+      <circle cx="100" cy="65" r="5" fill="#e6e7ee" stroke="#7c3aed" strokeWidth="2" className="pathForkDot" />
+      <line x1="104" y1="61" x2="138" y2="32" stroke="#5e72e4" strokeWidth="2" strokeDasharray="50" className="pathDraw pathDraw2" />
+      <line x1="104" y1="69" x2="138" y2="98" stroke="#a78bfa" strokeWidth="2" strokeDasharray="50" className="pathDraw pathDraw3" />
+      <line x1="178" y1="32" x2="196" y2="65" stroke="#10b981" strokeWidth="2" strokeDasharray="40" className="pathDraw pathDraw4" />
+      <line x1="178" y1="98" x2="196" y2="65" stroke="#10b981" strokeWidth="2" strokeDasharray="40" className="pathDraw pathDraw4" />
+
+      <rect x="2" y="50" width="54" height="28" rx="8" fill="#ede9fe" />
+      <text x="29" y="69" textAnchor="middle" fontSize="9" fontWeight="800" fill="#6d28d9">START</text>
+
+      <rect x="138" y="16" width="52" height="32" rx="8" fill="#dbeafe" />
+      <text x="164" y="30" textAnchor="middle" fontSize="8" fontWeight="800" fill="#2d4edc"> Fast</text>
+      <text x="164" y="42" textAnchor="middle" fontSize="8" fontWeight="800" fill="#2d4edc">Track</text>
+
+      <rect x="138" y="82" width="52" height="32" rx="8" fill="#ede9fe" />
+      <text x="164" y="96" textAnchor="middle" fontSize="8" fontWeight="800" fill="#6d28d9"> Support</text>
+      <text x="164" y="108" textAnchor="middle" fontSize="8" fontWeight="800" fill="#6d28d9">Mode</text>
+
+      <rect x="194" y="50" width="24" height="28" rx="8" fill="#d1fae5" />
+      <text x="206" y="69" textAnchor="middle" fontSize="7" fontWeight="800" fill="#047857">GOAL</text>
+    </svg>
+    <div className="stepVizCaption">Pathway adapts in real-time</div>
+  </div>
+);
+
+const step3Visual = (
+  <div className="stepViz">
+    {[
+      { title: "Data Analysis Deep Dive", sub: "Skill gap identified", score: "94%", scoreColor: "#5e72e4" },
+      { title: "ML Fundamentals", sub: "Recommended next", score: "87%", scoreColor: "#7c3aed" },
+      { title: "Python Basics", sub: "Mastered", score: "✓", scoreColor: "#10b981" },
+    ].map((rec, i) => (
+      <div key={rec.title} className="stepVizRecRow" style={{ animationDelay: `${i * 0.12}s` }}>
+        <div className="stepVizRecText">
+          <div className="stepVizRecTitle">{rec.title}</div>
+          <div className="stepVizRecSub">{rec.sub}</div>
+        </div>
+        <span className="stepVizRecScore" style={{ color: rec.scoreColor }}>{rec.score}</span>
+      </div>
+    ))}
+    <div className="stepVizCaption">AI matching your skill gaps</div>
+  </div>
+);
+
+const weekBars = [
+  { h: 30, color: "linear-gradient(to top,#5e72e4,#7a8ff0)" },
+  { h: 48, color: "linear-gradient(to top,#5e72e4,#7a8ff0)" },
+  { h: 62, color: "linear-gradient(to top,#7c3aed,#a78bfa)" },
+  { h: 75, color: "linear-gradient(to top,#7c3aed,#a78bfa)" },
+  { h: 85, color: "linear-gradient(to top,#10b981,#34d399)" },
+  { h: 90, color: "linear-gradient(to top,#10b981,#34d399)" },
+  { h: 95, color: "linear-gradient(to top,#f59e0b,#fbbf24)" },
+  { h: 100, color: "linear-gradient(to top,#f59e0b,#fcd34d)" },
+];
+
+const step4Visual = (
+  <div className="stepViz">
+    <div className="stepVizGrowthHeader">
+      {[
+        { num: "78%", lbl: "Growth" },
+        { num: "92%", lbl: "Completion" },
+        { num: "3×", lbl: "Faster" },
+      ].map((s) => (
+        <div key={s.lbl} className="stepVizGrowthStat">
+          <div className="stepVizGrowthNum">{s.num}</div>
+          <div className="stepVizGrowthLbl">{s.lbl}</div>
+        </div>
+      ))}
+    </div>
+
+    <div className="stepVizWeekBars">
+      {weekBars.map((bar, i) => (
+        <div key={i} className="stepVizWeekBarWrap">
+          <div
+            className="stepVizWeekBarFill"
+            style={{
+              height: `${bar.h}%`,
+              background: bar.color,
+              animationDelay: `${0.4 + i * 0.08}s`,
+            }}
+          />
+        </div>
+      ))}
+    </div>
+
+    <div className="stepVizBadges">
+      {[
+        { text: "Top Learner", bg: "#dbeafe", color: "#2d4edc" },
+        { text: "On Track", bg: "#d1fae5", color: "#047857" },
+        { text: "Goal Hit", bg: "#ede9fe", color: "#6d28d9" },
+      ].map((b) => (
+        <span key={b.text} className="stepVizBadge" style={{ background: b.bg, color: b.color }}>
+          {b.text}
+        </span>
+      ))}
+    </div>
+  </div>
+);
+
 const steps: StepData[] = [
   {
     tag: "Step 01",
@@ -125,6 +276,7 @@ const steps: StepData[] = [
       "Learning goal mapping",
     ],
     closing: "This step ensures learning begins at exactly the right level for each learner.",
+    svg: step1Visual,
   },
   {
     tag: "Step 02",
@@ -139,6 +291,7 @@ const steps: StepData[] = [
       "Practice adapts to current skill level",
     ],
     closing: "The learning experience stays challenging, engaging, and achievable at every stage.",
+    svg: step2Visual,
   },
   {
     tag: "Step 03",
@@ -153,6 +306,7 @@ const steps: StepData[] = [
       "Assessment and performance metrics",
     ],
     closing: "These insights allow the platform to optimize the learning journey in real time.",
+    svg: step3Visual,
   },
   {
     tag: "Step 04",
@@ -167,12 +321,13 @@ const steps: StepData[] = [
       "Strengthen advanced capabilities",
     ],
     closing: "Learners build balanced, job-ready competencies focused on real professional needs.",
+    svg: step4Visual,
   },
 ];
 
 const outcomesItems: string[] = [
   "Knowledge Absorption Speed",
-  "Learner Engagement & Motivation",
+  "Learning Drive & Focus",
   "Knowledge Retention Rates",
   "Skill Development Efficiency",
   "Learning Completion Rates",
@@ -227,7 +382,7 @@ const pills: string[] = ["Structured", "Flexible", "Adaptive", "Engaging", "Moti
 
 const eraCards = [
   { title: "Scientific Learning Design", desc: "Every pathway is built on evidence-based pedagogy and proven learning science principles." },
-  { title: "AI-Powered Adaptive Technology", desc: "Machine learning models continuously refine content delivery based on real-time data." },
+  { title: "Smart Learning Technology", desc: "Machine learning models continuously refine content delivery based on real-time data." },
   { title: "Competency-Based Paths", desc: "Structured learning journeys tied directly to measurable skill outcomes and growth." },
 ];
 
@@ -247,11 +402,22 @@ export default function PersonalizationPage() {
 
   return (
     <div className="personalization-page page">
+      <div className="neu-breadcrumb-nav">
+        <ol className="neu-breadcrumb">
+          <li className="neu-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="neu-breadcrumb-item active" aria-current="page">
+            Personalization
+          </li>
+        </ol>
+      </div>
+
       <section className="hero">
         <div>
           <h1 className="heroTitle">
-            Learning That{" "}
-            <span className="highlight">Adapts to You</span>
+            Learning{" "}
+            <span className="highlight">Adapts You</span>
             {" "}— Powered by NeuroLXP
           </h1>
 
@@ -283,21 +449,36 @@ export default function PersonalizationPage() {
           <div className="heroCard">
             <div className="heroCardHeader">
               <div className="heroCardTitle">Your Learning Journey</div>
-              <div className="heroCardSub">Active Progress</div>
+              <div className="heroCardBadge">
+                <span className="heroCardBadgeDot" />
+                Active Progress
+              </div>
             </div>
 
-            <div className="heroProgressList">
-              {heroProgress.map((item) => (
-                <div key={item.label} className="heroProgressItem">
-                  <div className="heroProgressLabel">
-                    <span>{item.label}</span>
-                    <span className="heroProgressPct">{item.pct}</span>
-                  </div>
-                  <div className="heroProgressBar">
-                    <div className={`heroProgressFill ${item.fillClass}`} />
-                  </div>
+            <div className="heroChartRow">
+              <div className="heroDonutWrap">
+                <div
+                  className="heroDonutCss"
+                  role="img"
+                  aria-label="Donut chart showing 80 percent overall learning progress"
+                />
+                <div className="heroDonutCenter">
+                  <span className="heroDonutPct">80%</span>
+                  <span className="heroDonutLbl">overall</span>
                 </div>
-              ))}
+              </div>
+
+              <div className="heroLegend">
+                {heroProgress.map((item) => (
+                  <div key={item.label} className="heroLegendItem">
+                    <div className={`heroLegendSwatch ${item.swatchClass}`} />
+                    <div className="heroLegendText">
+                      <div className="heroLegendName">{item.label}</div>
+                      <div className="heroLegendVal">{item.pct}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <div className="heroCardFooter">
@@ -363,7 +544,7 @@ export default function PersonalizationPage() {
             </div>
           </div>
 
-          <div>
+          <div className="questions">
             <div className="accordion">
               {accordionItems.map((item) => (
                 <div
@@ -380,6 +561,16 @@ export default function PersonalizationPage() {
                   <div className="accordionBody">{item.body}</div>
                 </div>
               ))}
+            </div>
+
+            <div className="imgQuestions">
+              <Image
+                src="/photo-1434030216411-0b793f4b4173.webp"
+                alt="Educator using learning analytics technology"
+                width={520}
+                height={300}
+                className="heroImage"
+              />
             </div>
           </div>
         </div>
@@ -431,18 +622,25 @@ export default function PersonalizationPage() {
               </div>
 
               <div className="stepBody">
-                <span className={`stepTag ${step.tagClass}`}>{step.tag}</span>
-                <h3 className="stepTitle">{step.title}</h3>
-                <p className="stepSubtitle">{step.subtitle}</p>
-                <ul className="stepList">
-                  {step.items.map((item) => (
-                    <li key={item} className="stepListItem">
-                      <span className={`stepDot ${step.dotClass}`} />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <p className="stepClosing">{step.closing}</p>
+                <div className="stepBodyInner">
+                  <div className="stepBodyLeft">
+                    <span className={`stepTag ${step.tagClass}`}>{step.tag}</span>
+                    <h3 className="stepTitle">{step.title}</h3>
+                    <p className="stepSubtitle">{step.subtitle}</p>
+                    <ul className="stepList">
+                      {step.items.map((item) => (
+                        <li key={item} className="stepListItem">
+                          <span className={`stepDot ${step.dotClass}`} />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="stepClosing">{step.closing}</p>
+                  </div>
+                  <div className="stepSvgWrap">
+                    {step.svg}
+                  </div>
+                </div>
               </div>
             </div>
           ))}
@@ -464,7 +662,7 @@ export default function PersonalizationPage() {
 
             <p className="bodyText">
               For the first time, learning becomes <strong>dynamic, adaptive, and personalized
-              for every individual</strong> — not as a future promise, but as a live reality
+                for every individual</strong> — not as a future promise, but as a live reality
               inside NeuroLXP today.
             </p>
 
@@ -528,6 +726,16 @@ export default function PersonalizationPage() {
           <div className="benefitsRight">
             <div className="benefitsRightLabel">Key Outcome</div>
             <div className="benefitsClosingBox">{activeData.closing}</div>
+
+            <div className="imgBenefitsRight">
+              <Image
+                src="/photo-1484480974693-6ca0a78fb36b.webp"
+                alt="Educator using learning analytics technology"
+                width={520}
+                height={300}
+                className="heroImage"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -597,11 +805,6 @@ export default function PersonalizationPage() {
               <p className="eraCardDesc">{card.desc}</p>
             </div>
           ))}
-        </div>
-
-        <div className="eraClosingBox">
-          The result is learning that is not just delivered — but{" "}
-          <span>carefully guided, intelligently adapted, and deeply impactful</span>.
         </div>
       </section>
 
