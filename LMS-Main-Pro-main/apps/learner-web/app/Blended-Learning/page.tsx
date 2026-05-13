@@ -8,18 +8,24 @@ import {
   FaChartLine,
   FaPuzzlePiece,
   FaUsers,
-  FaBullseye,
 } from "react-icons/fa";
-import {
-  MdOutlineQuiz,
-  MdOutlineAnalytics,
-  MdOutlineSchool,
-} from "react-icons/md";
+import { MdOutlineAnalytics } from "react-icons/md";
 import "./BlendedLearning.css";
 
 export default function Page() {
   return (
     <main className="blended-page">
+      <div className="blended-breadcrumb-nav">
+        <ol className="blended-breadcrumb">
+          <li className="blended-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="blended-breadcrumb-item active" aria-current="page">
+            Blended Learning
+          </li>
+        </ol>
+      </div>
+
       <section className="blended-hero">
         <div className="blended-hero-content">
           <span className="blended-badge">NeuroLXP Blended Learning</span>
@@ -193,9 +199,7 @@ export default function Page() {
         <div className="benefits-heading">
           <span className="blended-badge">Benefits</span>
           <h2>Benefits of Blended Learning with NeuroLXP</h2>
-          <p>
-            Institutions adopting blended learning through NeuroLXP can:
-          </p>
+          <p>Institutions adopting blended learning through NeuroLXP can:</p>
         </div>
 
         <div className="benefits-grid">
@@ -233,7 +237,11 @@ export default function Page() {
 
       <section className="blended-final">
         <div className="final-visual">
-         <img src="/pexels-katerina-holmes-5905703.jpg"  alt="Learners using a digital learning platform" className="placeholder-image"/>
+          <img
+            src="/pexels-katerina-holmes-5905703.jpg"
+            alt="Learners using a digital learning platform"
+            className="placeholder-image"
+          />
         </div>
 
         <div>
