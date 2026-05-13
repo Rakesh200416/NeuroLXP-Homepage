@@ -35,8 +35,131 @@ body {
 .gamification-page {
   width: min(1200px, calc(100% - 32px));
   margin: 0 auto;
-  padding: 34px 0 70px;
+  padding: 0 0 70px;
   color: var(--text);
+}
+
+/* Breadcrumb */
+
+.gamification-page .gamification-breadcrumb-nav {
+  width: 100%;
+  margin: 0 auto 18px;
+  padding: 14px 0 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  line-height: 1;
+}
+
+.gamification-page .gamification-breadcrumb,
+.gamification-page ol.gamification-breadcrumb {
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row !important;
+  gap: 0;
+  width: fit-content;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  list-style-type: none !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  counter-reset: none !important;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.gamification-page .gamification-breadcrumb-item,
+.gamification-page .gamification-breadcrumb li {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: static !important;
+  list-style: none !important;
+  list-style-type: none !important;
+  counter-increment: none !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.gamification-page .gamification-breadcrumb-item::marker,
+.gamification-page .gamification-breadcrumb li::marker {
+  content: "" !important;
+  display: none !important;
+}
+
+.gamification-page .gamification-breadcrumb-item::before,
+.gamification-page .gamification-breadcrumb li::before {
+  content: none !important;
+  display: none !important;
+}
+
+.gamification-page .gamification-breadcrumb-item + .gamification-breadcrumb-item::before,
+.gamification-page .gamification-breadcrumb li + li::before {
+  content: "›" !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 8px !important;
+  padding: 0 !important;
+  position: static !important;
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.gamification-page .gamification-breadcrumb-item a,
+.gamification-page .gamification-breadcrumb li a {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #bd081c;
+  text-decoration: none;
+  line-height: 1;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.gamification-page .gamification-breadcrumb-item a:hover,
+.gamification-page .gamification-breadcrumb li a:hover {
+  color: #8f0615;
+  text-decoration: underline;
+}
+
+.gamification-page .gamification-breadcrumb-item.active,
+.gamification-page .gamification-breadcrumb li.active {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #1e90ff;
+  font-weight: 600;
+  line-height: 1;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .gamification-page .heroSection,
@@ -159,21 +282,15 @@ body {
   transition: transform 0.28s ease, box-shadow 0.28s ease;
 }
 
-.gamification-page .floatingStats .statPill:nth-child(1){
-/* .gamification-page .benefitPills .statPill:nth-child(1)  */
-
+.gamification-page .floatingStats .statPill:nth-child(1) {
   color: var(--primary);
 }
 
-.gamification-page .floatingStats .statPill:nth-child(2)
-/* .gamification-page .benefitPills .statPill:nth-child(2)  */
-{
+.gamification-page .floatingStats .statPill:nth-child(2) {
   color: var(--secondary);
 }
 
-.gamification-page .floatingStats .statPill:nth-child(3)
-/* .gamification-page .benefitPills .statPill:nth-child(3)  */
-{
+.gamification-page .floatingStats .statPill:nth-child(3) {
   color: var(--accent);
 }
 
@@ -448,10 +565,25 @@ body {
   justify-content: center;
 }
 
-.gamification-page .iconListIcon.purple { background: rgba(124, 58, 237, 0.1); color: var(--primary); }
-.gamification-page .iconListIcon.teal   { background: rgba(15, 118, 110, 0.1);  color: var(--secondary); }
-.gamification-page .iconListIcon.amber  { background: rgba(217, 119, 6, 0.1);   color: var(--accent); }
-.gamification-page .iconListIcon.blue   { background: rgba(37, 99, 235, 0.1);   color: var(--support); }
+.gamification-page .iconListIcon.purple {
+  background: rgba(124, 58, 237, 0.1);
+  color: var(--primary);
+}
+
+.gamification-page .iconListIcon.teal {
+  background: rgba(15, 118, 110, 0.1);
+  color: var(--secondary);
+}
+
+.gamification-page .iconListIcon.amber {
+  background: rgba(217, 119, 6, 0.1);
+  color: var(--accent);
+}
+
+.gamification-page .iconListIcon.blue {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--support);
+}
 
 .gamification-page .iconListText {
   flex: 1;
@@ -545,7 +677,24 @@ body {
 @media (max-width: 768px) {
   .gamification-page {
     width: min(100%, calc(100% - 20px));
-    padding: 20px 0 44px;
+    padding: 0 0 44px;
+  }
+
+  .gamification-page .gamification-breadcrumb-nav {
+    padding: 12px 0 0;
+    margin-bottom: 14px;
+    justify-content: flex-end;
+  }
+
+  .gamification-page .gamification-breadcrumb,
+  .gamification-page ol.gamification-breadcrumb {
+    margin-left: auto !important;
+    justify-content: flex-end;
+  }
+
+  .gamification-page .gamification-breadcrumb-item,
+  .gamification-page .gamification-breadcrumb li {
+    font-size: 15px;
   }
 
   .gamification-page .heroContent {
@@ -597,12 +746,6 @@ body {
     grid-template-columns: 1fr;
   }
 
-  /* .gamification-page .miniFeatures,
-  .gamification-page .benefitPills {
-    flex-direction: column;
-  } */
-
-  /* .gamification-page .miniFeature, */
   .gamification-page .statPill {
     width: 100%;
   }
