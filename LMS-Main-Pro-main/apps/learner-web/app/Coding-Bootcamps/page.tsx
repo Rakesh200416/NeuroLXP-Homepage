@@ -14,6 +14,17 @@ import "./CodingBootcamps.css";
 export default function Page() {
   return (
     <main className="bootcamp-page">
+      <div className="bootcamp-breadcrumb-nav">
+        <ol className="bootcamp-breadcrumb">
+          <li className="bootcamp-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="bootcamp-breadcrumb-item active" aria-current="page">
+            Coding Bootcamps
+          </li>
+        </ol>
+      </div>
+
       <section className="bootcamp-hero">
         <div className="bootcamp-hero-content">
           <span className="bootcamp-badge">NeuroLabs Bootcamps</span>
@@ -224,12 +235,12 @@ export default function Page() {
 
       <section className="bootcamp-bottom">
         <div className="bootcamp-image-placeholder">
-        <img
-          src="/pexels-goumbik-574073.jpg"
-          alt="Student learning in a bootcamp session"
-          className="bootcamp-image"
-        />
-      </div>
+          <img
+            src="/pexels-goumbik-574073.jpg"
+            alt="Student learning in a bootcamp session"
+            className="bootcamp-image"
+          />
+        </div>
 
         <div>
           <h2>NeuroLabs Coding Bootcamps — Fast-Track Your Coding Journey</h2>
