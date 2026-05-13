@@ -32,10 +32,133 @@
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  padding: 34px 16px 70px;
+  padding: 0 16px 70px;
   color: var(--text);
   font-family: "Segoe UI", Arial, sans-serif;
   background-color: #e6e7ee;
+}
+
+/* Breadcrumb */
+
+.interactivities-page .interactivities-breadcrumb-nav {
+  width: 100%;
+  margin: 0 auto 18px;
+  padding: 14px 0 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  line-height: 1;
+}
+
+.interactivities-page .interactivities-breadcrumb,
+.interactivities-page ol.interactivities-breadcrumb {
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row !important;
+  gap: 0;
+  width: fit-content;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  list-style-type: none !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  counter-reset: none !important;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.interactivities-page .interactivities-breadcrumb-item,
+.interactivities-page .interactivities-breadcrumb li {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: static !important;
+  list-style: none !important;
+  list-style-type: none !important;
+  counter-increment: none !important;
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.interactivities-page .interactivities-breadcrumb-item::marker,
+.interactivities-page .interactivities-breadcrumb li::marker {
+  content: "" !important;
+  display: none !important;
+}
+
+.interactivities-page .interactivities-breadcrumb-item::before,
+.interactivities-page .interactivities-breadcrumb li::before {
+  content: none !important;
+  display: none !important;
+}
+
+.interactivities-page .interactivities-breadcrumb-item + .interactivities-breadcrumb-item::before,
+.interactivities-page .interactivities-breadcrumb li + li::before {
+  content: "›" !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: auto !important;
+  height: auto !important;
+  margin: 0 8px !important;
+  padding: 0 !important;
+  position: static !important;
+  color: #64748b;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.interactivities-page .interactivities-breadcrumb-item a,
+.interactivities-page .interactivities-breadcrumb li a {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #bd081c;
+  text-decoration: none;
+  line-height: 1;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.interactivities-page .interactivities-breadcrumb-item a:hover,
+.interactivities-page .interactivities-breadcrumb li a:hover {
+  color: #8f0615;
+  text-decoration: underline;
+}
+
+.interactivities-page .interactivities-breadcrumb-item.active,
+.interactivities-page .interactivities-breadcrumb li.active {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  color: #1e90ff;
+  font-weight: 600;
+  line-height: 1;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .interactivities-page .heroSection,
@@ -469,7 +592,24 @@
 
 @media (max-width: 768px) {
   .interactivities-page {
-    padding: 20px 12px 44px;
+    padding: 0 12px 44px;
+  }
+
+  .interactivities-page .interactivities-breadcrumb-nav {
+    padding: 12px 0 0;
+    margin-bottom: 14px;
+    justify-content: flex-end;
+  }
+
+  .interactivities-page .interactivities-breadcrumb,
+  .interactivities-page ol.interactivities-breadcrumb {
+    margin-left: auto !important;
+    justify-content: flex-end;
+  }
+
+  .interactivities-page .interactivities-breadcrumb-item,
+  .interactivities-page .interactivities-breadcrumb li {
+    font-size: 15px;
   }
 
   .interactivities-page .heroContent {
@@ -555,7 +695,7 @@
 
 @media (max-width: 480px) {
   .interactivities-page {
-    padding: 16px 10px 36px;
+    padding: 0 10px 36px;
   }
 
   .interactivities-page .heroContent {
