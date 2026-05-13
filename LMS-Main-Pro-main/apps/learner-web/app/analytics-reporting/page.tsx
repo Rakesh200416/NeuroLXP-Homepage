@@ -82,6 +82,17 @@ const environments = [
 export default function LearningAnalytics() {
   return (
     <main className="analytics-page">
+      <div className="analytics-breadcrumb-nav">
+        <ol className="analytics-breadcrumb">
+          <li className="analytics-breadcrumb-item">
+            <a href="/">Home</a>
+          </li>
+          <li className="analytics-breadcrumb-item active" aria-current="page">
+            Analytics &amp; Reporting
+          </li>
+        </ol>
+      </div>
+
       <section className="analytics-hero analytics-neumorphic-card">
         <div className="analytics-hero-content">
           <span className="analytics-eyebrow">
